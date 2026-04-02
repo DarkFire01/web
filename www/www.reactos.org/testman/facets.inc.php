@@ -17,32 +17,34 @@
 		return array(
 			"compiler" => array("GCC", "MSVC"),
 			"vm" => array("KVM", "VBox", "WHS", "Win2003_x64"),
-			"host_os" => array("Linux", "Windows", "ReactOS"),
+			"host_os" => array("Linux", "Windows", "ReactOS", "Unknown"),
 			"target_arch" => array("i386", "amd64"),
 		);
 	}
 
 	/**
-	 * Values shown as checkboxes on the index page: real DISTINCT data if any, else canonical presets
-	 * (avoids empty collapsed facet rows). Ajax search still uses DB-only merge for filter matching.
+	 * Checkbox labels on the index page: always merge canonical presets with DISTINCT DB values.
+	 * Otherwise a single backfilled value (e.g. only "Windows") would hide Linux/ReactOS even though
+	 * many rows still have NULL host_os. Ajax search still uses testman_merge_facet_values() (DB-only)
+	 * for IN (...) matching, so phantom labels do not widen the query.
 	 */
 	function testman_facet_ui_values(PDO $dbh, $column)
 	{
 		$db = testman_merge_facet_values($dbh, $column);
-		if (count($db) > 0)
-			return $db;
-
 		$canon = testman_canonical_facets();
-		return isset($canon[$column]) ? $canon[$column] : array();
+		$base = isset($canon[$column]) ? $canon[$column] : array();
+		$merged = array_values(array_unique(array_merge($base, $db)));
+		sort($merged);
+		return $merged;
 	}
 
 	function testman_merge_arch_facet_ui(PDO $dbh)
 	{
 		$db = testman_merge_arch_facet_values($dbh);
-		if (count($db) > 0)
-			return $db;
-
-		return testman_canonical_facets()["target_arch"];
+		$base = testman_canonical_facets()["target_arch"];
+		$merged = array_values(array_unique(array_merge($base, $db)));
+		sort($merged);
+		return $merged;
 	}
 
 	function testman_merge_facet_values(PDO $dbh, $column)

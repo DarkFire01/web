@@ -6,7 +6,8 @@ Fills in:
   - todo, skipped       — SUM from winetest_results
   - build_number        — from comment "Build N, ..."
   - target_arch         — from platform reactos.0 / reactos.9 when column is empty
-  - host_os             — from platform (reactos.* → ReactOS; 6.0.6003… NT-style → Windows)
+  - host_os             — from platform (reactos.* → ReactOS; 6.0.6003… NT-style → Windows),
+                          then sources.name; any still NULL → 'Unknown' (searchable) unless --keep-null-host-os
   - compiler, vm, host_os — from sources.name heuristics where still empty (+ MANUAL_SOURCE_OVERRIDES)
 
 Usage:
@@ -104,6 +105,11 @@ def main() -> None:
         help="Path to testman-connect.php (defines TESTMAN_DB_*)",
     )
     ap.add_argument("--dry-run", action="store_true", help="No UPDATE statements")
+    ap.add_argument(
+        "--keep-null-host-os",
+        action="store_true",
+        help="Leave host_os as SQL NULL when heuristics cannot infer it (no 'Unknown' tag).",
+    )
     args = ap.parse_args()
 
     cfg_path = args.config
@@ -280,6 +286,30 @@ def main() -> None:
                 params.append(sid)
                 cur.execute(upd_sql, params)
                 print(f'    source {sid} "{sname}" — updated {cur.rowcount} runs → {summary}')
+
+            if not args.keep_null_host_os:
+                cur.execute(
+                    "SELECT COUNT(*) FROM winetest_runs WHERE finished = 1 "
+                    "AND (host_os IS NULL OR TRIM(host_os) = '')"
+                )
+                n6 = int(cur.fetchone()[0])
+                print(
+                    f"[6] Set host_os = 'Unknown' where still NULL/empty ({n6} rows) "
+                    "(facet for unknown host OS; use --keep-null-host-os to skip)..."
+                )
+                sql6 = """
+                UPDATE winetest_runs
+                SET host_os = 'Unknown'
+                WHERE finished = 1
+                  AND (host_os IS NULL OR TRIM(host_os) = '')
+                """
+                if args.dry_run:
+                    print("    (dry-run: skipped)")
+                else:
+                    cur.execute(sql6)
+                    print(f"    rows affected: {cur.rowcount}")
+            else:
+                print("[6] Skipped (--keep-null-host-os): rows with empty host_os stay SQL NULL.")
 
         if not args.dry_run:
             conn.commit()
