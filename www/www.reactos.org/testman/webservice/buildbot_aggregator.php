@@ -12,6 +12,7 @@
 	require_once("config.inc.php");
 	require_once(ROOT_PATH . "../www.reactos.org_config/testman-connect.php");
 	require_once("autoload.inc.php");
+	require_once(__DIR__ . "/builder_meta.inc.php");
 	require_once(ROOT_PATH . "rosweb/exceptions.php");
 
 	$perf = array(
@@ -235,7 +236,7 @@
 
 			// Did we already get a Test ID for this run?
 			if (!$test_id)
-				$test_id = $writer->getTestId($revision, "reactos.$platform", $comment);
+				$test_id = $writer->getTestId($revision, "reactos.$platform", $comment, $run_meta);
 
 			// Finally submit the log.
 			$writer->submit($test_id, $suite_id, $log);

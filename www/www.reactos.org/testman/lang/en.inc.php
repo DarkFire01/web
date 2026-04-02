@@ -16,8 +16,18 @@
 
 		"date" => "Date",
 		"source" => "Source",
+		"sources" => "Sources (builders)",
 		"platform" => "Platform",
 		"comment" => "Comment",
+		"date_from" => "From date/time",
+		"date_to" => "To date/time",
+		"search_comment" => "Comment contains",
+		"build_number" => "Build number",
+		"filter_compiler" => "Compiler",
+		"filter_vm" => "VM / test environment",
+		"filter_host_os" => "Host OS",
+		"filter_arch" => "Architecture",
+		"nosources" => "Select at least one source.",
 
 		"search_header" => "Search for Test Results",
 		"search_button" => "Search",

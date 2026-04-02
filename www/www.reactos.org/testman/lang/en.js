@@ -14,6 +14,8 @@ testman_langres["platform"] = "Platform";
 testman_langres["comment"] = "Comment";
 testman_langres["totaltests"] = "Total Tests";
 testman_langres["failedtests"] = "Failed Tests";
+testman_langres["todotests"] = "Todo tests";
+testman_langres["nosources"] = "Select at least one source.";
 
 testman_langres["status"] = "{1} Tests selected for comparison";
 testman_langres["clearselected"] = "Clear Selection";

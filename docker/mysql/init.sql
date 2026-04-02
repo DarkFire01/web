@@ -97,6 +97,13 @@ CREATE TABLE `winetest_runs` (
   `comment` varchar(255) COLLATE latin1_general_ci DEFAULT NULL,
   `count` int(10) unsigned NOT NULL DEFAULT '0',
   `failures` int(10) unsigned NOT NULL DEFAULT '0',
+  `todo` int(10) unsigned NOT NULL DEFAULT '0',
+  `skipped` int(10) unsigned NOT NULL DEFAULT '0',
+  `build_number` int(10) unsigned DEFAULT NULL,
+  `compiler` varchar(32) COLLATE latin1_general_ci DEFAULT NULL,
+  `vm` varchar(32) COLLATE latin1_general_ci DEFAULT NULL,
+  `host_os` varchar(32) COLLATE latin1_general_ci DEFAULT NULL,
+  `target_arch` varchar(16) COLLATE latin1_general_ci DEFAULT NULL,
   `boot_cycles` bigint(20) unsigned NOT NULL DEFAULT '0',
   `context_switches` int(10) unsigned NOT NULL DEFAULT '0',
   `interrupts` int(10) unsigned NOT NULL DEFAULT '0',
@@ -105,7 +112,13 @@ CREATE TABLE `winetest_runs` (
   `time` float unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `revision` (`revision`),
-  KEY `platform` (`platform`)
+  KEY `platform` (`platform`),
+  KEY `idx_winetest_runs_timestamp` (`timestamp`),
+  KEY `idx_winetest_runs_build_number` (`build_number`),
+  KEY `idx_winetest_runs_compiler` (`compiler`),
+  KEY `idx_winetest_runs_vm` (`vm`),
+  KEY `idx_winetest_runs_host_os` (`host_os`),
+  KEY `idx_winetest_runs_target_arch` (`target_arch`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 CREATE TABLE `winetest_suites` (

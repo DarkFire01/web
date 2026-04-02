@@ -18,6 +18,7 @@
 	$lang = $rw->getLanguage();
 	require_once(ROOT_PATH . "rosweb/lang/$lang.inc.php");
 	require_once("lang/$lang.inc.php");
+	require_once("facets.inc.php");
 
 	try
 	{
@@ -29,6 +30,12 @@
 		// Connect to the database.
 		$dbh = new PDO("mysql:host=" . TESTMAN_DB_HOST . ";dbname=" . TESTMAN_DB_NAME, TESTMAN_DB_USER, TESTMAN_DB_PASS);
 		$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+		$sources_rows = $dbh->query("SELECT id, name FROM sources ORDER BY name")->fetchAll(PDO::FETCH_ASSOC);
+		$facet_compiler = testman_merge_facet_values($dbh, "compiler");
+		$facet_vm = testman_merge_facet_values($dbh, "vm");
+		$facet_host_os = testman_merge_facet_values($dbh, "host_os");
+		$facet_arch = testman_merge_facet_values($dbh, "target_arch");
 	}
 	catch (Exception $e)
 	{
@@ -44,7 +51,6 @@
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<script type="text/javascript">
 		var DEFAULT_SEARCH_LIMIT = <?php echo DEFAULT_SEARCH_LIMIT; ?>;
-		var DEFAULT_SEARCH_SOURCE = '<?php echo DEFAULT_SEARCH_SOURCE; ?>';
 		var MAX_COMPARE_RESULTS = <?php echo MAX_COMPARE_RESULTS; ?>;
 		var RESULTS_PER_PAGE = <?php echo RESULTS_PER_PAGE; ?>;
 	</script>
@@ -82,32 +88,93 @@
 			</div>
 
 			<div class="form-group">
-				<label for="search_source" class="col-sm-2 control-label"><?php echo $testman_langres["source"]; ?></label>
-
+				<label class="col-sm-2 control-label"><?php echo $testman_langres["sources"]; ?></label>
 				<div class="col-sm-7">
-					<div class="comboedit">
-						<select class="form-control" onchange="document.getElementById('search_source').value=this.value">
-							<option></option>
-							<?php
-								$stmt = $dbh->query("SELECT name FROM sources");
-								while (($source = $stmt->fetchColumn()) !== FALSE)
-									printf('<option value="%s">%s</option>', $source, $source);
-							?>
-						</select>
-						<div><input class="form-control" type="text" name="format" id="search_source" value=""></div>
+					<div class="testman-facet-box" id="source_filters">
+						<?php foreach ($sources_rows as $src): ?>
+							<label class="checkbox-inline testman-facet-item">
+								<input type="checkbox" class="source_filter_cb" name="source_filter[]" value="<?php echo (int)$src["id"]; ?>" checked>
+								<?php echo htmlspecialchars($src["name"]); ?>
+							</label>
+						<?php endforeach; ?>
 					</div>
 				</div>
 			</div>
 
 			<div class="form-group">
-				<label for="search_platform" class="col-sm-2 control-label"><?php echo $testman_langres["platform"]; ?></label>
+				<label for="search_date_from" class="col-sm-2 control-label"><?php echo $testman_langres["date_from"]; ?></label>
+				<div class="col-sm-3">
+					<input class="form-control" type="text" id="search_date_from" placeholder="YYYY-MM-DD or YYYY-MM-DD HH:MM" autocomplete="off">
+				</div>
+				<label for="search_date_to" class="col-sm-1 control-label"><?php echo $testman_langres["date_to"]; ?></label>
+				<div class="col-sm-3">
+					<input class="form-control" type="text" id="search_date_to" placeholder="YYYY-MM-DD or YYYY-MM-DD HH:MM" autocomplete="off">
+				</div>
+			</div>
 
+			<div class="form-group">
+				<label for="search_comment" class="col-sm-2 control-label"><?php echo $testman_langres["search_comment"]; ?></label>
 				<div class="col-sm-7">
-					<select class="form-control" id="search_platform" size="1">
-						<option></option>
-						<option value="reactos">ReactOS</option>
-						<option value="5.2">Windows Server 2003</option>
-					</select><br>
+					<input class="form-control" type="text" id="search_comment" value="" autocomplete="off">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="search_build_number" class="col-sm-2 control-label"><?php echo $testman_langres["build_number"]; ?></label>
+				<div class="col-sm-7">
+					<input class="form-control" type="text" id="search_build_number" value="" inputmode="numeric" autocomplete="off">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-2 control-label"><?php echo $testman_langres["filter_compiler"]; ?></label>
+				<div class="col-sm-7">
+					<div class="testman-facet-box">
+						<?php foreach ($facet_compiler as $v): ?>
+							<label class="checkbox-inline testman-facet-item">
+								<input type="checkbox" name="fac_compiler[]" value="<?php echo htmlspecialchars($v); ?>" checked> <?php echo htmlspecialchars($v); ?>
+							</label>
+						<?php endforeach; ?>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-2 control-label"><?php echo $testman_langres["filter_vm"]; ?></label>
+				<div class="col-sm-7">
+					<div class="testman-facet-box">
+						<?php foreach ($facet_vm as $v): ?>
+							<label class="checkbox-inline testman-facet-item">
+								<input type="checkbox" name="fac_vm[]" value="<?php echo htmlspecialchars($v); ?>" checked> <?php echo htmlspecialchars($v); ?>
+							</label>
+						<?php endforeach; ?>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-2 control-label"><?php echo $testman_langres["filter_host_os"]; ?></label>
+				<div class="col-sm-7">
+					<div class="testman-facet-box">
+						<?php foreach ($facet_host_os as $v): ?>
+							<label class="checkbox-inline testman-facet-item">
+								<input type="checkbox" name="fac_host_os[]" value="<?php echo htmlspecialchars($v); ?>" checked> <?php echo htmlspecialchars($v); ?>
+							</label>
+						<?php endforeach; ?>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-2 control-label"><?php echo $testman_langres["filter_arch"]; ?></label>
+				<div class="col-sm-7">
+					<div class="testman-facet-box">
+						<?php foreach ($facet_arch as $v): ?>
+							<label class="checkbox-inline testman-facet-item">
+								<input type="checkbox" name="fac_arch[]" value="<?php echo htmlspecialchars($v); ?>" checked> <?php echo htmlspecialchars($v); ?>
+							</label>
+						<?php endforeach; ?>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -4,6 +4,7 @@
  * LICENSE:     GPL-2.0+ (https://spdx.org/licenses/GPL-2.0+)
  * PURPOSE:     AJAX Backend for the Search feature
  * COPYRIGHT:   Copyright 2008-2017 Colin Finck (colin@reactos.org)
+ *              Copyright 2026 ReactOS Contributors
  */
 
 	header("Content-type: text/xml");
@@ -11,9 +12,59 @@
 	require_once("config.inc.php");
 	require_once(ROOT_PATH . "../www.reactos.org_config/testman-connect.php");
 	require_once("utils.inc.php");
+	require_once("facets.inc.php");
 	require_once(ROOT_PATH . "rosweb/exceptions.php");
 	require_once(ROOT_PATH . "rosweb/gitinfo.php");
 	require_once(ROOT_PATH . "rosweb/rosweb.php");
+
+	function testman_parse_datetime_input($s, $end_of_day)
+	{
+		$s = trim((string)$s);
+		if ($s === "")
+			return null;
+
+		$dt = DateTime::createFromFormat("Y-m-d H:i", $s);
+		if (!$dt)
+			$dt = DateTime::createFromFormat("Y-m-d", $s);
+		if (!$dt)
+			return null;
+
+		if ($end_of_day && preg_match("/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/", $s))
+			$dt->setTime(23, 59, 59);
+
+		return $dt;
+	}
+
+	function testman_ajax_apply_dimension(PDO $dbh, $get_key, $column, &$where, &$params)
+	{
+		if (!isset($_GET[$get_key]))
+			return;
+
+		$raw = $_GET[$get_key];
+		if ($raw === "")
+		{
+			$where[] = "0=1";
+			return;
+		}
+
+		$req = array_filter(array_map("trim", explode(",", $raw)));
+		$full = testman_merge_facet_values($dbh, $column);
+		$sel = array_values(array_intersect($req, $full));
+
+		if (count($sel) === 0)
+		{
+			$where[] = "0=1";
+			return;
+		}
+
+		if (count($sel) === count($full))
+			return;
+
+		$placeholders = implode(",", array_fill(0, count($sel), "?"));
+		$where[] = "r.`" . $column . "` IN (" . $placeholders . ")";
+		foreach ($sel as $v)
+			$params[] = $v;
+	}
 
 	$rw = new RosWeb();
 	$lang = $rw->getLanguage();
@@ -21,59 +72,106 @@
 
 	try
 	{
-		// Check the common parameter for all queries.
 		if (!array_key_exists("page", $_GET))
 			throw new ErrorMessageException("Necessary information not specified");
 
 		$page = (int)$_GET["page"];
+		if ($page < 1)
+			throw new RuntimeException("page is out of range");
+
 		$gi = new GitInfo();
 
-		// Connect to the database.
 		$dbh = new PDO("mysql:host=" . TESTMAN_DB_HOST . ";dbname=" . TESTMAN_DB_NAME, TESTMAN_DB_USER, TESTMAN_DB_PASS);
 		$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-		// Check all other parameters and prepare the WHERE clause.
-		$query = "FROM winetest_runs r JOIN sources src ON r.source_id = src.id WHERE r.finished = 1";
+		$where = array("r.finished = 1");
+		$params = array();
 
-		if (array_key_exists("startrev", $_GET) && array_key_exists("endrev", $_GET))
+		$all_source_ids = $dbh->query("SELECT id FROM sources ORDER BY id")->fetchAll(PDO::FETCH_COLUMN, 0);
+
+		if (array_key_exists("source_ids", $_GET) && $_GET["source_ids"] !== "")
+		{
+			$ids = array_unique(array_map("intval", explode(",", $_GET["source_ids"])));
+			$ids = array_values(array_intersect($ids, $all_source_ids));
+
+			if (count($ids) === 0)
+				$where[] = "0=1";
+			elseif (count($ids) < count($all_source_ids))
+			{
+				$where[] = "r.source_id IN (" . implode(",", $ids) . ")";
+			}
+		}
+
+		if (array_key_exists("source", $_GET) && $_GET["source"] !== "")
+			$where[] = "src.name LIKE " . $dbh->quote("%" . $_GET["source"] . "%");
+
+		if (array_key_exists("startrev", $_GET) && array_key_exists("endrev", $_GET) && $_GET["startrev"] !== "" && $_GET["endrev"] !== "")
 		{
 			$startrev = $_GET["startrev"];
 			$endrev = $_GET["endrev"];
 
 			if (preg_match($SVN_PATTERN, $startrev) && preg_match($SVN_PATTERN, $endrev))
 			{
-				// The user wants to find old SVN test results.
 				$range = range((int)$startrev, (int)$endrev);
 			}
 			else
 			{
-				// The user wants to find GIT test results.
-
-				// Get the long hashes for searching.
 				$start_hash = $gi->getLongHash($startrev);
 				$end_hash = $gi->getLongHash($endrev);
 				if (!$start_hash || !$end_hash)
 					throw new RuntimeException($shared_langres["invalidinput"]);
 
-				// Get all revisions between $start_hash and $end_hash.
 				$range = $gi->getRevisionRange($start_hash, $end_hash);
 			}
 
 			if (count($range) > REV_RANGE_LIMIT)
 				throw new RuntimeException(sprintf($shared_langres["rangelimitexceeded"], REV_RANGE_LIMIT));
 
-			$query .= " AND r.revision IN ('" . implode("','", $range) . "')";
+			$quoted = array();
+			foreach ($range as $h)
+				$quoted[] = $dbh->quote($h);
+
+			$where[] = "r.revision IN (" . implode(",", $quoted) . ")";
 		}
 
-		if (array_key_exists("source", $_GET) && $_GET["source"])
+		if (array_key_exists("platform", $_GET) && $_GET["platform"] !== "")
+			$where[] = "r.platform LIKE " . $dbh->quote($_GET["platform"] . "%");
+
+		$df = array_key_exists("date_from", $_GET) ? testman_parse_datetime_input($_GET["date_from"], false) : null;
+		if ($df)
 		{
-			$query .= " AND src.name LIKE " . $dbh->quote("%" . $_GET["source"] . "%");
+			$where[] = "r.timestamp >= ?";
+			$params[] = $df->format("Y-m-d H:i:s");
 		}
 
-		if (array_key_exists("platform", $_GET) && $_GET["platform"])
+		$dt = array_key_exists("date_to", $_GET) ? testman_parse_datetime_input($_GET["date_to"], true) : null;
+		if ($dt)
 		{
-			$query .= " AND r.platform LIKE " . $dbh->quote($_GET["platform"] . "%");
+			$where[] = "r.timestamp <= ?";
+			$params[] = $dt->format("Y-m-d H:i:s");
 		}
+
+		if (array_key_exists("search_comment", $_GET) && $_GET["search_comment"] !== "")
+		{
+			$where[] = "r.comment LIKE ?";
+			$needle = "%" . str_replace(array("\\", "%", "_"), array("\\\\", "\\%", "\\_"), $_GET["search_comment"]) . "%";
+			$params[] = $needle;
+		}
+
+		if (array_key_exists("build_number", $_GET) && $_GET["build_number"] !== "")
+		{
+			$bn = (int)$_GET["build_number"];
+			if ($bn > 0)
+			{
+				$where[] = "r.build_number = ?";
+				$params[] = $bn;
+			}
+		}
+
+		testman_ajax_apply_dimension($dbh, "compilers", "compiler", $where, $params);
+		testman_ajax_apply_dimension($dbh, "vms", "vm", $where, $params);
+		testman_ajax_apply_dimension($dbh, "host_oses", "host_os", $where, $params);
+		testman_ajax_apply_dimension($dbh, "arches", "target_arch", $where, $params);
 
 		if (array_key_exists("limit", $_GET))
 		{
@@ -88,31 +186,36 @@
 			$limit_count = RESULTS_PER_PAGE;
 		}
 
+		$where_sql = implode(" AND ", $where);
+		$base_from = "FROM winetest_runs r JOIN sources src ON r.source_id = src.id WHERE " . $where_sql;
+
 		$output = "<results>";
 
-		// Determine how many results we would get in total with this query.
-		$stmt = $dbh->query("SELECT COUNT(*) $query");
+		$stmt = $dbh->prepare("SELECT COUNT(*) " . $base_from);
+		$stmt->execute($params);
+		$total_matches = (int)$stmt->fetchColumn();
+
 		$limit_offset = ($page - 1) * RESULTS_PER_PAGE;
-		$result_count = max(0, (int)$stmt->fetchColumn() - $limit_offset);
+		$result_count = max(0, $total_matches - $limit_offset);
 
 		if (isset($limit) && $result_count > $limit)
-		{
-			// Don't count higher than the manually supplied limit.
 			$result_count = $limit;
-		}
 
 		if ($result_count)
 		{
-			$query .= " ORDER BY r.id " . (array_key_exists("desc", $_GET) ? "DESC" : "ASC");
+			$order = array_key_exists("desc", $_GET) ? "DESC" : "ASC";
+			$limit_offset = (int)$limit_offset;
+			$limit_count = (int)$limit_count;
 
 			if (array_key_exists("resultlist", $_GET))
 			{
-				$stmt = $dbh->query(
-					"SELECT r.id, UNIX_TIMESTAMP(r.timestamp) AS timestamp, src.name, r.revision, r.platform, r.comment, r.count, r.failures $query " .
-					"LIMIT $limit_offset, $limit_count"
-				);
+				$sql = "SELECT r.id, UNIX_TIMESTAMP(r.timestamp) AS timestamp, src.name, r.revision, r.platform, r.comment, r.count, r.failures, r.todo " .
+					$base_from . " ORDER BY r.id " . $order . " LIMIT $limit_offset, $limit_count";
 
-				while (($row = $stmt->fetch(PDO::FETCH_ASSOC)) !== FALSE)
+				$stmt = $dbh->prepare($sql);
+				$stmt->execute($params);
+
+				while (($row = $stmt->fetch(PDO::FETCH_ASSOC)) !== false)
 				{
 					$output .= "<result>";
 					$output .= "<id>" . $row["id"] . "</id>";
@@ -123,6 +226,7 @@
 					$output .= "<comment>" . htmlspecialchars($row["comment"]) . "</comment>";
 					$output .= "<count>" . $row["count"] . "</count>";
 					$output .= "<failures>" . $row["failures"] . "</failures>";
+					$output .= "<todo>" . (int)$row["todo"] . "</todo>";
 					$output .= "</result>";
 
 					if (!isset($first_revision))
@@ -133,11 +237,14 @@
 			}
 			else
 			{
-				// Get the first and last revision belonging to this call
-				$stmt = $dbh->query("SELECT r.revision $query LIMIT $limit_offset, 1");
+				$sql = "SELECT r.revision " . $base_from . " ORDER BY r.id " . $order . " LIMIT $limit_offset, 1";
+				$stmt = $dbh->prepare($sql);
+				$stmt->execute($params);
 				$first_revision = $gi->getShortHash($stmt->fetchColumn());
 
-				$stmt = $dbh->query("SELECT r.revision $query LIMIT " . ($limit_offset + $limit_count - 1) . ", 1");
+				$sql = "SELECT r.revision " . $base_from . " ORDER BY r.id " . $order . " LIMIT " . ($limit_offset + $limit_count - 1) . ", 1";
+				$stmt = $dbh->prepare($sql);
+				$stmt->execute($params);
 				$last_revision = $gi->getShortHash($stmt->fetchColumn());
 			}
 

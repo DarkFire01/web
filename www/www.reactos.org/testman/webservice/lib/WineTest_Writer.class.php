@@ -38,16 +38,30 @@
 			$this->_source_id = (int)$source_id;
 		}
 
-		public function getTestId($revision, $platform, $comment)
+		public function getTestId($revision, $platform, $comment, array $meta = array())
 		{
-			file_put_contents(MY_LOGFILE, date("Y-m-d H:i:s") . ": getTestId($revision, $platform, $comment)\n", FILE_APPEND);
+			file_put_contents(MY_LOGFILE, date("Y-m-d H:i:s") . ": getTestId($revision, $platform, $comment, ...)\n", FILE_APPEND);
+
+			$build_number = array_key_exists("build_number", $meta) ? $meta["build_number"] : null;
+			$compiler = array_key_exists("compiler", $meta) ? $meta["compiler"] : null;
+			$vm = array_key_exists("vm", $meta) ? $meta["vm"] : null;
+			$host_os = array_key_exists("host_os", $meta) ? $meta["host_os"] : null;
+			$target_arch = array_key_exists("target_arch", $meta) ? $meta["target_arch"] : null;
 
 			// Add a new Test ID with the given information.
-			$stmt = $this->_dbh->prepare("INSERT INTO winetest_runs (source_id, revision, platform, comment) VALUES (:sourceid, :revision, :platform, :comment)");
+			$stmt = $this->_dbh->prepare(
+				"INSERT INTO winetest_runs (source_id, revision, platform, comment, build_number, compiler, vm, host_os, target_arch) " .
+				"VALUES (:sourceid, :revision, :platform, :comment, :build_number, :compiler, :vm, :host_os, :target_arch)"
+			);
 			$stmt->bindValue(":sourceid", (int)$this->_source_id, PDO::PARAM_INT);
 			$stmt->bindParam(":revision", $revision);
 			$stmt->bindParam(":platform", $platform);
 			$stmt->bindParam(":comment", $comment);
+			$stmt->bindValue(":build_number", $build_number, $build_number === null ? PDO::PARAM_NULL : PDO::PARAM_INT);
+			$stmt->bindValue(":compiler", $compiler, $compiler === null ? PDO::PARAM_NULL : PDO::PARAM_STR);
+			$stmt->bindValue(":vm", $vm, $vm === null ? PDO::PARAM_NULL : PDO::PARAM_STR);
+			$stmt->bindValue(":host_os", $host_os, $host_os === null ? PDO::PARAM_NULL : PDO::PARAM_STR);
+			$stmt->bindValue(":target_arch", $target_arch, $target_arch === null ? PDO::PARAM_NULL : PDO::PARAM_STR);
 			$stmt->execute();
 			$id = (int)$this->_dbh->lastInsertId();
 
@@ -223,8 +237,10 @@
 				"UPDATE winetest_runs
 				 SET
 					finished = 1,
-					count    = (SELECT SUM(count) FROM  winetest_results WHERE test_id = :testid),
-					failures = (SELECT SUM(failures) FROM winetest_results WHERE test_id = :testid),
+					count    = (SELECT COALESCE(SUM(count), 0) FROM  winetest_results WHERE test_id = :testid),
+					failures = (SELECT COALESCE(SUM(failures), 0) FROM winetest_results WHERE test_id = :testid),
+					todo     = (SELECT COALESCE(SUM(todo), 0) FROM winetest_results WHERE test_id = :testid),
+					skipped  = (SELECT COALESCE(SUM(skipped), 0) FROM winetest_results WHERE test_id = :testid),
 					boot_cycles = :boot_cycles,
 					context_switches = :context_switches,
 					interrupts = :interrupts,

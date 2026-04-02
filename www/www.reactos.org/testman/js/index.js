@@ -4,6 +4,7 @@
  * PURPOSE:     JavaScript file for the Testman Front Page
  * COPYRIGHT:   Copyright 2008-2017 Colin Finck (colin@reactos.org)
  *              Copyright 2014 Kamil Hornicek (kamil.hornicek@reactos.org)
+ *              Copyright 2026 ReactOS Contributors
  */
 
 var CurrentPage;
@@ -24,9 +25,6 @@ function SetLoading(value)
 	document.getElementById("ajax_loading_search").style.visibility = (value ? "visible" : "hidden");
 }
 
-/**
- * Make sure that all checkboxes for the results in SelectedResults are checked.
- */
 function UpdateAllCheckboxes()
 {
 	for (id in SelectedResults)
@@ -40,7 +38,6 @@ function UpdateAllCheckboxes()
 
 function ResultCheckbox_OnClick(checkbox)
 {
-	// Make sure the user doesn't select more than he's allowed to :-)
 	if (checkbox.checked && SelectedResultCount == MAX_COMPARE_RESULTS)
 	{
 		alert(testman_langres["maxselection"].replace(/\{1\}/, MAX_COMPARE_RESULTS));
@@ -61,15 +58,12 @@ function ResultCheckbox_OnClick(checkbox)
 		SelectedResultCount--;
 	}
 
-	// Update the status message
 	document.getElementById("selectedresultcount").innerHTML = SelectedResultCount;
 }
 
 function ResultCell_OnClick(elem)
 {
 	var IDArray = new Array();
-
-	// Get the ID through the "id" attribute of the checkbox
 	IDArray.push(parseInt(elem.parentNode.firstChild.firstChild.id.substr(5)));
 	OpenComparePage(IDArray);
 }
@@ -78,7 +72,6 @@ function GetRevisions()
 {
 	var revisions = document.getElementById("search_revision").value;
 
-	// If the user didn't enter any revision number at all, he doesn't want to search for a specific revision
 	if (!revisions)
 	{
 		RevisionRangeStart = "";
@@ -101,6 +94,62 @@ function GetRevisions()
 	return (RevisionRangeStart && RevisionRangeEnd);
 }
 
+/**
+ * Append search filter GET parameters (sources, date range, comment, build number, facet dimensions).
+ */
+function ApplySearchFiltersToData(d)
+{
+	var allSrc = document.querySelectorAll(".source_filter_cb");
+	var chkSrc = document.querySelectorAll(".source_filter_cb:checked");
+	if (allSrc.length && chkSrc.length === 0)
+		throw new Error("nosources");
+	if (chkSrc.length > 0 && chkSrc.length < allSrc.length)
+	{
+		var ids = [];
+		for (var i = 0; i < chkSrc.length; i++)
+			ids.push(chkSrc[i].value);
+		d["source_ids"] = ids.join(",");
+	}
+
+	var df = document.getElementById("search_date_from").value.replace(/^\s+|\s+$/g, "");
+	if (df)
+		d["date_from"] = df;
+	var dt = document.getElementById("search_date_to").value.replace(/^\s+|\s+$/g, "");
+	if (dt)
+		d["date_to"] = dt;
+	var sc = document.getElementById("search_comment").value.replace(/^\s+|\s+$/g, "");
+	if (sc)
+		d["search_comment"] = sc;
+	var bn = document.getElementById("search_build_number").value.replace(/^\s+|\s+$/g, "");
+	if (bn)
+		d["build_number"] = bn;
+
+	function addFacet(boxName, param)
+	{
+		var all = document.querySelectorAll('input[name="' + boxName + '"]');
+		var on = document.querySelectorAll('input[name="' + boxName + '"]:checked');
+		if (!all.length)
+			return;
+		if (!on.length)
+		{
+			d[param] = "";
+			return;
+		}
+		if (on.length < all.length)
+		{
+			var v = [];
+			for (var j = 0; j < on.length; j++)
+				v.push(on[j].value);
+			d[param] = v.join(",");
+		}
+	}
+
+	addFacet("fac_compiler[]", "compilers");
+	addFacet("fac_vm[]", "vms");
+	addFacet("fac_host_os[]", "host_oses");
+	addFacet("fac_arch[]", "arches");
+}
+
 function SearchCall()
 {
 	SetLoading(true);
@@ -119,14 +168,23 @@ function SearchButton_OnClick()
 	data = new Array();
 	data["startrev"] = RevisionRangeStart;
 	data["endrev"] = RevisionRangeEnd;
-	data["source"] = document.getElementById("search_source").value;
-	data["platform"] = document.getElementById("search_platform").value;
 	data["page"] = CurrentPage;
 	data["resultlist"] = 1;
 	data["requesttype"] = REQUESTTYPE_FULLLOAD;
 
-	if (window.localStorage)
-		localStorage.setItem("testman_source", data["source"]);
+	try
+	{
+		ApplySearchFiltersToData(data);
+	}
+	catch (e)
+	{
+		if (e.message === "nosources")
+		{
+			alert(testman_langres["nosources"]);
+			return;
+		}
+		throw e;
+	}
 
 	SearchCall();
 }
@@ -139,35 +197,35 @@ function ResizeIFrame()
 
 function Load()
 {
-	// React on Return key presses.
 	var f = function(keyevent)
 	{
-		// keyevent.which - supported under NS 4.0, Opera 5.12, Firefox, Konqueror 3.3, Safari
-		// window.event - for IE Browsers
-		if((keyevent && keyevent.which == 13) || (window.event && window.event.keyCode == 13))
+		if ((keyevent && keyevent.which == 13) || (window.event && window.event.keyCode == 13))
 			SearchButton_OnClick();
 	};
 	document.getElementById("search_revision").onkeypress = f;
-	document.getElementById("search_source").onkeypress = f;
-	document.getElementById("search_platform").onkeypress = f;
+	document.getElementById("search_date_from").onkeypress = f;
+	document.getElementById("search_date_to").onkeypress = f;
+	document.getElementById("search_comment").onkeypress = f;
+	document.getElementById("search_build_number").onkeypress = f;
 
-	// Load the settings.
 	if (window.localStorage)
-	{
 		document.getElementById("opennewwindow").checked = parseInt(window.localStorage.getItem("testman_opennewwindow"));
-		document.getElementById("search_source").value = window.localStorage.getItem("testman_source") ? window.localStorage.getItem("testman_source") : DEFAULT_SEARCH_SOURCE;
-	}
 
-	// Search for the 10 last results, sorted with the newest on top.
-	// Descending order and limiting is not doable with the regular Search function, so we have to do the call ourselves.
 	CurrentPage = 1;
 	data = new Array();
 	data["desc"] = 1;
 	data["limit"] = DEFAULT_SEARCH_LIMIT;
-	data["source"] = document.getElementById("search_source").value;
 	data["page"] = CurrentPage;
 	data["resultlist"] = 1;
 	data["requesttype"] = REQUESTTYPE_FULLLOAD;
+
+	try
+	{
+		ApplySearchFiltersToData(data);
+	}
+	catch (e)
+	{
+	}
 
 	SearchCall();
 }
@@ -178,9 +236,16 @@ function GetTagData(RootElement, TagName)
 	return Child ? Child.data : "";
 }
 
+function GetTagDataSafe(RootElement, TagName, defaultVal)
+{
+	var els = RootElement.getElementsByTagName(TagName);
+	if (!els.length || !els[0].firstChild)
+		return defaultVal;
+	return els[0].firstChild.data;
+}
+
 function SearchCallback(HttpRequest)
 {
-	// Check for an error
 	if (HttpRequest.responseXML.getElementsByTagName("error").length > 0)
 	{
 		alert(HttpRequest.responseXML.getElementsByTagName("error")[0].firstChild.data)
@@ -201,10 +266,9 @@ function SearchCallback(HttpRequest)
 
 	if (data["requesttype"] == REQUESTTYPE_FULLLOAD || data["requesttype"] == REQUESTTYPE_PAGESWITCH)
 	{
-		// Build a new infobox
 		html += '<div class="row"><div id="infobox" class="col-sm-2">';
 
-		if(data["requesttype"] == REQUESTTYPE_FULLLOAD)
+		if (data["requesttype"] == REQUESTTYPE_FULLLOAD)
 		{
 			ResultCount = RequestResultCount;
 			PageCount = 1;
@@ -224,7 +288,6 @@ function SearchCallback(HttpRequest)
 
 		if (PageCount > 1 || MoreResults)
 		{
-			// Page number boxes
 			html += '<div id="pagesbox" class="form-inline pull-right">';
 
 			html += '<button class="btn btn-default" ' + (CurrentPage > 1 ? 'onclick="FirstPage_OnClick()"' : 'disabled="disabled"') + ' title="' + shared_langres["firstpage_title"] + '"><i class="fa fa-angle-double-left"><\/i><\/button> ';
@@ -254,7 +317,6 @@ function SearchCallback(HttpRequest)
 
 		html += '<\/div><\/div>';
 
-		// File table
 		html += '<table class="table table-hover" id="resulttable">';
 
 		html += '<thead><tr class="head">';
@@ -263,6 +325,7 @@ function SearchCallback(HttpRequest)
 		html += '<th>' + shared_langres["date"] + '<\/th>';
 		html += '<th>' + testman_langres["totaltests"] + '<\/th>';
 		html += '<th>' + testman_langres["failedtests"] + '<\/th>';
+		html += '<th>' + testman_langres["todotests"] + '<\/th>';
 		html += '<th>' + testman_langres["source"] + '<\/th>';
 		html += '<th>' + testman_langres["platform"] + '<\/th>';
 		html += '<th>' + testman_langres["comment"] + '<\/th>';
@@ -273,7 +336,7 @@ function SearchCallback(HttpRequest)
 
 		if (!results.length)
 		{
-			html += '<tr><td colspan="8">' + testman_langres["noresults"] + '<\/td><\/tr>';
+			html += '<tr><td colspan="9">' + testman_langres["noresults"] + '<\/td><\/tr>';
 		}
 		else
 		{
@@ -285,6 +348,7 @@ function SearchCallback(HttpRequest)
 				html += '<td onclick="ResultCell_OnClick(this)">' + GetTagData(results[i], "date") + '<\/td>';
 				html += '<td onclick="ResultCell_OnClick(this)">' + GetTagData(results[i], "count") + '<\/td>';
 				html += '<td onclick="ResultCell_OnClick(this)">' + GetTagData(results[i], "failures") + '<\/td>';
+				html += '<td onclick="ResultCell_OnClick(this)">' + GetTagDataSafe(results[i], "todo", "0") + '<\/td>';
 				html += '<td onclick="ResultCell_OnClick(this)">' + GetTagData(results[i], "source") + '<\/td>';
 				html += '<td onclick="ResultCell_OnClick(this)">' + GetTagData(results[i], "platform") + '<\/td>';
 				html += '<td onclick="ResultCell_OnClick(this)">' + GetTagData(results[i], "comment") + '<\/td>';
@@ -296,9 +360,8 @@ function SearchCallback(HttpRequest)
 
 		document.getElementById("searchtable").innerHTML = html;
 
-		if(data["requesttype"] == REQUESTTYPE_PAGESWITCH)
+		if (data["requesttype"] == REQUESTTYPE_PAGESWITCH)
 		{
-			// Switch the selected page in the Page ComboBox
 			document.getElementById("pagesel").getElementsByTagName("option")[CurrentPage - 1].selected = true;
 		}
 
@@ -306,12 +369,8 @@ function SearchCallback(HttpRequest)
 	}
 	else
 	{
-		// Just add a new page to the Page combo box and the information for it
 		PageCount++;
 
-		// As always, we have to work around an IE bug
-		// If I use "innerHTML" here, the first <OPTION> start tag gets dropped in the IE...
-		// Therefore I have to use the DOM functions in this case.
 		var OptionElem = document.createElement("option");
 		var OptionText = document.createTextNode(shared_langres["page"] + ' ' + PageCount + ' - ' + FirstRev + ' ... ' + LastRev);
 
@@ -323,7 +382,6 @@ function SearchCallback(HttpRequest)
 
 	if (MoreResults && (data["requesttype"] == REQUESTTYPE_FULLLOAD || data["requesttype"] == REQUESTTYPE_ADDPAGE))
 	{
-		// There are more results available in the full range. Therefore we have to start another request and add a new page.
 		data["resultlist"] = 0;
 		data["page"] = PageCount + 1;
 		data["requesttype"] = REQUESTTYPE_ADDPAGE;
@@ -331,8 +389,6 @@ function SearchCallback(HttpRequest)
 	}
 	else
 	{
-		// If data["desc"] is set, this is the initial search performed in Load().
-		// In this case, set the search_revision field to the range we got.
 		if (data["desc"] && FirstRev && LastRev)
 			document.getElementById("search_revision").value = LastRev + "-" + FirstRev;
 
@@ -340,13 +396,6 @@ function SearchCallback(HttpRequest)
 	}
 }
 
-/**
- * Open the Compare page in the user-defined area
- *
- * @param ResultArray
- * Array containing the result IDs to pass to the Compare page.
- * The array will be sorted ascending before.
- */
 function OpenComparePage(ResultArray)
 {
 	var parameters = "ids=";
@@ -385,7 +434,6 @@ function CompareFirstTwoButton_OnClick()
 	if (trs[0].firstChild.firstChild.nodeName != "INPUT")
 		return;
 
-	// Get the IDs through the "id" attribute of the checkboxes
 	IDArray = new Array();
 	IDArray.push(parseInt(trs[0].firstChild.firstChild.id.substr(5)));
 
@@ -439,7 +487,6 @@ function CompareSelectedButton_OnClick()
 {
 	var IDArray = new Array();
 
-	// Sort the selected IDs
 	for (id in SelectedResults)
 		IDArray.push(parseInt(id));
 
