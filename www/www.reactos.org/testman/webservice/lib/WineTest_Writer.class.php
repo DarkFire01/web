@@ -42,6 +42,9 @@
 		{
 			file_put_contents(MY_LOGFILE, date("Y-m-d H:i:s") . ": getTestId($revision, $platform, $comment, ...)\n", FILE_APPEND);
 
+			$platform = substr((string)$platform, 0, 255);
+			$comment = substr((string)$comment, 0, 255);
+
 			$build_number = array_key_exists("build_number", $meta) ? $meta["build_number"] : null;
 			$compiler = array_key_exists("compiler", $meta) ? $meta["compiler"] : null;
 			$vm = array_key_exists("vm", $meta) ? $meta["vm"] : null;

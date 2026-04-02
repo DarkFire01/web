@@ -132,7 +132,7 @@ function ApplySearchFiltersToData(d)
 			return;
 		if (!on.length)
 		{
-			d[param] = "";
+			// Do not send an empty query value: PHP treats compilers= etc. as "" and applies 0=1 (no rows).
 			return;
 		}
 		if (on.length < all.length)
@@ -449,6 +449,14 @@ function PageSwitch(NewPage)
 	data["page"] = NewPage;
 	data["resultlist"] = 1;
 	data["requesttype"] = REQUESTTYPE_PAGESWITCH;
+
+	try
+	{
+		ApplySearchFiltersToData(data);
+	}
+	catch (e)
+	{
+	}
 
 	SearchCall();
 }

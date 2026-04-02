@@ -93,7 +93,7 @@ CREATE TABLE `winetest_runs` (
   `finished` tinyint(1) NOT NULL DEFAULT '0',
   `source_id` int(10) unsigned NOT NULL,
   `revision` varchar(40) NOT NULL,
-  `platform` varchar(24) COLLATE latin1_general_ci NOT NULL,
+  `platform` varchar(255) COLLATE latin1_general_ci NOT NULL,
   `comment` varchar(255) COLLATE latin1_general_ci DEFAULT NULL,
   `count` int(10) unsigned NOT NULL DEFAULT '0',
   `failures` int(10) unsigned NOT NULL DEFAULT '0',

@@ -61,27 +61,16 @@
 			return;
 
 		$placeholders = implode(",", array_fill(0, count($sel), "?"));
-		$where[] = "r.`" . $column . "` IN (" . $placeholders . ")";
+		// Include NULL/empty so imported or legacy rows (facets not backfilled) are not dropped
+		// as soon as the user unchecks a facet value.
+		$where[] = "(r.`" . $column . "` IN (" . $placeholders . ") OR r.`" . $column . "` IS NULL OR r.`" . $column . "` = '')";
 		foreach ($sel as $v)
 			$params[] = $v;
-	}
-
-	/**
-	 * SQL expression: facet target_arch if set, else derive i386/amd64 from reactos.<arch> platform
-	 * (matches GetPlatformString() in utils.inc.php: 0 = i386, 9 = amd64).
-	 */
-	function testman_sql_effective_target_arch()
-	{
-		return "COALESCE(NULLIF(TRIM(r.target_arch), ''), " .
-			"CASE WHEN r.platform LIKE 'reactos.%' THEN " .
-			"CASE SUBSTRING_INDEX(r.platform, '.', -1) WHEN '0' THEN 'i386' WHEN '9' THEN 'amd64' ELSE NULL END " .
-			"ELSE NULL END)";
 	}
 
 	function testman_ajax_apply_arch_filter(PDO $dbh, &$where, &$params)
 	{
 		$get_key = "arches";
-		$column = "target_arch";
 
 		if (!isset($_GET[$get_key]))
 			return;
@@ -94,7 +83,7 @@
 		}
 
 		$req = array_filter(array_map("trim", explode(",", $raw)));
-		$full = testman_merge_facet_values($dbh, $column);
+		$full = testman_merge_arch_facet_values($dbh);
 		$sel = array_values(array_intersect($req, $full));
 
 		if (count($sel) === 0)
@@ -106,7 +95,7 @@
 		if (count($sel) === count($full))
 			return;
 
-		$eff = testman_sql_effective_target_arch();
+		$eff = testman_sql_effective_target_arch_expr();
 		$placeholders = implode(",", array_fill(0, count($sel), "?"));
 		$where[] = "(" . $eff . ") IN (" . $placeholders . ")";
 		foreach ($sel as $v)

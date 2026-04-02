@@ -17,8 +17,8 @@ From **Windows** (PowerShell), repo path adjusted if yours differs:
 
 ```powershell
 cd C:\Users\DarkFire\Desktop\WebsiteNew\web\scripts
-py -m pip install requests pymysql
-py fetch_builds.py --base-url https://reactos.org --count 80 --suites 8 --delay 0.25 --output builds_data.json
+python -m pip install requests pymysql
+python fetch_builds.py --base-url https://reactos.org --count 80 --suites 8 --delay 0.25 --output builds_data.json
 
 scp builds_data.json submit_builds.py backport_testman_run_metadata.py darkfire@216.128.144.135:/home/darkfire/
 ```
@@ -43,7 +43,7 @@ python3 backport_testman_run_metadata.py \
 Submit from your **PC** against the public URL (no SSH) if the host is reachable:
 
 ```powershell
-py submit_builds.py `
+python submit_builds.py `
   --input builds_data.json `
   --url http://216.128.144.135/testman/webservice/index.php `
   --sourceid 1 `
@@ -51,6 +51,8 @@ py submit_builds.py `
 ```
 
 For this **educational VM** repo, MySQL users and the default Testman source share **`51505150`**: put that in `TESTMAN_DB_PASS` on the server and use `UPDATE sources SET password = MD5('51505150') WHERE id = 1` if the row still uses another secret. `submit_builds.py` defaults to `--password 51505150`.
+
+On **Windows**, use `python` (not `py`) for the commands in this README.
 
 ## Requirements
 
@@ -70,7 +72,8 @@ Queries Testman (default **reactos.org**) and saves test run data locally as JSO
 
 For each run it fetches:
 
-- Run metadata (source, revision, platform, comment) via `ajax-search.php` and `export.php`
+- Run metadata (source, revision, comment) via `ajax-search.php` and `export.php`
+- **`platform` in the JSON is the compact value from `export.php`** (same as the DB / webservice), not the long `GetPlatformString()` text from the search list. `--platform-display-contains` only filters on that display text.
 - The raw log for every suite result via `detail.php`
 
 | Option | Default | Description |
@@ -83,6 +86,36 @@ For each run it fetches:
 
 Each run can have many suite results, so the total number of HTTP requests is
 roughly `count × suites_per_run`. Increase `--delay` if fetching large counts.
+
+**More variety (arches / platforms / builders):** pass the same filters Testman’s search uses:
+
+| Option | Example | Meaning |
+|--------|---------|--------|
+| `--platform` | `reactos.0` | ReactOS **i386** runs (`reactos.9` ≈ amd64) |
+| `--platform` | `Windows` | Host OS name prefix (matches `platform LIKE 'Windows%'`) |
+| `--arches` | `i386,amd64` | Effective arch facet (`ajax-search` `arches=`) |
+| `--source-ids` | `1,2` | Only those `sources.id` values on the upstream server |
+| `--platform-display-contains` | `AMD64` | Client-side filter on the **human-readable** platform in search XML (fixes empty `builds_amd64.json` when `--platform reactos.9` / `--arches amd64` match nothing) |
+| `--source-display-contains` | `KVM` | Client-side filter on builder `<source>` name (e.g. `Test_KVM` on reactos.org) |
+
+Example: KVM x64 builder runs only (no Windows-only bias from `AMD64` alone):
+
+```powershell
+python fetch_builds.py --count 80 --source-display-contains KVM --platform-display-contains AMD64 --output builds_kvm_amd64.json
+```
+
+**Why `builds_amd64.json` can be empty:** `ajax-search` lists platforms with `GetPlatformString()` (e.g. `Windows Server 2008 … AMD64`), but `platform=` and `arches=` filter on **raw** DB values. Windows amd64 rows often have **no** effective `target_arch` in SQL, so `arches=amd64` returns no rows; `reactos.9` is empty if the live site has few amd64 ReactOS runs. Use **`--platform-display-contains AMD64`** (no server filter) to page through mixed results and keep amd64-looking rows.
+
+Typical pattern: fetch several JSON files (or one big `--count`), then submit each:
+
+```powershell
+python fetch_builds.py --count 60 --platform reactos.0 --output builds_i386.json
+python fetch_builds.py --count 60 --platform-display-contains AMD64 --output builds_amd64.json
+python submit_builds.py --input builds_i386.json --url http://216.128.144.135/testman/webservice/index.php --password 51505150
+python submit_builds.py --input builds_amd64.json --url http://216.128.144.135/testman/webservice/index.php --password 51505150
+```
+
+After import, run `backport_testman_run_metadata.py` on the server so `compiler` / `vm` / `host_os` / `target_arch` fill in where the script can infer them.
 
 ### 2. Start Docker
 
