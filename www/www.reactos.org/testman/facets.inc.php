@@ -64,19 +64,18 @@
 	}
 
 	/**
-	 * SQL fragment: effective arch (target_arch column if set, else i386/amd64 from platform).
-	 * Handles buildbot-style reactos.0 / reactos.9 and rosautotest-style reactos0 / reactos9 (no dot).
+	 * SQL fragment: effective arch for filters and facet DISTINCT.
+	 * For reactos.* / reactos0 / reactos9 platforms, the encoded arch in the platform string wins
+	 * over target_arch (builder labels like MSVC_x64 must not classify a reactos.0 run as amd64).
+	 * Otherwise use target_arch (e.g. WHS / Win2003 NT-style platform strings).
 	 * Expects alias r for winetest_runs.
 	 */
 	function testman_sql_effective_target_arch_expr()
 	{
-		return "COALESCE(NULLIF(TRIM(r.target_arch), ''), " .
-			"CASE " .
-			"WHEN r.platform REGEXP '^reactos\\.0(\\.|$)' THEN 'i386' " .
-			"WHEN r.platform REGEXP '^reactos\\.9(\\.|$)' THEN 'amd64' " .
-			"WHEN r.platform REGEXP '^reactos0([^0-9]|$)' THEN 'i386' " .
-			"WHEN r.platform REGEXP '^reactos9([^0-9]|$)' THEN 'amd64' " .
-			"ELSE NULL END)";
+		return "(CASE " .
+			"WHEN r.platform REGEXP '^reactos\\.0(\\.|$)' OR r.platform REGEXP '^reactos0([^0-9]|$)' THEN 'i386' " .
+			"WHEN r.platform REGEXP '^reactos\\.9(\\.|$)' OR r.platform REGEXP '^reactos9([^0-9]|$)' THEN 'amd64' " .
+			"ELSE COALESCE(NULLIF(TRIM(r.target_arch), ''), NULL) END)";
 	}
 
 	/** Distinct effective arch values for filter UI (includes reactos.* when target_arch is NULL). */

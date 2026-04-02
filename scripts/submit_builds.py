@@ -111,13 +111,16 @@ def main():
             bn = build_number_from_comment(comment)
             if bn is not None:
                 get_fields["build_number"] = str(bn)
-            for k in ("compiler", "vm", "host_os", "target_arch"):
+            for k in ("compiler", "vm", "host_os"):
                 v = facets.get(k)
                 if v:
                     get_fields[k] = v
+            # Platform reactos.0 / reactos.9 (and rosautotest reactos0/9) beats builder label for arch.
             ta = target_arch_from_platform(platform)
-            if ta and "target_arch" not in get_fields:
+            if ta:
                 get_fields["target_arch"] = ta
+            elif facets.get("target_arch"):
+                get_fields["target_arch"] = facets["target_arch"]
 
             test_id = ws_post(args.url, **get_fields)
 

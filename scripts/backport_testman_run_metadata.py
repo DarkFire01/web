@@ -123,6 +123,7 @@ def main() -> None:
 
     try:
         with conn.cursor() as cur:
+            updates_applied = 0
             if args.diagnose:
                 print("DIAGNOSE (read-only)")
                 print("-" * 60)
@@ -191,6 +192,7 @@ def main() -> None:
                 print("    (dry-run: skipped)")
             else:
                 cur.execute(sql1)
+                updates_applied += cur.rowcount
                 print(f"    rows affected: {cur.rowcount}")
 
             cur.execute(
@@ -210,16 +212,25 @@ def main() -> None:
                 print("    (dry-run: skipped)")
             else:
                 cur.execute(sql2)
+                updates_applied += cur.rowcount
                 print(f"    rows affected: {cur.rowcount}")
 
             cur.execute(
                 "SELECT COUNT(*) FROM winetest_runs WHERE finished = 1 "
-                "AND (target_arch IS NULL OR TRIM(target_arch) = '') "
-                "AND (platform LIKE 'reactos.%' OR platform REGEXP '^reactos0([^0-9]|$)' "
-                "OR platform REGEXP '^reactos9([^0-9]|$)')"
+                "AND ("
+                "  ("
+                "    (platform REGEXP '^reactos\\.0(\\.|$)' OR platform REGEXP '^reactos0([^0-9]|$)')"
+                "    AND (target_arch IS NULL OR TRIM(target_arch) = '' OR target_arch <> 'i386')"
+                "  ) OR ("
+                "    (platform REGEXP '^reactos\\.9(\\.|$)' OR platform REGEXP '^reactos9([^0-9]|$)')"
+                "    AND (target_arch IS NULL OR TRIM(target_arch) = '' OR target_arch <> 'amd64')"
+                "  )"
+                ")"
             )
             n3 = int(cur.fetchone()[0])
-            print(f"[3] Derive target_arch from reactos.0/9 and reactos0/9 ({n3} rows)...")
+            print(
+                f"[3] Align target_arch with reactos.0/9 and reactos0/9 (empty or wrong, {n3} rows)..."
+            )
             # One backslash before "." in the pattern (same as facets.inc.php / MySQL REGEXP).
             sql3 = """
             UPDATE winetest_runs
@@ -231,17 +242,21 @@ def main() -> None:
               ELSE target_arch
             END
             WHERE finished = 1
-              AND (target_arch IS NULL OR TRIM(target_arch) = '')
               AND (
-                platform LIKE 'reactos.%'
-                OR platform REGEXP '^reactos0([^0-9]|$)'
-                OR platform REGEXP '^reactos9([^0-9]|$)'
+                (
+                  (platform REGEXP '^reactos\\.0(\\.|$)' OR platform REGEXP '^reactos0([^0-9]|$)')
+                  AND (target_arch IS NULL OR TRIM(target_arch) = '' OR target_arch <> 'i386')
+                ) OR (
+                  (platform REGEXP '^reactos\\.9(\\.|$)' OR platform REGEXP '^reactos9([^0-9]|$)')
+                  AND (target_arch IS NULL OR TRIM(target_arch) = '' OR target_arch <> 'amd64')
+                )
               )
             """
             if args.dry_run:
                 print("    (dry-run: skipped)")
             else:
                 cur.execute(sql3)
+                updates_applied += cur.rowcount
                 print(f"    rows affected: {cur.rowcount}")
 
             cur.execute(
@@ -271,6 +286,7 @@ def main() -> None:
                 print("    (dry-run: skipped)")
             else:
                 cur.execute(sql4)
+                updates_applied += cur.rowcount
                 print(f"    rows affected: {cur.rowcount}")
 
             print("[5] Infer compiler, vm, host_os, target_arch from sources.name...")
@@ -338,6 +354,7 @@ def main() -> None:
                 upd_sql = f"UPDATE winetest_runs SET {', '.join(sets)} WHERE source_id = %s AND finished = 1"
                 params.append(sid)
                 cur.execute(upd_sql, params)
+                updates_applied += cur.rowcount
                 print(f'    source {sid} "{sname}" — updated {cur.rowcount} runs → {summary}')
 
             if not args.keep_null_host_os:
@@ -360,6 +377,7 @@ def main() -> None:
                     print("    (dry-run: skipped)")
                 else:
                     cur.execute(sql6)
+                    updates_applied += cur.rowcount
                     print(f"    rows affected: {cur.rowcount}")
             else:
                 print("[6] Skipped (--keep-null-host-os): rows with empty host_os stay SQL NULL.")
@@ -373,6 +391,14 @@ def main() -> None:
         conn.close()
 
     print("-" * 60)
+    if not args.dry_run and not args.diagnose and updates_applied == 0:
+        print(
+            "Note: No column values were changed this run (MySQL reports rows actually modified). "
+            "Numbers in parentheses for [2]–[6] are candidate counts before UPDATE; 0 means nothing matched. "
+            "[1] is often 0 when todo/skipped already equal per-result sums. "
+            '"Lab Buildbot" in [5] is expected unless you add MANUAL_SOURCE_OVERRIDES. '
+            "Use --diagnose to list platform and source rows."
+        )
     print("Dry-run finished." if args.dry_run else "Backport finished.")
 
 
