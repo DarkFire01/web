@@ -64,6 +64,8 @@ def parse_testman_connect(path: Path) -> dict[str, str]:
 
 
 def infer_facets_from_source_name(name: str) -> dict[str, str | None]:
+    # DB / PHP may include trailing spaces or odd whitespace.
+    name = " ".join((name or "").split())
     out: dict[str, str | None] = {"compiler": None, "vm": None, "host_os": None}
 
     if "MSVC" in name.upper():
@@ -89,7 +91,9 @@ def infer_facets_from_source_name(name: str) -> dict[str, str | None]:
         out["host_os"] = "Windows"
 
     # Plain client name with no KVM/VBox/etc. in the string (common lab submitter).
-    if name.casefold() == "lab buildbot".casefold():
+    if name.casefold() == "lab buildbot".casefold() or re.search(
+        r"\blab\s+buildbot\b", name, re.IGNORECASE
+    ):
         out["compiler"] = out["compiler"] or "GCC"
         out["vm"] = out["vm"] or "KVM"
         out["host_os"] = out["host_os"] or "Linux"

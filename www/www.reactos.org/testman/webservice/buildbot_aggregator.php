@@ -49,6 +49,21 @@
 		$build = (int)$_GET["build"];
 		$comment = $_GET["comment"];
 
+		// Metadata for WineTest_Writer::getTestId (optional GET from worker submit_result + builder_meta.inc.php).
+		$run_meta = testman_meta_for_builder_id($builder);
+		foreach (array("compiler", "vm", "host_os", "target_arch") as $facet_key)
+		{
+			if (!array_key_exists($facet_key, $_GET))
+				continue;
+
+			$v = testman_sanitize_meta_token((string)$_GET[$facet_key]);
+			if ($v !== null)
+				$run_meta[$facet_key] = $v;
+		}
+
+		if (preg_match("/\bBuild\s+(\d+)\b/i", $comment, $comment_match))
+			$run_meta["build_number"] = (int)$comment_match[1];
+
 		$writer = new WineTest_Writer($sourceid, $password);
 
 		// Connect to the database.
