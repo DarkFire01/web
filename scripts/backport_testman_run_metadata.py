@@ -11,7 +11,7 @@ Fills in:
   - compiler, vm, host_os, target_arch — from sources.name heuristics where still empty (+ MANUAL_SOURCE_OVERRIDES)
 
 Usage:
-  python backport_testman_run_metadata.py [--config PATH] [--dry-run]
+  python backport_testman_run_metadata.py [--config PATH] [--dry-run] [--diagnose]
 
 Examples:
   python backport_testman_run_metadata.py \\
@@ -86,6 +86,11 @@ def main() -> None:
         action="store_true",
         help="Leave host_os as SQL NULL when heuristics cannot infer it (no 'Unknown' tag).",
     )
+    ap.add_argument(
+        "--diagnose",
+        action="store_true",
+        help="Print facet/platform/source samples (read-only) and exit; use when all steps show 0 rows.",
+    )
     args = ap.parse_args()
 
     cfg_path = args.config
@@ -118,6 +123,60 @@ def main() -> None:
 
     try:
         with conn.cursor() as cur:
+            if args.diagnose:
+                print("DIAGNOSE (read-only)")
+                print("-" * 60)
+                cur.execute("SELECT COUNT(*) FROM winetest_runs WHERE finished = 1")
+                print(f"finished runs: {int(cur.fetchone()[0])}")
+                for label, q in (
+                    (
+                        "target_arch empty + reactos platform (step 3 scope)",
+                        "SELECT COUNT(*) FROM winetest_runs WHERE finished = 1 "
+                        "AND (target_arch IS NULL OR TRIM(target_arch) = '') "
+                        "AND (platform LIKE 'reactos.%' OR platform REGEXP '^reactos0([^0-9]|$)' "
+                        "OR platform REGEXP '^reactos9([^0-9]|$)')",
+                    ),
+                    (
+                        "host_os empty + derivable platform (step 4 scope)",
+                        "SELECT COUNT(*) FROM winetest_runs WHERE finished = 1 "
+                        "AND (host_os IS NULL OR TRIM(host_os) = '') "
+                        "AND (platform LIKE 'reactos.%' OR platform REGEXP '^reactos[0-9]' "
+                        "OR platform REGEXP '^[0-9]+\\\\.[0-9]+\\\\.[0-9]+')",
+                    ),
+                    (
+                        "host_os still empty (step 6 would tag Unknown)",
+                        "SELECT COUNT(*) FROM winetest_runs WHERE finished = 1 "
+                        "AND (host_os IS NULL OR TRIM(host_os) = '')",
+                    ),
+                    (
+                        "build_number empty + comment Build … (step 2 scope)",
+                        "SELECT COUNT(*) FROM winetest_runs WHERE (build_number IS NULL OR build_number = 0) "
+                        "AND comment LIKE 'Build %'",
+                    ),
+                ):
+                    cur.execute(q)
+                    print(f"  {label}: {int(cur.fetchone()[0])}")
+                print("  DISTINCT platform (finished, up to 20):")
+                cur.execute(
+                    "SELECT platform, COUNT(*) AS c FROM winetest_runs WHERE finished = 1 "
+                    "GROUP BY platform ORDER BY c DESC LIMIT 20"
+                )
+                for row in cur.fetchall():
+                    print(f"    {row[0]!r}: {row[1]}")
+                print("  sources:")
+                cur.execute("SELECT id, name FROM sources ORDER BY id")
+                for row in cur.fetchall():
+                    print(f"    id={row[0]} name={row[1]!r}")
+                print("-" * 60)
+                print(
+                    "If step-3/4/6 counts are 0, metadata is already filled or platforms "
+                    "do not match reactos.* / NT-style. Step [1] rowcount can be 0 when "
+                    "todo/skipped already match sums. Step [5] skips generic source names "
+                    '(e.g. "Lab Buildbot"); use MANUAL_SOURCE_OVERRIDES only if one source '
+                    "maps to one fixed facet set."
+                )
+                return
+
             cur.execute("SELECT COUNT(*) FROM winetest_runs WHERE finished = 1")
             n1 = int(cur.fetchone()[0])
             print(f"[1] Sync todo/skipped from winetest_results ({n1} finished runs)...")
@@ -161,12 +220,13 @@ def main() -> None:
             )
             n3 = int(cur.fetchone()[0])
             print(f"[3] Derive target_arch from reactos.0/9 and reactos0/9 ({n3} rows)...")
+            # One backslash before "." in the pattern (same as facets.inc.php / MySQL REGEXP).
             sql3 = """
             UPDATE winetest_runs
             SET target_arch = CASE
-              WHEN platform REGEXP '^reactos\\\\.0(\\\\.|$)' OR platform REGEXP '^reactos0([^0-9]|$)'
+              WHEN platform REGEXP '^reactos\\.0(\\.|$)' OR platform REGEXP '^reactos0([^0-9]|$)'
                 THEN 'i386'
-              WHEN platform REGEXP '^reactos\\\\.9(\\\\.|$)' OR platform REGEXP '^reactos9([^0-9]|$)'
+              WHEN platform REGEXP '^reactos\\.9(\\.|$)' OR platform REGEXP '^reactos9([^0-9]|$)'
                 THEN 'amd64'
               ELSE target_arch
             END
