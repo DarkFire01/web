@@ -9,6 +9,7 @@
 	require_once("config.inc.php");
 	require_once(ROOT_PATH . "../www.reactos.org_config/testman-connect.php");
 	require_once("autoload.inc.php");
+	require_once(__DIR__ . "/builder_meta.inc.php");
 	require_once(ROOT_PATH . "rosweb/exceptions.php");
 
 	try
@@ -33,7 +34,23 @@
 				$revision = $_POST["revision"];
 				$platform = $_POST["platform"];
 				$comment = $_POST["comment"];
-				die((string)$writer->getTestId($revision, $platform, $comment));
+
+				// Optional facets (e.g. submit_builds.py replays JSON "source" / build number).
+				$meta = array();
+				if (array_key_exists("build_number", $_POST) && $_POST["build_number"] !== "" && ctype_digit((string)$_POST["build_number"]))
+					$meta["build_number"] = (int)$_POST["build_number"];
+
+				foreach (array("compiler", "vm", "host_os", "target_arch") as $facet_key)
+				{
+					if (!array_key_exists($facet_key, $_POST) || $_POST[$facet_key] === "")
+						continue;
+
+					$v = testman_sanitize_meta_token((string)$_POST[$facet_key]);
+					if ($v !== null)
+						$meta[$facet_key] = $v;
+				}
+
+				die((string)$writer->getTestId($revision, $platform, $comment, $meta));
 
 			case "getsuiteid":
 				if (!array_key_exists("module", $_POST) || !array_key_exists("test", $_POST))

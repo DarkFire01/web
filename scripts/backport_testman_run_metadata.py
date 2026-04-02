@@ -8,7 +8,7 @@ Fills in:
   - target_arch         — from platform reactos.0 / reactos.9 when column is empty
   - host_os             — from platform (reactos.* → ReactOS; 6.0.6003… NT-style → Windows),
                           then sources.name; any still NULL → 'Unknown' (searchable) unless --keep-null-host-os
-  - compiler, vm, host_os — from sources.name heuristics where still empty (+ MANUAL_SOURCE_OVERRIDES)
+  - compiler, vm, host_os, target_arch — from sources.name heuristics where still empty (+ MANUAL_SOURCE_OVERRIDES)
 
 Usage:
   python backport_testman_run_metadata.py [--config PATH] [--dry-run]
@@ -31,6 +31,8 @@ import re
 import sys
 from pathlib import Path
 from typing import Any
+
+from testman_facet_infer import infer_facets_from_source_name
 
 try:
     import pymysql
@@ -60,44 +62,6 @@ def parse_testman_connect(path: Path) -> dict[str, str]:
     for k in need:
         if k not in out:
             raise SystemExit(f"Missing {k} in {path}")
-    return out
-
-
-def infer_facets_from_source_name(name: str) -> dict[str, str | None]:
-    # DB / PHP may include trailing spaces or odd whitespace.
-    name = " ".join((name or "").split())
-    out: dict[str, str | None] = {"compiler": None, "vm": None, "host_os": None}
-
-    if "MSVC" in name.upper():
-        out["compiler"] = "MSVC"
-    elif "GCCLIN" in name.upper() or "GCCWIN" in name.upper() or re.search(r"\bGCC\b", name, re.I):
-        out["compiler"] = "GCC"
-
-    un = name.upper()
-    if "KVM" in un:
-        out["vm"] = "KVM"
-    elif "VBOX" in un or "VIRTUALBOX" in un:
-        out["vm"] = "VBox"
-    elif "WHS" in un:
-        out["vm"] = "WHS"
-    elif "WIN2003" in un:
-        out["vm"] = "Win2003_x64"
-
-    if out["vm"] in ("KVM", "VBox"):
-        out["host_os"] = "Linux"
-    elif out["vm"] in ("WHS", "Win2003_x64"):
-        out["host_os"] = "Windows"
-    elif "GCCWIN" in un or "WIN7" in un:
-        out["host_os"] = "Windows"
-
-    # Plain client name with no KVM/VBox/etc. in the string (common lab submitter).
-    if name.casefold() == "lab buildbot".casefold() or re.search(
-        r"\blab\s+buildbot\b", name, re.IGNORECASE
-    ):
-        out["compiler"] = out["compiler"] or "GCC"
-        out["vm"] = out["vm"] or "KVM"
-        out["host_os"] = out["host_os"] or "Linux"
-
     return out
 
 
@@ -239,7 +203,7 @@ def main() -> None:
                 cur.execute(sql4)
                 print(f"    rows affected: {cur.rowcount}")
 
-            print("[5] Infer compiler, vm, host_os from sources.name...")
+            print("[5] Infer compiler, vm, host_os, target_arch from sources.name...")
             cur.execute("SELECT id, name FROM sources ORDER BY id")
             sources = cur.fetchall()
 
@@ -262,6 +226,11 @@ def main() -> None:
                 if inf.get("host_os"):
                     sets.append("host_os = IF(host_os IS NULL OR TRIM(host_os) = '', %s, host_os)")
                     params.append(inf["host_os"])
+                if inf.get("target_arch"):
+                    sets.append(
+                        "target_arch = IF(target_arch IS NULL OR TRIM(target_arch) = '', %s, target_arch)"
+                    )
+                    params.append(inf["target_arch"])
 
                 if not sets:
                     print(
@@ -277,6 +246,8 @@ def main() -> None:
                     null_checks.append("(vm IS NULL OR TRIM(vm) = '')")
                 if inf.get("host_os"):
                     null_checks.append("(host_os IS NULL OR TRIM(host_os) = '')")
+                if inf.get("target_arch"):
+                    null_checks.append("(target_arch IS NULL OR TRIM(target_arch) = '')")
 
                 count_sql = (
                     "SELECT COUNT(*) FROM winetest_runs WHERE source_id = %s AND finished = 1 AND ("

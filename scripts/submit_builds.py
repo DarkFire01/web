@@ -8,6 +8,11 @@ the normal testman webservice HTTP API:
 
 The actual log text fetched from the live server is submitted as-is.
 
+Facets (compiler, vm, host_os) and build_number are sent on gettestid when the
+JSON has a "source" string (e.g. "Build MSVC_x64 on Test KVM_x64") so the lab DB
+matches upstream builder names even though authentication uses one sources row
+(e.g. "Lab Buildbot"). Requires an updated webservice index.php on the server.
+
 Usage:
     python submit_builds.py [--input FILE] [--url URL] [--sourceid N] [--password PW]
 
@@ -37,8 +42,21 @@ reset the database if needed.
 
 import argparse
 import json
+import sys
+from pathlib import Path
 
 import requests
+
+# Same directory as this script (works when run as python submit_builds.py).
+_SCRIPT_DIR = Path(__file__).resolve().parent
+if str(_SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(_SCRIPT_DIR))
+
+from testman_facet_infer import (
+    build_number_from_comment,
+    infer_facets_from_source_name,
+    target_arch_from_platform,
+)
 
 WEBSERVICE_URL = "http://localhost/testman/webservice/index.php"
 DEFAULT_SOURCE_ID = 1
@@ -79,16 +97,29 @@ def main():
         suites   = run.get("suites", [])
 
         try:
-            # 1. Register the test run and get a local test ID.
-            test_id = ws_post(
-                args.url,
-                sourceid=args.sourceid,
-                password=args.password,
-                action="gettestid",
-                revision=revision,
-                platform=platform,
-                comment=comment,
-            )
+            # 1. Register the test run and get a local test ID (include facets from JSON "source").
+            get_fields = {
+                "sourceid": args.sourceid,
+                "password": args.password,
+                "action": "gettestid",
+                "revision": revision,
+                "platform": platform,
+                "comment": comment,
+            }
+            label = run.get("source") or ""
+            facets = infer_facets_from_source_name(label)
+            bn = build_number_from_comment(comment)
+            if bn is not None:
+                get_fields["build_number"] = str(bn)
+            for k in ("compiler", "vm", "host_os", "target_arch"):
+                v = facets.get(k)
+                if v:
+                    get_fields[k] = v
+            ta = target_arch_from_platform(platform)
+            if ta and "target_arch" not in get_fields:
+                get_fields["target_arch"] = ta
+
+            test_id = ws_post(args.url, **get_fields)
 
             if not test_id.isdigit():
                 raise RuntimeError(f"gettestid returned: {test_id!r}")
