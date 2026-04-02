@@ -5,7 +5,8 @@ Backport / backfill winetest_runs metadata for older or replayed rows.
 Fills in:
   - todo, skipped       — SUM from winetest_results
   - build_number        — from comment "Build N, ..."
-  - target_arch         — from platform reactos.0 / reactos.9 when column is empty
+  - platform            — reactos.0→reactos.9 when vm=KVM and target_arch=amd64 (KVM_x64 export quirk)
+  - target_arch         — from platform reactos.0 / reactos.9 when column is empty or wrong
   - host_os             — from platform (reactos.* → ReactOS; 6.0.6003… NT-style → Windows),
                           then sources.name; any still NULL → 'Unknown' (searchable) unless --keep-null-host-os
   - compiler, vm, host_os, target_arch — from sources.name heuristics where still empty (+ MANUAL_SOURCE_OVERRIDES)
@@ -145,7 +146,7 @@ def main() -> None:
                         "OR platform REGEXP '^[0-9]+\\\\.[0-9]+\\\\.[0-9]+')",
                     ),
                     (
-                        "host_os still empty (step 6 would tag Unknown)",
+                        "host_os still empty (step 7 would tag Unknown)",
                         "SELECT COUNT(*) FROM winetest_runs WHERE finished = 1 "
                         "AND (host_os IS NULL OR TRIM(host_os) = '')",
                     ),
@@ -170,7 +171,7 @@ def main() -> None:
                     print(f"    id={row[0]} name={row[1]!r}")
                 print("-" * 60)
                 print(
-                    "If step-3/4/6 counts are 0, metadata is already filled or platforms "
+                    "If step-4/5/7 counts are 0, metadata is already filled or platforms "
                     "do not match reactos.* / NT-style. Step [1] rowcount can be 0 when "
                     "todo/skipped already match sums. Step [5] skips generic source names "
                     '(e.g. "Lab Buildbot"); use MANUAL_SOURCE_OVERRIDES only if one source '
@@ -217,6 +218,38 @@ def main() -> None:
 
             cur.execute(
                 "SELECT COUNT(*) FROM winetest_runs WHERE finished = 1 "
+                "AND vm = 'KVM' AND target_arch = 'amd64' "
+                "AND (platform REGEXP '^reactos\\.0(\\.|$)' OR platform REGEXP '^reactos0([^0-9]|$)')"
+            )
+            n_kvm_plat = int(cur.fetchone()[0])
+            print(
+                f"[3] Fix platform for KVM + amd64 still on reactos.0/reactos0 "
+                f"(export quirk, {n_kvm_plat} rows)..."
+            )
+            sql_kvm_plat = """
+            UPDATE winetest_runs
+            SET platform = CASE
+              WHEN platform REGEXP '^reactos\\.0(\\.|$)' THEN CONCAT('reactos.9', SUBSTRING(platform, 10))
+              WHEN platform REGEXP '^reactos0([^0-9]|$)' THEN CONCAT('reactos9', SUBSTRING(platform, 9))
+              ELSE platform
+            END
+            WHERE finished = 1
+              AND vm = 'KVM'
+              AND target_arch = 'amd64'
+              AND (
+                platform REGEXP '^reactos\\.0(\\.|$)'
+                OR platform REGEXP '^reactos0([^0-9]|$)'
+              )
+            """
+            if args.dry_run:
+                print("    (dry-run: skipped)")
+            else:
+                cur.execute(sql_kvm_plat)
+                updates_applied += cur.rowcount
+                print(f"    rows affected: {cur.rowcount}")
+
+            cur.execute(
+                "SELECT COUNT(*) FROM winetest_runs WHERE finished = 1 "
                 "AND ("
                 "  ("
                 "    (platform REGEXP '^reactos\\.0(\\.|$)' OR platform REGEXP '^reactos0([^0-9]|$)')"
@@ -229,7 +262,7 @@ def main() -> None:
             )
             n3 = int(cur.fetchone()[0])
             print(
-                f"[3] Align target_arch with reactos.0/9 and reactos0/9 (empty or wrong, {n3} rows)..."
+                f"[4] Align target_arch with reactos.0/9 and reactos0/9 (empty or wrong, {n3} rows)..."
             )
             # One backslash before "." in the pattern (same as facets.inc.php / MySQL REGEXP).
             sql3 = """
@@ -266,7 +299,7 @@ def main() -> None:
                 "OR platform REGEXP '^[0-9]+\\\\.[0-9]+\\\\.[0-9]+')"
             )
             n4 = int(cur.fetchone()[0])
-            print(f"[4] Derive host_os from platform (ReactOS vs Windows NT-style) ({n4} rows)...")
+            print(f"[5] Derive host_os from platform (ReactOS vs Windows NT-style) ({n4} rows)...")
             sql4 = """
             UPDATE winetest_runs
             SET host_os = CASE
@@ -289,7 +322,7 @@ def main() -> None:
                 updates_applied += cur.rowcount
                 print(f"    rows affected: {cur.rowcount}")
 
-            print("[5] Infer compiler, vm, host_os, target_arch from sources.name...")
+            print("[6] Infer compiler, vm, host_os, target_arch from sources.name...")
             cur.execute("SELECT id, name FROM sources ORDER BY id")
             sources = cur.fetchall()
 
@@ -364,7 +397,7 @@ def main() -> None:
                 )
                 n6 = int(cur.fetchone()[0])
                 print(
-                    f"[6] Set host_os = 'Unknown' where still NULL/empty ({n6} rows) "
+                    f"[7] Set host_os = 'Unknown' where still NULL/empty ({n6} rows) "
                     "(facet for unknown host OS; use --keep-null-host-os to skip)..."
                 )
                 sql6 = """
@@ -380,7 +413,7 @@ def main() -> None:
                     updates_applied += cur.rowcount
                     print(f"    rows affected: {cur.rowcount}")
             else:
-                print("[6] Skipped (--keep-null-host-os): rows with empty host_os stay SQL NULL.")
+                print("[7] Skipped (--keep-null-host-os): rows with empty host_os stay SQL NULL.")
 
         if not args.dry_run:
             conn.commit()
@@ -394,9 +427,9 @@ def main() -> None:
     if not args.dry_run and not args.diagnose and updates_applied == 0:
         print(
             "Note: No column values were changed this run (MySQL reports rows actually modified). "
-            "Numbers in parentheses for [2]–[6] are candidate counts before UPDATE; 0 means nothing matched. "
+            "Numbers in parentheses for [2]–[7] are candidate counts before UPDATE; 0 means nothing matched. "
             "[1] is often 0 when todo/skipped already equal per-result sums. "
-            '"Lab Buildbot" in [5] is expected unless you add MANUAL_SOURCE_OVERRIDES. '
+            '"Lab Buildbot" in [6] is expected unless you add MANUAL_SOURCE_OVERRIDES. '
             "Use --diagnose to list platform and source rows."
         )
     print("Dry-run finished." if args.dry_run else "Backport finished.")

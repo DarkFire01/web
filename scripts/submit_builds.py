@@ -55,6 +55,7 @@ if str(_SCRIPT_DIR) not in sys.path:
 from testman_facet_infer import (
     build_number_from_comment,
     infer_facets_from_source_name,
+    normalize_platform_for_amd64_kvm_worker,
     target_arch_from_platform,
 )
 
@@ -92,9 +93,10 @@ def main():
 
     for run in runs:
         revision = run["revision"]
-        platform = run["platform"]
-        comment  = run.get("comment", "")
-        suites   = run.get("suites", [])
+        comment = run.get("comment", "")
+        suites = run.get("suites", [])
+        label = run.get("source") or ""
+        platform = normalize_platform_for_amd64_kvm_worker(run["platform"], label)
 
         try:
             # 1. Register the test run and get a local test ID (include facets from JSON "source").
@@ -106,7 +108,6 @@ def main():
                 "platform": platform,
                 "comment": comment,
             }
-            label = run.get("source") or ""
             facets = infer_facets_from_source_name(label)
             bn = build_number_from_comment(comment)
             if bn is not None:

@@ -37,11 +37,19 @@ import argparse
 import html
 import json
 import re
+import sys
 import time
 import xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from pathlib import Path
 
 import requests
+
+_SCRIPT_DIR = Path(__file__).resolve().parent
+if str(_SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(_SCRIPT_DIR))
+
+from testman_facet_infer import normalize_platform_for_amd64_kvm_worker
 
 
 def get(url, params, retries=5, backoff=5):
@@ -265,12 +273,15 @@ def main():
                     for rid in result_ids
                 ]
 
+                source_str = (run_el.get("source") or result_el.findtext("source", "") or "").strip()
+                platform_store = normalize_platform_for_amd64_kvm_worker(platform_raw, source_str)
+
                 runs.append({
                     "id":         run_id,
                     "source_id":  source_id,
-                    "source":     run_el.get("source", result_el.findtext("source", "")),
+                    "source":     source_str,
                     "revision":   run_el.get("revision", ""),
-                    "platform": platform_raw,
+                    "platform":   platform_store,
                     "comment":  comment,
                     "suites":   suites,
                 })

@@ -18,6 +18,11 @@ There is **no** inference for the generic name "Lab Buildbot": if you use one DB
 uploads, facets must come from submit_builds (JSON "source") + gettestid meta. Otherwise step [5]
 would wrongly force GCC/KVM on WHS/Win2003 rows.
 
+**reactos.0 vs KVM_x64:** Some exports still use the compact platform prefix ``reactos.0`` for jobs that
+are actually **amd64 ReactOS** on a **KVM_x64** worker (``Test KVM_x64`` in the builder string).
+``normalize_platform_for_amd64_kvm_worker()`` maps those to ``reactos.9`` / ``reactos9`` so Testman
+filters and ``GetPlatformString`` match reality. Plain ``Test KVM`` (no ``KVM_x64``) is unchanged.
+
 No DB dependencies.
 """
 
@@ -83,6 +88,26 @@ def infer_facets_from_source_name(name: str) -> dict[str, str | None]:
         out["target_arch"] = out["target_arch"] or "amd64"
 
     return out
+
+
+def is_amd64_kvm_worker_source(name: str) -> bool:
+    """True if builder label refers to the KVM_x64 worker (amd64 ReactOS KVM), not plain Test KVM."""
+    return bool(re.search(r"kvm[_ ]?x64", name or "", re.I))
+
+
+def normalize_platform_for_amd64_kvm_worker(platform: str, source: str) -> str:
+    """
+    If source names KVM_x64 but the stored platform still uses the i386 reactos prefix, rewrite to
+    the amd64 prefix (upstream export quirk).
+    """
+    if not is_amd64_kvm_worker_source(source):
+        return (platform or "").strip()
+    p = (platform or "").strip()
+    if re.match(r"^reactos\.0(\.|$)", p):
+        return "reactos.9" + p[9:]
+    if re.match(r"^reactos0([^0-9]|$)", p):
+        return "reactos9" + p[8:]
+    return p
 
 
 def target_arch_from_platform(platform: str) -> str | None:
