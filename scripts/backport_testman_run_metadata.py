@@ -155,20 +155,28 @@ def main() -> None:
 
             cur.execute(
                 "SELECT COUNT(*) FROM winetest_runs WHERE finished = 1 "
-                "AND (target_arch IS NULL OR TRIM(target_arch) = '') AND platform LIKE 'reactos.%'"
+                "AND (target_arch IS NULL OR TRIM(target_arch) = '') "
+                "AND (platform LIKE 'reactos.%' OR platform REGEXP '^reactos0([^0-9]|$)' "
+                "OR platform REGEXP '^reactos9([^0-9]|$)')"
             )
             n3 = int(cur.fetchone()[0])
-            print(f"[3] Derive target_arch from reactos.0 / reactos.9 ({n3} rows)...")
+            print(f"[3] Derive target_arch from reactos.0/9 and reactos0/9 ({n3} rows)...")
             sql3 = """
             UPDATE winetest_runs
-            SET target_arch = CASE SUBSTRING_INDEX(platform, '.', -1)
-              WHEN '0' THEN 'i386'
-              WHEN '9' THEN 'amd64'
+            SET target_arch = CASE
+              WHEN platform REGEXP '^reactos\\\\.0(\\\\.|$)' OR platform REGEXP '^reactos0([^0-9]|$)'
+                THEN 'i386'
+              WHEN platform REGEXP '^reactos\\\\.9(\\\\.|$)' OR platform REGEXP '^reactos9([^0-9]|$)'
+                THEN 'amd64'
               ELSE target_arch
             END
             WHERE finished = 1
               AND (target_arch IS NULL OR TRIM(target_arch) = '')
-              AND platform LIKE 'reactos.%'
+              AND (
+                platform LIKE 'reactos.%'
+                OR platform REGEXP '^reactos0([^0-9]|$)'
+                OR platform REGEXP '^reactos9([^0-9]|$)'
+              )
             """
             if args.dry_run:
                 print("    (dry-run: skipped)")
@@ -179,14 +187,15 @@ def main() -> None:
             cur.execute(
                 "SELECT COUNT(*) FROM winetest_runs WHERE finished = 1 "
                 "AND (host_os IS NULL OR TRIM(host_os) = '') "
-                "AND (platform LIKE 'reactos.%%' OR platform REGEXP '^[0-9]+\\\\.[0-9]+\\\\.[0-9]+')"
+                "AND (platform LIKE 'reactos.%%' OR platform REGEXP '^reactos[0-9]' "
+                "OR platform REGEXP '^[0-9]+\\\\.[0-9]+\\\\.[0-9]+')"
             )
             n4 = int(cur.fetchone()[0])
             print(f"[4] Derive host_os from platform (ReactOS vs Windows NT-style) ({n4} rows)...")
             sql4 = """
             UPDATE winetest_runs
             SET host_os = CASE
-              WHEN platform LIKE 'reactos.%' THEN 'ReactOS'
+              WHEN platform LIKE 'reactos.%' OR platform REGEXP '^reactos[0-9]' THEN 'ReactOS'
               WHEN platform REGEXP '^[0-9]+\\.[0-9]+\\.[0-9]+' THEN 'Windows'
               ELSE host_os
             END
@@ -194,6 +203,7 @@ def main() -> None:
               AND (host_os IS NULL OR TRIM(host_os) = '')
               AND (
                 platform LIKE 'reactos.%'
+                OR platform REGEXP '^reactos[0-9]'
                 OR platform REGEXP '^[0-9]+\\.[0-9]+\\.[0-9]+'
               )
             """

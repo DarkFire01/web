@@ -64,14 +64,18 @@
 	}
 
 	/**
-	 * SQL fragment: effective arch (target_arch column if set, else i386/amd64 from reactos.N platform).
+	 * SQL fragment: effective arch (target_arch column if set, else i386/amd64 from platform).
+	 * Handles buildbot-style reactos.0 / reactos.9 and rosautotest-style reactos0 / reactos9 (no dot).
 	 * Expects alias r for winetest_runs.
 	 */
 	function testman_sql_effective_target_arch_expr()
 	{
 		return "COALESCE(NULLIF(TRIM(r.target_arch), ''), " .
-			"CASE WHEN r.platform LIKE 'reactos.%' THEN " .
-			"CASE SUBSTRING_INDEX(r.platform, '.', -1) WHEN '0' THEN 'i386' WHEN '9' THEN 'amd64' ELSE NULL END " .
+			"CASE " .
+			"WHEN r.platform REGEXP '^reactos\\.0(\\.|$)' THEN 'i386' " .
+			"WHEN r.platform REGEXP '^reactos\\.9(\\.|$)' THEN 'amd64' " .
+			"WHEN r.platform REGEXP '^reactos0([^0-9]|$)' THEN 'i386' " .
+			"WHEN r.platform REGEXP '^reactos9([^0-9]|$)' THEN 'amd64' " .
 			"ELSE NULL END)";
 	}
 

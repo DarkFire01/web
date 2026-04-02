@@ -86,14 +86,15 @@ def infer_facets_from_source_name(name: str) -> dict[str, str | None]:
 
 
 def target_arch_from_platform(platform: str) -> str | None:
-    """Match ajax-search effective arch for reactos.N compact platform strings."""
+    """Match ajax-search / facets.inc: reactos.0 / reactos.9 and rosautotest reactos0 / reactos9."""
     p = (platform or "").strip()
-    if not p.startswith("reactos."):
-        return None
-    tail = p.rsplit(".", 1)[-1]
-    if tail == "0":
+    if re.match(r"^reactos\.0(\.|$)", p):
         return "i386"
-    if tail == "9":
+    if re.match(r"^reactos\.9(\.|$)", p):
+        return "amd64"
+    if re.match(r"^reactos0([^0-9]|$)", p):
+        return "i386"
+    if re.match(r"^reactos9([^0-9]|$)", p):
         return "amd64"
     return None
 

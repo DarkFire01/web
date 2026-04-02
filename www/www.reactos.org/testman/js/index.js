@@ -396,8 +396,8 @@ function SearchCallback(HttpRequest)
 	}
 	else
 	{
-		if (data["desc"] && FirstRev && LastRev)
-			document.getElementById("search_revision").value = LastRev + "-" + FirstRev;
+		// Do not auto-fill revision: that pins the next search to the first page's rev span and
+		// hides other arches / builders (e.g. amd64 KVM outside that range).
 
 		SetLoading(false);
 	}
