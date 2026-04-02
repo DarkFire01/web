@@ -13,6 +13,11 @@ Upstream reactos.org sources.name examples:
   "Test Win2003_x64"               → MSVC, Win2003_x64, Windows, amd64
 
 Shared by submit_builds.py (JSON "source") and backport_testman_run_metadata.py (DB sources.name).
+
+There is **no** inference for the generic name "Lab Buildbot": if you use one DB source for all
+uploads, facets must come from submit_builds (JSON "source") + gettestid meta. Otherwise step [5]
+would wrongly force GCC/KVM on WHS/Win2003 rows.
+
 No DB dependencies.
 """
 
@@ -76,11 +81,6 @@ def infer_facets_from_source_name(name: str) -> dict[str, str | None]:
         out["target_arch"] = out["target_arch"] or "i386"
     elif "MSVC_X64" in un or "KVM_X64" in un:
         out["target_arch"] = out["target_arch"] or "amd64"
-
-    # Plain lab source name — guess compiler/VM only; host_os comes from platform + backport [4].
-    if name.casefold() == "lab buildbot" or re.search(r"\blab\s+buildbot\b", name, re.IGNORECASE):
-        out["compiler"] = out["compiler"] or "GCC"
-        out["vm"] = out["vm"] or "KVM"
 
     return out
 
