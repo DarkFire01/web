@@ -42,13 +42,13 @@
 
 		$raw = $_GET[$get_key];
 		if ($raw === "")
-		{
-			$where[] = "0=1";
 			return;
-		}
 
 		$req = array_filter(array_map("trim", explode(",", $raw)));
 		$full = testman_merge_facet_values($dbh, $column);
+		if (count($full) === 0)
+			return;
+
 		$sel = array_values(array_intersect($req, $full));
 
 		if (count($sel) === 0)
@@ -77,13 +77,13 @@
 
 		$raw = $_GET[$get_key];
 		if ($raw === "")
-		{
-			$where[] = "0=1";
 			return;
-		}
 
 		$req = array_filter(array_map("trim", explode(",", $raw)));
 		$full = testman_merge_arch_facet_values($dbh);
+		if (count($full) === 0)
+			return;
+
 		$sel = array_values(array_intersect($req, $full));
 
 		if (count($sel) === 0)
@@ -145,29 +145,57 @@
 		{
 			$startrev = $_GET["startrev"];
 			$endrev = $_GET["endrev"];
+			$git_hex = '/^[0-9a-f]{7,40}$/i';
 
 			if (preg_match($SVN_PATTERN, $startrev) && preg_match($SVN_PATTERN, $endrev))
 			{
 				$range = range((int)$startrev, (int)$endrev);
+				if (count($range) > REV_RANGE_LIMIT)
+					throw new RuntimeException(sprintf($shared_langres["rangelimitexceeded"], REV_RANGE_LIMIT));
+
+				$quoted = array();
+				foreach ($range as $h)
+					$quoted[] = $dbh->quote((string)$h);
+
+				$where[] = "r.revision IN (" . implode(",", $quoted) . ")";
 			}
 			else
 			{
 				$start_hash = $gi->getLongHash($startrev);
 				$end_hash = $gi->getLongHash($endrev);
-				if (!$start_hash || !$end_hash)
+
+				if ($start_hash && $end_hash)
+				{
+					$range = $gi->getRevisionRange($start_hash, $end_hash);
+					if (count($range) > REV_RANGE_LIMIT)
+						throw new RuntimeException(sprintf($shared_langres["rangelimitexceeded"], REV_RANGE_LIMIT));
+
+					$quoted = array();
+					foreach ($range as $h)
+						$quoted[] = $dbh->quote($h);
+
+					$where[] = "r.revision IN (" . implode(",", $quoted) . ")";
+				}
+				elseif (preg_match($git_hex, $startrev) && preg_match($git_hex, $endrev))
+				{
+					// Gitinfo DB often lacks full history on lab mirrors; short hashes from the UI still work via prefix.
+					if (strcasecmp($startrev, $endrev) === 0)
+					{
+						$where[] = "r.revision LIKE ?";
+						$params[] = $startrev . '%';
+					}
+					else
+					{
+						$where[] = "(r.revision LIKE ? OR r.revision LIKE ?)";
+						$params[] = $startrev . '%';
+						$params[] = $endrev . '%';
+					}
+				}
+				else
+				{
 					throw new RuntimeException($shared_langres["invalidinput"]);
-
-				$range = $gi->getRevisionRange($start_hash, $end_hash);
+				}
 			}
-
-			if (count($range) > REV_RANGE_LIMIT)
-				throw new RuntimeException(sprintf($shared_langres["rangelimitexceeded"], REV_RANGE_LIMIT));
-
-			$quoted = array();
-			foreach ($range as $h)
-				$quoted[] = $dbh->quote($h);
-
-			$where[] = "r.revision IN (" . implode(",", $quoted) . ")";
 		}
 
 		if (array_key_exists("platform", $_GET) && $_GET["platform"] !== "")

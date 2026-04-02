@@ -11,6 +11,40 @@
 		return array("compiler", "vm", "host_os", "target_arch");
 	}
 
+	/** Default checkbox labels when the DB has no non-empty values for that column yet. */
+	function testman_canonical_facets()
+	{
+		return array(
+			"compiler" => array("GCC", "MSVC"),
+			"vm" => array("KVM", "VBox", "WHS", "Win2003_x64"),
+			"host_os" => array("Linux", "Windows", "ReactOS"),
+			"target_arch" => array("i386", "amd64"),
+		);
+	}
+
+	/**
+	 * Values shown as checkboxes on the index page: real DISTINCT data if any, else canonical presets
+	 * (avoids empty collapsed facet rows). Ajax search still uses DB-only merge for filter matching.
+	 */
+	function testman_facet_ui_values(PDO $dbh, $column)
+	{
+		$db = testman_merge_facet_values($dbh, $column);
+		if (count($db) > 0)
+			return $db;
+
+		$canon = testman_canonical_facets();
+		return isset($canon[$column]) ? $canon[$column] : array();
+	}
+
+	function testman_merge_arch_facet_ui(PDO $dbh)
+	{
+		$db = testman_merge_arch_facet_values($dbh);
+		if (count($db) > 0)
+			return $db;
+
+		return testman_canonical_facets()["target_arch"];
+	}
+
 	function testman_merge_facet_values(PDO $dbh, $column)
 	{
 		$allowed = testman_facet_columns();

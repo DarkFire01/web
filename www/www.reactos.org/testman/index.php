@@ -32,10 +32,10 @@
 		$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 		$sources_rows = $dbh->query("SELECT id, name FROM sources ORDER BY name")->fetchAll(PDO::FETCH_ASSOC);
-		$facet_compiler = testman_merge_facet_values($dbh, "compiler");
-		$facet_vm = testman_merge_facet_values($dbh, "vm");
-		$facet_host_os = testman_merge_facet_values($dbh, "host_os");
-		$facet_arch = testman_merge_arch_facet_values($dbh);
+		$facet_compiler = testman_facet_ui_values($dbh, "compiler");
+		$facet_vm = testman_facet_ui_values($dbh, "vm");
+		$facet_host_os = testman_facet_ui_values($dbh, "host_os");
+		$facet_arch = testman_merge_arch_facet_ui($dbh);
 	}
 	catch (Exception $e)
 	{
