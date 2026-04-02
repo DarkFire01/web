@@ -1,5 +1,18 @@
--- Migration: extend winetest_runs for Testman search facets and denormalized aggregates.
--- Run against existing testman databases that predate this schema.
+-- =============================================================================
+-- Testman: extend winetest_runs (todo/skipped rollups, build_number, facets)
+-- =============================================================================
+-- Run once against the `testman` database after deploying the new PHP.
+--
+-- Example (as root / DBA):
+--   mysql testman < /path/to/migration_winetest_runs_extend.sql
+--   # or:
+--   sudo mysql testman < /srv/www/.../migration_winetest_runs_extend.sql
+--
+-- If this errors with "Duplicate column" or "Duplicate key", the migration
+-- already ran (or partially ran); fix manually with SHOW COLUMNS / SHOW INDEX.
+-- =============================================================================
+
+USE `testman`;
 
 ALTER TABLE `winetest_runs`
   ADD COLUMN `todo` int(10) unsigned NOT NULL DEFAULT '0' AFTER `failures`,
@@ -21,3 +34,10 @@ SET
   r.todo = (SELECT COALESCE(SUM(wr.todo), 0) FROM winetest_results wr WHERE wr.test_id = r.id),
   r.skipped = (SELECT COALESCE(SUM(wr.skipped), 0) FROM winetest_results wr WHERE wr.test_id = r.id)
 WHERE r.finished = 1;
+
+-- Optional: backfill build_number from comment text like "Build 123, ..." (submit_result format)
+UPDATE `winetest_runs`
+SET `build_number` = CAST(SUBSTRING_INDEX(SUBSTRING_INDEX(`comment`, 'Build ', -1), ',', 1) AS UNSIGNED)
+WHERE `build_number` IS NULL
+  AND `comment` LIKE 'Build %'
+  AND SUBSTRING_INDEX(SUBSTRING_INDEX(`comment`, 'Build ', -1), ',', 1) REGEXP '^[0-9]+$';

@@ -5,7 +5,7 @@ Utilities for populating the local Docker environment with data from the live Re
 ## Requirements
 
 ```bash
-pip install requests
+pip install requests pymysql
 ```
 
 ## Workflow
@@ -63,6 +63,22 @@ row, reset it with:
 ```bash
 docker compose down -v && docker compose up
 ```
+
+## Backfill metadata on existing rows (Python)
+
+After importing runs (e.g. with `submit_builds.py`) or upgrading the schema,
+facet columns may be NULL while `platform` / `comment` / `sources.name` carry
+enough information to fill them. This script updates `winetest_runs` in place:
+
+```bash
+pip install pymysql
+python backport_testman_run_metadata.py --config ../www/www.reactos.org_config/testman-connect.php
+python backport_testman_run_metadata.py --dry-run   # preview only
+```
+
+On a VPS, point `--config` at your real `testman-connect.php`. Edit
+`MANUAL_SOURCE_OVERRIDES` inside the script for sources whose names do not
+match the built-in heuristics (e.g. `"Lab Buildbot"`).
 
 ## Re-running
 

@@ -66,6 +66,53 @@
 			$params[] = $v;
 	}
 
+	/**
+	 * SQL expression: facet target_arch if set, else derive i386/amd64 from reactos.<arch> platform
+	 * (matches GetPlatformString() in utils.inc.php: 0 = i386, 9 = amd64).
+	 */
+	function testman_sql_effective_target_arch()
+	{
+		return "COALESCE(NULLIF(TRIM(r.target_arch), ''), " .
+			"CASE WHEN r.platform LIKE 'reactos.%' THEN " .
+			"CASE SUBSTRING_INDEX(r.platform, '.', -1) WHEN '0' THEN 'i386' WHEN '9' THEN 'amd64' ELSE NULL END " .
+			"ELSE NULL END)";
+	}
+
+	function testman_ajax_apply_arch_filter(PDO $dbh, &$where, &$params)
+	{
+		$get_key = "arches";
+		$column = "target_arch";
+
+		if (!isset($_GET[$get_key]))
+			return;
+
+		$raw = $_GET[$get_key];
+		if ($raw === "")
+		{
+			$where[] = "0=1";
+			return;
+		}
+
+		$req = array_filter(array_map("trim", explode(",", $raw)));
+		$full = testman_merge_facet_values($dbh, $column);
+		$sel = array_values(array_intersect($req, $full));
+
+		if (count($sel) === 0)
+		{
+			$where[] = "0=1";
+			return;
+		}
+
+		if (count($sel) === count($full))
+			return;
+
+		$eff = testman_sql_effective_target_arch();
+		$placeholders = implode(",", array_fill(0, count($sel), "?"));
+		$where[] = "(" . $eff . ") IN (" . $placeholders . ")";
+		foreach ($sel as $v)
+			$params[] = $v;
+	}
+
 	$rw = new RosWeb();
 	$lang = $rw->getLanguage();
 	require_once(ROOT_PATH . "rosweb/lang/$lang.inc.php");
@@ -171,7 +218,7 @@
 		testman_ajax_apply_dimension($dbh, "compilers", "compiler", $where, $params);
 		testman_ajax_apply_dimension($dbh, "vms", "vm", $where, $params);
 		testman_ajax_apply_dimension($dbh, "host_oses", "host_os", $where, $params);
-		testman_ajax_apply_dimension($dbh, "arches", "target_arch", $where, $params);
+		testman_ajax_apply_arch_filter($dbh, $where, $params);
 
 		if (array_key_exists("limit", $_GET))
 		{

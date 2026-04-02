@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 """
-Fetches test run data (including per-suite logs) from the live ReactOS Testman
-and stores it locally as JSON for later submission.
+Fetches test run data (including per-suite logs) from a ReactOS Testman
+instance and stores it locally as JSON for later submission.
 
 For each test run the full suite results are fetched via the XML export
 endpoint, then the raw log for each suite is extracted from detail.php.
 
 Usage:
-    python fetch_builds.py [--count N] [--output FILE] [--delay SECS]
+    python fetch_builds.py [--base-url URL] [--count N] [--output FILE] [--delay SECS]
+
+Default --base-url is the official site (https://reactos.org).
 
 Requirements:
     pip install requests
@@ -22,11 +24,6 @@ import xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import requests
-
-BASE_URL      = "https://reactos.org"
-SEARCH_URL    = f"{BASE_URL}/testman/ajax-search.php"
-EXPORT_URL    = f"{BASE_URL}/testman/export.php"
-DETAIL_URL    = f"{BASE_URL}/testman/detail.php"
 
 
 def get(url, params, retries=5, backoff=5):
@@ -45,34 +42,42 @@ def get(url, params, retries=5, backoff=5):
             time.sleep(wait)
 
 
-def search_runs(page, limit):
+def search_runs(base_url, page, limit):
+    base = base_url.rstrip("/")
+    url = f"{base}/testman/ajax-search.php"
     params = {"page": page, "resultlist": "1", "desc": "1", "limit": limit}
-    return ET.fromstring(get(SEARCH_URL, params).text)
+    return ET.fromstring(get(url, params).text)
 
 
-def export_run(run_id):
-    resp = get(EXPORT_URL, {"f": "xml", "ids": str(run_id)})
+def export_run(base_url, run_id):
+    base = base_url.rstrip("/")
+    url = f"{base}/testman/export.php"
+    resp = get(url, {"f": "xml", "ids": str(run_id)})
     return ET.fromstring(resp.text)
 
 
-def fetch_log(result_id):
+def fetch_log(base_url, result_id):
     """Fetch detail.php for a suite result and return the raw log text."""
-    resp = get(DETAIL_URL, {"id": str(result_id)})
+    base = base_url.rstrip("/")
+    url = f"{base}/testman/detail.php"
+    resp = get(url, {"id": str(result_id)})
 
-    # The log sits in the sole <pre> element on the page.
     match = re.search(r"<pre>(.*?)</pre>", resp.text, re.DOTALL)
     if not match:
         return ""
 
-    # detail.php HTML-escapes the log and adds <a href="..."> links around
-    # file:line references. Strip the tags to recover the original text.
     raw = re.sub(r"<[^>]+>", "", match.group(1))
     return html.unescape(raw)
 
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Fetch ReactOS Testman runs (with logs) from the live server."
+        description="Fetch Testman runs (with logs) from a ReactOS Testman server."
+    )
+    parser.add_argument(
+        "--base-url",
+        default="https://reactos.org",
+        help="Testman site root (default: https://reactos.org), no trailing slash required",
     )
     parser.add_argument("--count", type=int, default=50,
                         help="Maximum number of test runs to fetch (default: 50)")
@@ -86,12 +91,15 @@ def main():
                         help="Max suite logs to fetch per run (default: 10)")
     args = parser.parse_args()
 
+    base_url = args.base_url
+    print(f"Source: {base_url.rstrip('/')}/testman/")
+
     runs = []
     page = 1
 
     while len(runs) < args.count:
         batch = args.count - len(runs)
-        root = search_runs(page, batch)
+        root = search_runs(base_url, page, batch)
         time.sleep(args.delay)
 
         result_elements = root.findall("result")
@@ -104,7 +112,7 @@ def main():
             comment  = result_el.findtext("comment", "")
 
             try:
-                export_root = export_run(run_id)
+                export_root = export_run(base_url, run_id)
                 run_el = export_root.find("run")
                 if run_el is None:
                     print(f"  [{run_id}] no <run> in export, skipping")
@@ -113,8 +121,6 @@ def main():
                 suite_elements = run_el.findall("test")[:args.suites]
                 total_suites = len(suite_elements)
 
-                # Build a map of result_id → metadata so we can reassemble
-                # results in original order after parallel fetching.
                 suite_meta = {
                     int(el.get("id")): {
                         "module": el.get("module", ""),
@@ -128,7 +134,7 @@ def main():
                 logs = {}
                 done = 0
                 with ThreadPoolExecutor(max_workers=args.workers) as pool:
-                    futures = {pool.submit(fetch_log, rid): rid for rid in result_ids}
+                    futures = {pool.submit(fetch_log, base_url, rid): rid for rid in result_ids}
                     for future in as_completed(futures):
                         rid = futures[future]
                         logs[rid] = future.result()

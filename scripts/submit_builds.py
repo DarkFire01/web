@@ -11,6 +11,19 @@ The actual log text fetched from the live server is submitted as-is.
 Usage:
     python submit_builds.py [--input FILE] [--url URL] [--sourceid N] [--password PW]
 
+Inject into a remote VPS (from your PC; use your public IP or hostname and the
+API password you set with UPDATE sources SET password = MD5('...') ):
+
+    python submit_builds.py --input builds_data.json \\
+      --url http://YOUR_SERVER_IP/testman/webservice/index.php \\
+      --sourceid 1 --password 'YourApiPassword'
+
+Or on the server after scp builds_data.json:
+
+    python3 submit_builds.py --input builds_data.json \\
+      --url http://127.0.0.1/testman/webservice/index.php \\
+      --sourceid 1 --password 'YourApiPassword'
+
 Requirements:
     pip install requests
 
