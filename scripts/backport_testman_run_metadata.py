@@ -6,7 +6,8 @@ Fills in:
   - todo, skipped       — SUM from winetest_results
   - build_number        — from comment "Build N, ..."
   - target_arch         — from platform reactos.0 / reactos.9 when column is empty
-  - compiler, vm, host_os — from sources.name heuristics (+ optional manual overrides)
+  - host_os             — from platform (reactos.* → ReactOS; 6.0.6003… NT-style → Windows)
+  - compiler, vm, host_os — from sources.name heuristics where still empty (+ MANUAL_SOURCE_OVERRIDES)
 
 Usage:
   python backport_testman_run_metadata.py [--config PATH] [--dry-run]
@@ -193,7 +194,34 @@ def main() -> None:
                 cur.execute(sql3)
                 print(f"    rows affected: {cur.rowcount}")
 
-            print("[4] Infer compiler, vm, host_os from sources.name...")
+            cur.execute(
+                "SELECT COUNT(*) FROM winetest_runs WHERE finished = 1 "
+                "AND (host_os IS NULL OR TRIM(host_os) = '') "
+                "AND (platform LIKE 'reactos.%%' OR platform REGEXP '^[0-9]+\\\\.[0-9]+\\\\.[0-9]+')"
+            )
+            n4 = int(cur.fetchone()[0])
+            print(f"[4] Derive host_os from platform (ReactOS vs Windows NT-style) ({n4} rows)...")
+            sql4 = """
+            UPDATE winetest_runs
+            SET host_os = CASE
+              WHEN platform LIKE 'reactos.%' THEN 'ReactOS'
+              WHEN platform REGEXP '^[0-9]+\\.[0-9]+\\.[0-9]+' THEN 'Windows'
+              ELSE host_os
+            END
+            WHERE finished = 1
+              AND (host_os IS NULL OR TRIM(host_os) = '')
+              AND (
+                platform LIKE 'reactos.%'
+                OR platform REGEXP '^[0-9]+\\.[0-9]+\\.[0-9]+'
+              )
+            """
+            if args.dry_run:
+                print("    (dry-run: skipped)")
+            else:
+                cur.execute(sql4)
+                print(f"    rows affected: {cur.rowcount}")
+
+            print("[5] Infer compiler, vm, host_os from sources.name...")
             cur.execute("SELECT id, name FROM sources ORDER BY id")
             sources = cur.fetchall()
 

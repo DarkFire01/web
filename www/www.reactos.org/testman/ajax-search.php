@@ -61,9 +61,9 @@
 			return;
 
 		$placeholders = implode(",", array_fill(0, count($sel), "?"));
-		// Include NULL/empty so imported or legacy rows (facets not backfilled) are not dropped
-		// as soon as the user unchecks a facet value.
-		$where[] = "(r.`" . $column . "` IN (" . $placeholders . ") OR r.`" . $column . "` IS NULL OR r.`" . $column . "` = '')";
+		// Strict match: NULL/empty host_os/compiler/vm must be backfilled (see backport script)
+		// or they do not match any ticked value — otherwise "uncheck Windows" still shows Win runs.
+		$where[] = "r.`" . $column . "` IN (" . $placeholders . ")";
 		foreach ($sel as $v)
 			$params[] = $v;
 	}
