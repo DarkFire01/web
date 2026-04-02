@@ -53,18 +53,6 @@
         "test": "crypt_md5",
         "status": "ok",
         "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.00 seconds.\n"
-      },
-      {
-        "module": "advapi32",
-        "test": "crypt_sha",
-        "status": "ok",
-        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_sha: 1 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_sha completed in 0.02 seconds.\n"
-      },
-      {
-        "module": "advapi32",
-        "test": "DuplicateTokenEx",
-        "status": "ok",
-        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_apitest.exe) failing with status c000000f\n\nDuplicateTokenEx: 15 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest DuplicateTokenEx completed in 0.01 seconds.\n"
       }
     ]
   },
@@ -122,18 +110,6 @@
         "test": "crypt_md5",
         "status": "ok",
         "log": "\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.00 seconds.\n"
-      },
-      {
-        "module": "advapi32",
-        "test": "crypt_sha",
-        "status": "ok",
-        "log": "\ncrypt_sha: 1 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_sha completed in 0.01 seconds.\n"
-      },
-      {
-        "module": "advapi32",
-        "test": "DuplicateTokenEx",
-        "status": "ok",
-        "log": "\nDuplicateTokenEx: 15 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest DuplicateTokenEx completed in 0.03 seconds.\n"
       }
     ]
   },
@@ -191,18 +167,6 @@
         "test": "crypt_md5",
         "status": "ok",
         "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.01 seconds.\n"
-      },
-      {
-        "module": "advapi32",
-        "test": "crypt_sha",
-        "status": "ok",
-        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_sha: 1 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_sha completed in 0.02 seconds.\n"
-      },
-      {
-        "module": "advapi32",
-        "test": "DuplicateTokenEx",
-        "status": "ok",
-        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_apitest.exe) failing with status c000000f\n\nDuplicateTokenEx: 15 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest DuplicateTokenEx completed in 0.02 seconds.\n"
       }
     ]
   },
@@ -260,18 +224,6 @@
         "test": "crypt_md5",
         "status": "ok",
         "log": "\r\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_md5 completed in 0.02 seconds.\n"
-      },
-      {
-        "module": "advapi32",
-        "test": "crypt_sha",
-        "status": "ok",
-        "log": "\r\ncrypt_sha: 1 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_sha completed in 0.02 seconds.\n"
-      },
-      {
-        "module": "advapi32",
-        "test": "DuplicateTokenEx",
-        "status": "ok",
-        "log": "\r\nDuplicateTokenEx: 15 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest DuplicateTokenEx completed in 0.00 seconds.\n"
       }
     ]
   },
@@ -329,18 +281,6 @@
         "test": "crypt_md5",
         "status": "ok",
         "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.00 seconds.\n"
-      },
-      {
-        "module": "advapi32",
-        "test": "crypt_sha",
-        "status": "ok",
-        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_sha: 1 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_sha completed in 0.02 seconds.\n"
-      },
-      {
-        "module": "advapi32",
-        "test": "DuplicateTokenEx",
-        "status": "ok",
-        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_apitest.exe) failing with status c000000f\n\nDuplicateTokenEx: 15 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest DuplicateTokenEx completed in 0.01 seconds.\n"
       }
     ]
   },
@@ -398,18 +338,6 @@
         "test": "crypt_md5",
         "status": "ok",
         "log": "\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.00 seconds.\n"
-      },
-      {
-        "module": "advapi32",
-        "test": "crypt_sha",
-        "status": "ok",
-        "log": "\ncrypt_sha: 1 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_sha completed in 0.00 seconds.\n"
-      },
-      {
-        "module": "advapi32",
-        "test": "DuplicateTokenEx",
-        "status": "ok",
-        "log": "\nDuplicateTokenEx: 15 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest DuplicateTokenEx completed in 0.03 seconds.\n"
       }
     ]
   },
@@ -467,18 +395,6 @@
         "test": "crypt_md5",
         "status": "ok",
         "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.02 seconds.\n"
-      },
-      {
-        "module": "advapi32",
-        "test": "crypt_sha",
-        "status": "ok",
-        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_sha: 1 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_sha completed in 0.00 seconds.\n"
-      },
-      {
-        "module": "advapi32",
-        "test": "DuplicateTokenEx",
-        "status": "ok",
-        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_apitest.exe) failing with status c000000f\n\nDuplicateTokenEx: 15 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest DuplicateTokenEx completed in 0.01 seconds.\n"
       }
     ]
   },
@@ -536,18 +452,6 @@
         "test": "crypt_md5",
         "status": "ok",
         "log": "\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.01 seconds.\n"
-      },
-      {
-        "module": "advapi32",
-        "test": "crypt_sha",
-        "status": "ok",
-        "log": "\ncrypt_sha: 1 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_sha completed in 0.00 seconds.\n"
-      },
-      {
-        "module": "advapi32",
-        "test": "DuplicateTokenEx",
-        "status": "ok",
-        "log": "\nDuplicateTokenEx: 15 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest DuplicateTokenEx completed in 0.03 seconds.\n"
       }
     ]
   },
@@ -605,18 +509,6 @@
         "test": "crypt_md5",
         "status": "ok",
         "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.01 seconds.\n"
-      },
-      {
-        "module": "advapi32",
-        "test": "crypt_sha",
-        "status": "ok",
-        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_sha: 1 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_sha completed in 0.00 seconds.\n"
-      },
-      {
-        "module": "advapi32",
-        "test": "DuplicateTokenEx",
-        "status": "ok",
-        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_apitest.exe) failing with status c000000f\n\nDuplicateTokenEx: 15 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest DuplicateTokenEx completed in 0.00 seconds.\n"
       }
     ]
   },
@@ -674,18 +566,6 @@
         "test": "crypt_md5",
         "status": "ok",
         "log": "\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.00 seconds.\n"
-      },
-      {
-        "module": "advapi32",
-        "test": "crypt_sha",
-        "status": "ok",
-        "log": "\ncrypt_sha: 1 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_sha completed in 0.00 seconds.\n"
-      },
-      {
-        "module": "advapi32",
-        "test": "DuplicateTokenEx",
-        "status": "ok",
-        "log": "\nDuplicateTokenEx: 15 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest DuplicateTokenEx completed in 0.01 seconds.\n"
       }
     ]
   },
@@ -743,18 +623,6 @@
         "test": "crypt_md5",
         "status": "ok",
         "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.00 seconds.\n"
-      },
-      {
-        "module": "advapi32",
-        "test": "crypt_sha",
-        "status": "ok",
-        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_sha: 1 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_sha completed in 0.02 seconds.\n"
-      },
-      {
-        "module": "advapi32",
-        "test": "DuplicateTokenEx",
-        "status": "ok",
-        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_apitest.exe) failing with status c000000f\n\nDuplicateTokenEx: 15 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest DuplicateTokenEx completed in 0.01 seconds.\n"
       }
     ]
   },
@@ -812,18 +680,6 @@
         "test": "crypt_md5",
         "status": "ok",
         "log": "\r\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_md5 completed in 0.00 seconds.\n"
-      },
-      {
-        "module": "advapi32",
-        "test": "crypt_sha",
-        "status": "ok",
-        "log": "\r\ncrypt_sha: 1 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_sha completed in 0.00 seconds.\n"
-      },
-      {
-        "module": "advapi32",
-        "test": "DuplicateTokenEx",
-        "status": "ok",
-        "log": "\r\nDuplicateTokenEx: 15 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest DuplicateTokenEx completed in 0.00 seconds.\n"
       }
     ]
   },
@@ -881,18 +737,6 @@
         "test": "crypt_md5",
         "status": "ok",
         "log": "\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.00 seconds.\n"
-      },
-      {
-        "module": "advapi32",
-        "test": "crypt_sha",
-        "status": "ok",
-        "log": "\ncrypt_sha: 1 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_sha completed in 0.00 seconds.\n"
-      },
-      {
-        "module": "advapi32",
-        "test": "DuplicateTokenEx",
-        "status": "ok",
-        "log": "\nDuplicateTokenEx: 15 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest DuplicateTokenEx completed in 0.03 seconds.\n"
       }
     ]
   },
@@ -950,18 +794,6 @@
         "test": "crypt_md5",
         "status": "ok",
         "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.01 seconds.\n"
-      },
-      {
-        "module": "advapi32",
-        "test": "crypt_sha",
-        "status": "ok",
-        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_sha: 1 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_sha completed in 0.02 seconds.\n"
-      },
-      {
-        "module": "advapi32",
-        "test": "DuplicateTokenEx",
-        "status": "ok",
-        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_apitest.exe) failing with status c000000f\n\nDuplicateTokenEx: 15 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest DuplicateTokenEx completed in 0.01 seconds.\n"
       }
     ]
   },
@@ -1019,18 +851,2001 @@
         "test": "crypt_md5",
         "status": "ok",
         "log": "\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.00 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106716,
+    "source": "Build MSVC_x64 on Test KVM_x64",
+    "revision": "dfd8d003f21bea63ea300d5816beee8d2a881d87",
+    "platform": "ReactOS - i386",
+    "comment": "Build 8052, Reason: WINEBUILD sync PR",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\acpi_apitest.exe) failing with status c000000f\nBus_PDO_EvalMethod.c:857: Test failed: Line 627: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 628: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 641: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 643: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 645: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 647: Status = 0xc0000001, expected 0x00000000\nBus_PDO_EvalMethod.c:955: Test failed: Line 669: Argument->Type = 0, expected 2\nBus_PDO_EvalMethod.c:962: Test failed: Line 669: Argument->DataLength = 0, expected 20\nBus_PDO_EvalMethod.c:924: Test failed: Line 698: Status = 0xc00000ef, expected 0xc0000023\n\nBus_PDO_EvalMethod: 335 tests executed (0 marked as todo, 9 failures), 0 skipped.\nTest Bus_PDO_EvalMethod completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\acpi_apitest.exe) failing with status c000000f\nBus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\n\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\nTest Bus_PDO_QueryResourceRequirements completed in 0.02 seconds.\n"
       },
       {
         "module": "advapi32",
-        "test": "crypt_sha",
+        "test": "CreateService",
         "status": "ok",
-        "log": "\ncrypt_sha: 1 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_sha completed in 0.00 seconds.\n"
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_apitest.exe) failing with status c000000f\n\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest CreateService completed in 0.03 seconds.\n"
       },
       {
         "module": "advapi32",
-        "test": "DuplicateTokenEx",
+        "test": "cred",
         "status": "ok",
-        "log": "\nDuplicateTokenEx: 15 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest DuplicateTokenEx completed in 0.03 seconds.\n"
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1469) unhandled type -1\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1476) unhandled flags 0xdeadbeef\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username L\"winetest\"\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username (null)\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username (null)\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1181) unhandled type -1\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1188) unhandled flags 0xdeadbeef\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (0000000000132110, 0x0, 000000000012FC54, 000000000012FC08) stub\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (0000000000132110, 0x0, 000000000012FC54, 000000000012FC08) stub\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (0000000000132110, 0x0, 000000000012FC54, 000000000012FC08) stub\ncred.c:361: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:361: Test failed: expected NULL credentials but got 0000000000132254\ncred.c:374: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:374: Test failed: expected NULL credentials but got 000000000013224C\ncred.c:820: Tests skipped: CRED_TYPE_DOMAIN_VISIBLE_PASSWORD credentials are not supported or are disabled. Skipping\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:2219) BinaryBlobCredential not checked\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:2219) BinaryBlobCredential not checked\n\ncred: 349 tests executed (0 marked as todo, 4 failures), 1 skipped.\nTest cred completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\ncrypt.c:156: Test failed: got 2148073473\ncrypt.c:285: Test failed: 6\ncrypt.c:288: Test failed: 6\ncrypt.c:291: Test failed: 6\ncrypt.c:298: Test failed: 6\ncrypt.c:301: Test failed: 6\ncrypt.c:307: Test failed: 6\ncrypt.c:325: Test failed: deadbeef\ncrypt.c:360: Test failed: 6\ncrypt.c:370: Test failed: 3735928559\ncrypt.c:378: Test failed: 6\ncrypt.c:402: Test failed: FIXME: The following tests normally completes on ReactOS x64, but not after being fuzzed from other tests in our test suite.\ncrypt.c:1289: Test failed: got 3735928559\n\ncrypt: 144 tests executed (0 marked as todo, 13 failures), 0 skipped.\nTest crypt completed in 0.06 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_lmhash completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md4 completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.00 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106715,
+    "source": "Build GCCLin_x86 on Test KVM",
+    "revision": "3bcd5e781899e791dbab8dc103c6e7a75f08d617",
+    "platform": "ReactOS - i386",
+    "comment": "Build 40213, Reason: picture library PR",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "Bus_PDO_EvalMethod.c:857: Test failed: Line 627: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 628: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 641: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 643: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 645: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 647: Status = 0xc0000001, expected 0x00000000\nBus_PDO_EvalMethod.c:955: Test failed: Line 669: Argument->Type = 0, expected 2\nBus_PDO_EvalMethod.c:962: Test failed: Line 669: Argument->DataLength = 0, expected 20\nBus_PDO_EvalMethod.c:924: Test failed: Line 698: Status = 0xc00000ef, expected 0xc0000023\n\nBus_PDO_EvalMethod: 335 tests executed (0 marked as todo, 9 failures), 0 skipped.\nTest Bus_PDO_EvalMethod completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "Bus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\n\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\nTest Bus_PDO_QueryResourceRequirements completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "CreateService",
+        "status": "ok",
+        "log": "\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest CreateService completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "cred",
+        "status": "ok",
+        "log": "fixme:(dll/win32/advapi32/wine/cred.c:1469) unhandled type -1\nfixme:(dll/win32/advapi32/wine/cred.c:1476) unhandled flags 0xdeadbeef\nerr:(dll/win32/advapi32/wine/cred.c:1853) bad username L\"winetest\"\nerr:(dll/win32/advapi32/wine/cred.c:1853) bad username (null)\nerr:(dll/win32/advapi32/wine/cred.c:1853) bad username (null)\nfixme:(dll/win32/advapi32/wine/cred.c:1181) unhandled type -1\nfixme:(dll/win32/advapi32/wine/cred.c:1188) unhandled flags 0xdeadbeef\nfixme:(dll/win32/advapi32/wine/cred.c:1757) (00231FC0, 0x0, 0022FD14, 0022FCE4) stub\nfixme:(dll/win32/advapi32/wine/cred.c:1757) (00231FC0, 0x0, 0022FD14, 0022FCE4) stub\nfixme:(dll/win32/advapi32/wine/cred.c:1757) (00231FC0, 0x0, 0022FD14, 0022FCE4) stub\ncred.c:361: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:361: Test failed: expected NULL credentials but got 00232104\ncred.c:374: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:374: Test failed: expected NULL credentials but got 002320E8\ncred.c:820: Tests skipped: CRED_TYPE_DOMAIN_VISIBLE_PASSWORD credentials are not supported or are disabled. Skipping\nfixme:(dll/win32/advapi32/wine/cred.c:2219) BinaryBlobCredential not checked\nfixme:(dll/win32/advapi32/wine/cred.c:2219) BinaryBlobCredential not checked\n\ncred: 349 tests executed (0 marked as todo, 4 failures), 1 skipped.\nTest cred completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "(ntoskrnl/mm/mmfault.c:148) Address: deadbeef\n(ntoskrnl/mm/mmfault.c:148) Address: deadbeef\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef7\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef3\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef7\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef3\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef7\ncrypt.c:156: Test failed: got 2148073473\ncrypt.c:285: Test failed: 6\ncrypt.c:288: Test failed: 6\ncrypt.c:291: Test failed: 6\ncrypt.c:298: Test failed: 6\ncrypt.c:301: Test failed: 6\ncrypt.c:307: Test failed: 6\ncrypt.c:325: Test failed: deadbeef\ncrypt.c:360: Test failed: 6\ncrypt.c:370: Test failed: -559038737\ncrypt.c:378: Test failed: 6\ncrypt.c:432: Test failed: 6\ncrypt.c:466: Test failed: 6\ncrypt.c:1289: Test failed: got -559038737\n\ncrypt: 164 tests executed (0 marked as todo, 14 failures), 0 skipped.\nTest crypt completed in 0.05 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_lmhash completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md4 completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.00 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106714,
+    "source": "Build MSVC_x64 on Test KVM_x64",
+    "revision": "3bcd5e781899e791dbab8dc103c6e7a75f08d617",
+    "platform": "ReactOS - i386",
+    "comment": "Build 8051, Reason: Picture library sync",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\acpi_apitest.exe) failing with status c000000f\nBus_PDO_EvalMethod.c:857: Test failed: Line 627: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 628: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 641: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 643: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 645: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 647: Status = 0xc0000001, expected 0x00000000\nBus_PDO_EvalMethod.c:955: Test failed: Line 669: Argument->Type = 0, expected 2\nBus_PDO_EvalMethod.c:962: Test failed: Line 669: Argument->DataLength = 0, expected 20\nBus_PDO_EvalMethod.c:924: Test failed: Line 698: Status = 0xc00000ef, expected 0xc0000023\n\nBus_PDO_EvalMethod: 335 tests executed (0 marked as todo, 9 failures), 0 skipped.\nTest Bus_PDO_EvalMethod completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\acpi_apitest.exe) failing with status c000000f\nBus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\n\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\nTest Bus_PDO_QueryResourceRequirements completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "CreateService",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_apitest.exe) failing with status c000000f\n\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest CreateService completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "cred",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1469) unhandled type -1\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1476) unhandled flags 0xdeadbeef\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username L\"winetest\"\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username (null)\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username (null)\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1181) unhandled type -1\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1188) unhandled flags 0xdeadbeef\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (0000000000132110, 0x0, 000000000012FC54, 000000000012FC08) stub\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (0000000000132110, 0x0, 000000000012FC54, 000000000012FC08) stub\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (0000000000132110, 0x0, 000000000012FC54, 000000000012FC08) stub\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:2219) BinaryBlobCredential not checked\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:2219) BinaryBlobCredential not checked\ncred.c:361: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:361: Test failed: expected NULL credentials but got 0000000000132254\ncred.c:374: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:374: Test failed: expected NULL credentials but got 000000000013224C\ncred.c:820: Tests skipped: CRED_TYPE_DOMAIN_VISIBLE_PASSWORD credentials are not supported or are disabled. Skipping\n\ncred: 349 tests executed (0 marked as todo, 4 failures), 1 skipped.\nTest cred completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\ncrypt.c:156: Test failed: got 2148073473\ncrypt.c:285: Test failed: 6\ncrypt.c:288: Test failed: 6\ncrypt.c:291: Test failed: 6\ncrypt.c:298: Test failed: 6\ncrypt.c:301: Test failed: 6\ncrypt.c:307: Test failed: 6\ncrypt.c:325: Test failed: deadbeef\ncrypt.c:360: Test failed: 6\ncrypt.c:370: Test failed: 3735928559\ncrypt.c:378: Test failed: 6\ncrypt.c:402: Test failed: FIXME: The following tests normally completes on ReactOS x64, but not after being fuzzed from other tests in our test suite.\ncrypt.c:1289: Test failed: got 3735928559\n\ncrypt: 144 tests executed (0 marked as todo, 13 failures), 0 skipped.\nTest crypt completed in 0.06 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_lmhash completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md4 completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.00 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106713,
+    "source": "Test Win2003_x64",
+    "revision": "8297b50db2bca7774a5da24f3acf6cf45235f487",
+    "platform": "Windows Server 2008 - Build 6003 SP2 - AMD64",
+    "comment": "Build 9814, Reason: COMDLG Syc",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "Bus_PDO_EvalMethod.c:857: Test marked todo: Line 627: Status = 0xc0140008, expected 0x00000000\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 628: Status = 0xc0140008, expected 0x00000000\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 641: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 643: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 645: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 647: Status = 0xc0000001, expected 0x00000000\r\nBus_PDO_EvalMethod.c:955: Test marked todo: Line 669: Argument->Type = 0, expected 2\r\nBus_PDO_EvalMethod.c:962: Test marked todo: Line 669: Argument->DataLength = 0, expected 20\r\nBus_PDO_EvalMethod.c:924: Test marked todo: Line 698: Status = 0xc00000ef, expected 0xc0000023\r\n\r\nBus_PDO_EvalMethod: 335 tests executed (9 marked as todo, 0 failures), 0 skipped.\r\nTest Bus_PDO_EvalMethod completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "Bus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\r\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\r\n\r\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\r\nTest Bus_PDO_QueryResourceRequirements completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "CreateService",
+        "status": "ok",
+        "log": "\r\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest CreateService completed in 0.11 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "cred",
+        "status": "ok",
+        "log": "cred.c:806: generic:\r\ncred.c:812: domain password:\r\ncred.c:345: Tests skipped: CRED_TYPE_DOMAIN_PASSWORD credentials are not supported or are disabled. Skipping\r\ncred.c:818: domain visible password:\r\n\r\ncred: 350 tests executed (0 marked as todo, 0 failures), 1 skipped.\r\nTest cred completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "\r\ncrypt: 163 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "\r\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_lmhash completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "\r\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_md4 completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "\r\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_md5 completed in 0.00 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106712,
+    "source": "Build GCCLin_x86 on Test KVM",
+    "revision": "8297b50db2bca7774a5da24f3acf6cf45235f487",
+    "platform": "ReactOS - i386",
+    "comment": "Build 40212, Reason: COMDLG32 sync",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "Bus_PDO_EvalMethod.c:857: Test failed: Line 627: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 628: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 641: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 643: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 645: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 647: Status = 0xc0000001, expected 0x00000000\nBus_PDO_EvalMethod.c:955: Test failed: Line 669: Argument->Type = 0, expected 2\nBus_PDO_EvalMethod.c:962: Test failed: Line 669: Argument->DataLength = 0, expected 20\nBus_PDO_EvalMethod.c:924: Test failed: Line 698: Status = 0xc00000ef, expected 0xc0000023\n\nBus_PDO_EvalMethod: 335 tests executed (0 marked as todo, 9 failures), 0 skipped.\nTest Bus_PDO_EvalMethod completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "Bus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\n\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\nTest Bus_PDO_QueryResourceRequirements completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "CreateService",
+        "status": "ok",
+        "log": "\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest CreateService completed in 0.05 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "cred",
+        "status": "ok",
+        "log": "fixme:(dll/win32/advapi32/wine/cred.c:1469) unhandled type -1\nfixme:(dll/win32/advapi32/wine/cred.c:1476) unhandled flags 0xdeadbeef\nerr:(dll/win32/advapi32/wine/cred.c:1853) bad username L\"winetest\"\nerr:(dll/win32/advapi32/wine/cred.c:1853) bad username (null)\nerr:(dll/win32/advapi32/wine/cred.c:1853) bad username (null)\nfixme:(dll/win32/advapi32/wine/cred.c:1181) unhandled type -1\nfixme:(dll/win32/advapi32/wine/cred.c:1188) unhandled flags 0xdeadbeef\nfixme:(dll/win32/advapi32/wine/cred.c:1757) (002326A0, 0x0, 0022FD14, 0022FCE4) stub\nfixme:(dll/win32/advapi32/wine/cred.c:1757) (002326A0, 0x0, 0022FD14, 0022FCE4) stub\nfixme:(dll/win32/advapi32/wine/cred.c:1757) (002326A0, 0x0, 0022FD14, 0022FCE4) stub\nfixme:(dll/win32/advapi32/wine/cred.c:2219) BinaryBlobCredential not checked\nfixme:(dll/win32/advapi32/wine/cred.c:2219) BinaryBlobCredential not checked\ncred.c:361: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:361: Test failed: expected NULL credentials but got 002326F4\ncred.c:374: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:374: Test failed: expected NULL credentials but got 002326F0\ncred.c:820: Tests skipped: CRED_TYPE_DOMAIN_VISIBLE_PASSWORD credentials are not supported or are disabled. Skipping\n\ncred: 349 tests executed (0 marked as todo, 4 failures), 1 skipped.\nTest cred completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "(ntoskrnl/mm/mmfault.c:148) Address: deadbeef\n(ntoskrnl/mm/mmfault.c:148) Address: deadbeef\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef7\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef3\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef7\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef3\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef7\ncrypt.c:156: Test failed: got 2148073473\ncrypt.c:285: Test failed: 6\ncrypt.c:288: Test failed: 6\ncrypt.c:291: Test failed: 6\ncrypt.c:298: Test failed: 6\ncrypt.c:301: Test failed: 6\ncrypt.c:307: Test failed: 6\ncrypt.c:325: Test failed: deadbeef\ncrypt.c:360: Test failed: 6\ncrypt.c:370: Test failed: -559038737\ncrypt.c:378: Test failed: 6\ncrypt.c:432: Test failed: 6\ncrypt.c:466: Test failed: 6\ncrypt.c:1289: Test failed: got -559038737\n\ncrypt: 164 tests executed (0 marked as todo, 14 failures), 0 skipped.\nTest crypt completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_lmhash completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md4 completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.00 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106711,
+    "source": "Build MSVC_x64 on Test KVM_x64",
+    "revision": "8297b50db2bca7774a5da24f3acf6cf45235f487",
+    "platform": "ReactOS - i386",
+    "comment": "Build 8050, Reason: COMDLG Syc",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\acpi_apitest.exe) failing with status c000000f\nBus_PDO_EvalMethod.c:857: Test failed: Line 627: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 628: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 641: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 643: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 645: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 647: Status = 0xc0000001, expected 0x00000000\nBus_PDO_EvalMethod.c:955: Test failed: Line 669: Argument->Type = 0, expected 2\nBus_PDO_EvalMethod.c:962: Test failed: Line 669: Argument->DataLength = 0, expected 20\nBus_PDO_EvalMethod.c:924: Test failed: Line 698: Status = 0xc00000ef, expected 0xc0000023\n\nBus_PDO_EvalMethod: 335 tests executed (0 marked as todo, 9 failures), 0 skipped.\nTest Bus_PDO_EvalMethod completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\acpi_apitest.exe) failing with status c000000f\nBus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\n\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\nTest Bus_PDO_QueryResourceRequirements completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "CreateService",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_apitest.exe) failing with status c000000f\n\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest CreateService completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "cred",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1469) unhandled type -1\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1476) unhandled flags 0xdeadbeef\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username L\"winetest\"\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username (null)\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username (null)\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1181) unhandled type -1\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1188) unhandled flags 0xdeadbeef\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (00000000001321F0, 0x0, 000000000012FC54, 000000000012FC08) stub\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (00000000001321F0, 0x0, 000000000012FC54, 000000000012FC08) stub\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (00000000001321F0, 0x0, 000000000012FC54, 000000000012FC08) stub\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:2219) BinaryBlobCredential not checked\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:2219) BinaryBlobCredential not checked\ncred.c:361: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:361: Test failed: expected NULL credentials but got 0000000000132264\ncred.c:374: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:374: Test failed: expected NULL credentials but got 000000000013225C\ncred.c:820: Tests skipped: CRED_TYPE_DOMAIN_VISIBLE_PASSWORD credentials are not supported or are disabled. Skipping\n\ncred: 349 tests executed (0 marked as todo, 4 failures), 1 skipped.\nTest cred completed in 0.05 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\ncrypt.c:156: Test failed: got 2148073473\ncrypt.c:285: Test failed: 6\ncrypt.c:288: Test failed: 6\ncrypt.c:291: Test failed: 6\ncrypt.c:298: Test failed: 6\ncrypt.c:301: Test failed: 6\ncrypt.c:307: Test failed: 6\ncrypt.c:325: Test failed: deadbeef\ncrypt.c:360: Test failed: 6\ncrypt.c:370: Test failed: 3735928559\ncrypt.c:378: Test failed: 6\ncrypt.c:402: Test failed: FIXME: The following tests normally completes on ReactOS x64, but not after being fuzzed from other tests in our test suite.\ncrypt.c:1289: Test failed: got 3735928559\n\ncrypt: 144 tests executed (0 marked as todo, 13 failures), 0 skipped.\nTest crypt completed in 0.06 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_lmhash completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md4 completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.01 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106710,
+    "source": "Test Win2003_x64",
+    "revision": "fd683dbba4599f81747345097081f988a8b9f71c",
+    "platform": "Windows Server 2008 - Build 6003 SP2 - AMD64",
+    "comment": "Build 9813",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "Bus_PDO_EvalMethod.c:857: Test marked todo: Line 627: Status = 0xc0140008, expected 0x00000000\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 628: Status = 0xc0140008, expected 0x00000000\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 641: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 643: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 645: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 647: Status = 0xc0000001, expected 0x00000000\r\nBus_PDO_EvalMethod.c:955: Test marked todo: Line 669: Argument->Type = 0, expected 2\r\nBus_PDO_EvalMethod.c:962: Test marked todo: Line 669: Argument->DataLength = 0, expected 20\r\nBus_PDO_EvalMethod.c:924: Test marked todo: Line 698: Status = 0xc00000ef, expected 0xc0000023\r\n\r\nBus_PDO_EvalMethod: 335 tests executed (9 marked as todo, 0 failures), 0 skipped.\r\nTest Bus_PDO_EvalMethod completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "Bus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\r\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\r\n\r\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\r\nTest Bus_PDO_QueryResourceRequirements completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "CreateService",
+        "status": "ok",
+        "log": "\r\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest CreateService completed in 0.14 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "cred",
+        "status": "ok",
+        "log": "cred.c:806: generic:\r\ncred.c:812: domain password:\r\ncred.c:345: Tests skipped: CRED_TYPE_DOMAIN_PASSWORD credentials are not supported or are disabled. Skipping\r\ncred.c:818: domain visible password:\r\n\r\ncred: 350 tests executed (0 marked as todo, 0 failures), 1 skipped.\r\nTest cred completed in 0.05 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "\r\ncrypt: 163 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "\r\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_lmhash completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "\r\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_md4 completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "\r\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_md5 completed in 0.01 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106709,
+    "source": "Build GCCLin_x86 on Test KVM",
+    "revision": "e68ebe19c603dde26d8653c14c44b5b42be423a9",
+    "platform": "ReactOS - i386",
+    "comment": "Build 40211",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "Bus_PDO_EvalMethod.c:857: Test failed: Line 627: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 628: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 641: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 643: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 645: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 647: Status = 0xc0000001, expected 0x00000000\nBus_PDO_EvalMethod.c:955: Test failed: Line 669: Argument->Type = 0, expected 2\nBus_PDO_EvalMethod.c:962: Test failed: Line 669: Argument->DataLength = 0, expected 20\nBus_PDO_EvalMethod.c:924: Test failed: Line 698: Status = 0xc00000ef, expected 0xc0000023\n\nBus_PDO_EvalMethod: 335 tests executed (0 marked as todo, 9 failures), 0 skipped.\nTest Bus_PDO_EvalMethod completed in 0.05 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "Bus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\n\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\nTest Bus_PDO_QueryResourceRequirements completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "CreateService",
+        "status": "ok",
+        "log": "\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest CreateService completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "cred",
+        "status": "ok",
+        "log": "fixme:(dll/win32/advapi32/wine/cred.c:1469) unhandled type -1\nfixme:(dll/win32/advapi32/wine/cred.c:1476) unhandled flags 0xdeadbeef\nerr:(dll/win32/advapi32/wine/cred.c:1853) bad username L\"winetest\"\nerr:(dll/win32/advapi32/wine/cred.c:1853) bad username (null)\nerr:(dll/win32/advapi32/wine/cred.c:1853) bad username (null)\nfixme:(dll/win32/advapi32/wine/cred.c:1181) unhandled type -1\nfixme:(dll/win32/advapi32/wine/cred.c:1188) unhandled flags 0xdeadbeef\nfixme:(dll/win32/advapi32/wine/cred.c:1757) (00231FC0, 0x0, 0022FD14, 0022FCE4) stub\nfixme:(dll/win32/advapi32/wine/cred.c:1757) (00231FC0, 0x0, 0022FD14, 0022FCE4) stub\nfixme:(dll/win32/advapi32/wine/cred.c:1757) (00231FC0, 0x0, 0022FD14, 0022FCE4) stub\nfixme:(dll/win32/advapi32/wine/cred.c:2219) BinaryBlobCredential not checked\nfixme:(dll/win32/advapi32/wine/cred.c:2219) BinaryBlobCredential not checked\ncred.c:361: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:361: Test failed: expected NULL credentials but got 00232104\ncred.c:374: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:374: Test failed: expected NULL credentials but got 002320E8\ncred.c:820: Tests skipped: CRED_TYPE_DOMAIN_VISIBLE_PASSWORD credentials are not supported or are disabled. Skipping\n\ncred: 349 tests executed (0 marked as todo, 4 failures), 1 skipped.\nTest cred completed in 0.05 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "(ntoskrnl/mm/mmfault.c:148) Address: deadbeef\n(ntoskrnl/mm/mmfault.c:148) Address: deadbeef\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef7\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef3\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef7\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef3\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef7\ncrypt.c:156: Test failed: got 2148073473\ncrypt.c:285: Test failed: 6\ncrypt.c:288: Test failed: 6\ncrypt.c:291: Test failed: 6\ncrypt.c:298: Test failed: 6\ncrypt.c:301: Test failed: 6\ncrypt.c:307: Test failed: 6\ncrypt.c:325: Test failed: deadbeef\ncrypt.c:360: Test failed: 6\ncrypt.c:370: Test failed: -559038737\ncrypt.c:378: Test failed: 6\ncrypt.c:432: Test failed: 6\ncrypt.c:466: Test failed: 6\ncrypt.c:1289: Test failed: got -559038737\n\ncrypt: 164 tests executed (0 marked as todo, 14 failures), 0 skipped.\nTest crypt completed in 0.08 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_lmhash completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md4 completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.01 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106708,
+    "source": "Build MSVC_x64 on Test KVM_x64",
+    "revision": "e68ebe19c603dde26d8653c14c44b5b42be423a9",
+    "platform": "ReactOS - i386",
+    "comment": "Build 8049",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\acpi_apitest.exe) failing with status c000000f\nBus_PDO_EvalMethod.c:857: Test failed: Line 627: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 628: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 641: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 643: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 645: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 647: Status = 0xc0000001, expected 0x00000000\nBus_PDO_EvalMethod.c:955: Test failed: Line 669: Argument->Type = 0, expected 2\nBus_PDO_EvalMethod.c:962: Test failed: Line 669: Argument->DataLength = 0, expected 20\nBus_PDO_EvalMethod.c:924: Test failed: Line 698: Status = 0xc00000ef, expected 0xc0000023\n\nBus_PDO_EvalMethod: 335 tests executed (0 marked as todo, 9 failures), 0 skipped.\nTest Bus_PDO_EvalMethod completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\acpi_apitest.exe) failing with status c000000f\nBus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\n\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\nTest Bus_PDO_QueryResourceRequirements completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "CreateService",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_apitest.exe) failing with status c000000f\n\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest CreateService completed in 0.05 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "cred",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1469) unhandled type -1\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1476) unhandled flags 0xdeadbeef\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username L\"winetest\"\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username (null)\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username (null)\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1181) unhandled type -1\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1188) unhandled flags 0xdeadbeef\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (0000000000132110, 0x0, 000000000012FC54, 000000000012FC08) stub\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (0000000000132110, 0x0, 000000000012FC54, 000000000012FC08) stub\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (0000000000132110, 0x0, 000000000012FC54, 000000000012FC08) stub\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:2219) BinaryBlobCredential not checked\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:2219) BinaryBlobCredential not checked\ncred.c:361: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:361: Test failed: expected NULL credentials but got 0000000000132254\ncred.c:374: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:374: Test failed: expected NULL credentials but got 000000000013224C\ncred.c:820: Tests skipped: CRED_TYPE_DOMAIN_VISIBLE_PASSWORD credentials are not supported or are disabled. Skipping\n\ncred: 349 tests executed (0 marked as todo, 4 failures), 1 skipped.\nTest cred completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\ncrypt.c:156: Test failed: got 2148073473\ncrypt.c:285: Test failed: 6\ncrypt.c:288: Test failed: 6\ncrypt.c:291: Test failed: 6\ncrypt.c:298: Test failed: 6\ncrypt.c:301: Test failed: 6\ncrypt.c:307: Test failed: 6\ncrypt.c:325: Test failed: deadbeef\ncrypt.c:360: Test failed: 6\ncrypt.c:370: Test failed: 3735928559\ncrypt.c:378: Test failed: 6\ncrypt.c:402: Test failed: FIXME: The following tests normally completes on ReactOS x64, but not after being fuzzed from other tests in our test suite.\ncrypt.c:1289: Test failed: got 3735928559\n\ncrypt: 144 tests executed (0 marked as todo, 13 failures), 0 skipped.\nTest crypt completed in 0.08 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_lmhash completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md4 completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.00 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106707,
+    "source": "Test Win2003_x64",
+    "revision": "3bcd5e781899e791dbab8dc103c6e7a75f08d617",
+    "platform": "Windows Server 2008 - Build 6003 SP2 - AMD64",
+    "comment": "Build 9811, Reason: Picture library sync",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "Bus_PDO_EvalMethod.c:857: Test marked todo: Line 627: Status = 0xc0140008, expected 0x00000000\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 628: Status = 0xc0140008, expected 0x00000000\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 641: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 643: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 645: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 647: Status = 0xc0000001, expected 0x00000000\r\nBus_PDO_EvalMethod.c:955: Test marked todo: Line 669: Argument->Type = 0, expected 2\r\nBus_PDO_EvalMethod.c:962: Test marked todo: Line 669: Argument->DataLength = 0, expected 20\r\nBus_PDO_EvalMethod.c:924: Test marked todo: Line 698: Status = 0xc00000ef, expected 0xc0000023\r\n\r\nBus_PDO_EvalMethod: 335 tests executed (9 marked as todo, 0 failures), 0 skipped.\r\nTest Bus_PDO_EvalMethod completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "Bus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\r\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\r\n\r\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\r\nTest Bus_PDO_QueryResourceRequirements completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "CreateService",
+        "status": "ok",
+        "log": "\r\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest CreateService completed in 0.13 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "cred",
+        "status": "ok",
+        "log": "cred.c:806: generic:\r\ncred.c:812: domain password:\r\ncred.c:345: Tests skipped: CRED_TYPE_DOMAIN_PASSWORD credentials are not supported or are disabled. Skipping\r\ncred.c:818: domain visible password:\r\n\r\ncred: 350 tests executed (0 marked as todo, 0 failures), 1 skipped.\r\nTest cred completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "\r\ncrypt: 163 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "\r\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_lmhash completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "\r\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_md4 completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "\r\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_md5 completed in 0.00 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106706,
+    "source": "Build GCCLin_x86 on Test KVM",
+    "revision": "45a4f95b04f152f9c5d931390f2ad8eb773423ea",
+    "platform": "ReactOS - i386",
+    "comment": "Build 40210",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "Bus_PDO_EvalMethod.c:857: Test failed: Line 627: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 628: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 641: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 643: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 645: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 647: Status = 0xc0000001, expected 0x00000000\nBus_PDO_EvalMethod.c:955: Test failed: Line 669: Argument->Type = 0, expected 2\nBus_PDO_EvalMethod.c:962: Test failed: Line 669: Argument->DataLength = 0, expected 20\nBus_PDO_EvalMethod.c:924: Test failed: Line 698: Status = 0xc00000ef, expected 0xc0000023\n\nBus_PDO_EvalMethod: 335 tests executed (0 marked as todo, 9 failures), 0 skipped.\nTest Bus_PDO_EvalMethod completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "Bus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\n\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\nTest Bus_PDO_QueryResourceRequirements completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "CreateService",
+        "status": "ok",
+        "log": "\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest CreateService completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "cred",
+        "status": "ok",
+        "log": "fixme:(dll/win32/advapi32/wine/cred.c:1469) unhandled type -1\nfixme:(dll/win32/advapi32/wine/cred.c:1476) unhandled flags 0xdeadbeef\nerr:(dll/win32/advapi32/wine/cred.c:1853) bad username L\"winetest\"\nerr:(dll/win32/advapi32/wine/cred.c:1853) bad username (null)\nerr:(dll/win32/advapi32/wine/cred.c:1853) bad username (null)\nfixme:(dll/win32/advapi32/wine/cred.c:1181) unhandled type -1\nfixme:(dll/win32/advapi32/wine/cred.c:1188) unhandled flags 0xdeadbeef\nfixme:(dll/win32/advapi32/wine/cred.c:1757) (002326A0, 0x0, 0022FD14, 0022FCE4) stub\nfixme:(dll/win32/advapi32/wine/cred.c:1757) (002326A0, 0x0, 0022FD14, 0022FCE4) stub\nfixme:(dll/win32/advapi32/wine/cred.c:1757) (002326A0, 0x0, 0022FD14, 0022FCE4) stub\nfixme:(dll/win32/advapi32/wine/cred.c:2219) BinaryBlobCredential not checked\nfixme:(dll/win32/advapi32/wine/cred.c:2219) BinaryBlobCredential not checked\ncred.c:361: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:361: Test failed: expected NULL credentials but got 002326F4\ncred.c:374: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:374: Test failed: expected NULL credentials but got 002326F0\ncred.c:820: Tests skipped: CRED_TYPE_DOMAIN_VISIBLE_PASSWORD credentials are not supported or are disabled. Skipping\n\ncred: 349 tests executed (0 marked as todo, 4 failures), 1 skipped.\nTest cred completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "(ntoskrnl/mm/mmfault.c:148) Address: deadbeef\n(ntoskrnl/mm/mmfault.c:148) Address: deadbeef\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef7\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef3\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef7\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef3\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef7\ncrypt.c:156: Test failed: got 2148073473\ncrypt.c:285: Test failed: 6\ncrypt.c:288: Test failed: 6\ncrypt.c:291: Test failed: 6\ncrypt.c:298: Test failed: 6\ncrypt.c:301: Test failed: 6\ncrypt.c:307: Test failed: 6\ncrypt.c:325: Test failed: deadbeef\ncrypt.c:360: Test failed: 6\ncrypt.c:370: Test failed: -559038737\ncrypt.c:378: Test failed: 6\ncrypt.c:432: Test failed: 6\ncrypt.c:466: Test failed: 6\ncrypt.c:1289: Test failed: got -559038737\n\ncrypt: 164 tests executed (0 marked as todo, 14 failures), 0 skipped.\nTest crypt completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_lmhash completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md4 completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.01 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106705,
+    "source": "Test Win2003_x64",
+    "revision": "e68ebe19c603dde26d8653c14c44b5b42be423a9",
+    "platform": "Windows Server 2008 - Build 6003 SP2 - AMD64",
+    "comment": "Build 9809",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "Bus_PDO_EvalMethod.c:857: Test marked todo: Line 627: Status = 0xc0140008, expected 0x00000000\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 628: Status = 0xc0140008, expected 0x00000000\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 641: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 643: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 645: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 647: Status = 0xc0000001, expected 0x00000000\r\nBus_PDO_EvalMethod.c:955: Test marked todo: Line 669: Argument->Type = 0, expected 2\r\nBus_PDO_EvalMethod.c:962: Test marked todo: Line 669: Argument->DataLength = 0, expected 20\r\nBus_PDO_EvalMethod.c:924: Test marked todo: Line 698: Status = 0xc00000ef, expected 0xc0000023\r\n\r\nBus_PDO_EvalMethod: 335 tests executed (9 marked as todo, 0 failures), 0 skipped.\r\nTest Bus_PDO_EvalMethod completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "Bus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\r\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\r\n\r\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\r\nTest Bus_PDO_QueryResourceRequirements completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "CreateService",
+        "status": "ok",
+        "log": "\r\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest CreateService completed in 0.14 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "cred",
+        "status": "ok",
+        "log": "cred.c:806: generic:\r\ncred.c:812: domain password:\r\ncred.c:345: Tests skipped: CRED_TYPE_DOMAIN_PASSWORD credentials are not supported or are disabled. Skipping\r\ncred.c:818: domain visible password:\r\n\r\ncred: 350 tests executed (0 marked as todo, 0 failures), 1 skipped.\r\nTest cred completed in 0.05 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "\r\ncrypt: 163 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "\r\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_lmhash completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "\r\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_md4 completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "\r\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_md5 completed in 0.00 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106704,
+    "source": "Test WHS",
+    "revision": "e68ebe19c603dde26d8653c14c44b5b42be423a9",
+    "platform": "Windows Server 2003 - Build 3790 SP2 - i386",
+    "comment": "Build 3750",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "Bus_PDO_EvalMethod.c:857: Test marked todo: Line 627: Status = 0xc0140008, expected 0x00000000\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 628: Status = 0xc0140008, expected 0x00000000\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 641: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 643: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 645: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 647: Status = 0xc0000001, expected 0x00000000\r\nBus_PDO_EvalMethod.c:955: Test marked todo: Line 669: Argument->Type = 0, expected 2\r\nBus_PDO_EvalMethod.c:962: Test marked todo: Line 669: Argument->DataLength = 0, expected 20\r\nBus_PDO_EvalMethod.c:924: Test marked todo: Line 698: Status = 0xc00000ef, expected 0xc0000023\r\n\r\nBus_PDO_EvalMethod: 335 tests executed (9 marked as todo, 0 failures), 0 skipped.\r\nTest Bus_PDO_EvalMethod completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "Bus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\r\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\r\n\r\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\r\nTest Bus_PDO_QueryResourceRequirements completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "CreateService",
+        "status": "ok",
+        "log": "\r\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest CreateService completed in 0.52 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "cred",
+        "status": "ok",
+        "log": "cred.c:806: generic:\r\ncred.c:812: domain password:\r\ncred.c:818: domain visible password:\r\n\r\ncred: 363 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest cred completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "\r\ncrypt: 163 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt completed in 0.05 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "\r\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_lmhash completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "\r\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_md4 completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "\r\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_md5 completed in 0.01 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106703,
+    "source": "Build MSVC_x64 on Test KVM_x64",
+    "revision": "45a4f95b04f152f9c5d931390f2ad8eb773423ea",
+    "platform": "ReactOS - i386",
+    "comment": "Build 8048",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\acpi_apitest.exe) failing with status c000000f\nBus_PDO_EvalMethod.c:857: Test failed: Line 627: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 628: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 641: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 643: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 645: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 647: Status = 0xc0000001, expected 0x00000000\nBus_PDO_EvalMethod.c:955: Test failed: Line 669: Argument->Type = 0, expected 2\nBus_PDO_EvalMethod.c:962: Test failed: Line 669: Argument->DataLength = 0, expected 20\nBus_PDO_EvalMethod.c:924: Test failed: Line 698: Status = 0xc00000ef, expected 0xc0000023\n\nBus_PDO_EvalMethod: 335 tests executed (0 marked as todo, 9 failures), 0 skipped.\nTest Bus_PDO_EvalMethod completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\acpi_apitest.exe) failing with status c000000f\nBus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\n\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\nTest Bus_PDO_QueryResourceRequirements completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "CreateService",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_apitest.exe) failing with status c000000f\n\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest CreateService completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "cred",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1469) unhandled type -1\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1476) unhandled flags 0xdeadbeef\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username L\"winetest\"\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username (null)\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username (null)\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1181) unhandled type -1\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1188) unhandled flags 0xdeadbeef\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (00000000001321F0, 0x0, 000000000012FC54, 000000000012FC08) stub\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (00000000001321F0, 0x0, 000000000012FC54, 000000000012FC08) stub\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (00000000001321F0, 0x0, 000000000012FC54, 000000000012FC08) stub\ncred.c:361: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:361: Test failed: expected NULL credentials but got 0000000000132264\ncred.c:374: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:374: Test failed: expected NULL credentials but got 000000000013225C\ncred.c:820: Tests skipped: CRED_TYPE_DOMAIN_VISIBLE_PASSWORD credentials are not supported or are disabled. Skipping\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:2219) BinaryBlobCredential not checked\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:2219) BinaryBlobCredential not checked\n\ncred: 349 tests executed (0 marked as todo, 4 failures), 1 skipped.\nTest cred completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\ncrypt.c:156: Test failed: got 2148073473\ncrypt.c:285: Test failed: 6\ncrypt.c:288: Test failed: 6\ncrypt.c:291: Test failed: 6\ncrypt.c:298: Test failed: 6\ncrypt.c:301: Test failed: 6\ncrypt.c:307: Test failed: 6\ncrypt.c:325: Test failed: deadbeef\ncrypt.c:360: Test failed: 6\ncrypt.c:370: Test failed: 3735928559\ncrypt.c:378: Test failed: 6\ncrypt.c:402: Test failed: FIXME: The following tests normally completes on ReactOS x64, but not after being fuzzed from other tests in our test suite.\ncrypt.c:1289: Test failed: got 3735928559\n\ncrypt: 144 tests executed (0 marked as todo, 13 failures), 0 skipped.\nTest crypt completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_lmhash completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md4 completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.02 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106702,
+    "source": "Build GCCLin_x86 on Test KVM",
+    "revision": "7950ea3f07eace2dd52b1439a2b4c1b64c8efc48",
+    "platform": "ReactOS - i386",
+    "comment": "Build 40209",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "Bus_PDO_EvalMethod.c:857: Test failed: Line 627: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 628: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 641: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 643: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 645: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 647: Status = 0xc0000001, expected 0x00000000\nBus_PDO_EvalMethod.c:955: Test failed: Line 669: Argument->Type = 0, expected 2\nBus_PDO_EvalMethod.c:962: Test failed: Line 669: Argument->DataLength = 0, expected 20\nBus_PDO_EvalMethod.c:924: Test failed: Line 698: Status = 0xc00000ef, expected 0xc0000023\n\nBus_PDO_EvalMethod: 335 tests executed (0 marked as todo, 9 failures), 0 skipped.\nTest Bus_PDO_EvalMethod completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "Bus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\n\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\nTest Bus_PDO_QueryResourceRequirements completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "CreateService",
+        "status": "ok",
+        "log": "\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest CreateService completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "cred",
+        "status": "ok",
+        "log": "fixme:(dll/win32/advapi32/wine/cred.c:1469) unhandled type -1\nfixme:(dll/win32/advapi32/wine/cred.c:1476) unhandled flags 0xdeadbeef\nerr:(dll/win32/advapi32/wine/cred.c:1853) bad username L\"winetest\"\nerr:(dll/win32/advapi32/wine/cred.c:1853) bad username (null)\nerr:(dll/win32/advapi32/wine/cred.c:1853) bad username (null)\nfixme:(dll/win32/advapi32/wine/cred.c:1181) unhandled type -1\nfixme:(dll/win32/advapi32/wine/cred.c:1188) unhandled flags 0xdeadbeef\nfixme:(dll/win32/advapi32/wine/cred.c:1757) (002326A0, 0x0, 0022FD14, 0022FCE4) stub\nfixme:(dll/win32/advapi32/wine/cred.c:1757) (002326A0, 0x0, 0022FD14, 0022FCE4) stub\nfixme:(dll/win32/advapi32/wine/cred.c:1757) (002326A0, 0x0, 0022FD14, 0022FCE4) stub\nfixme:(dll/win32/advapi32/wine/cred.c:2219) BinaryBlobCredential not checked\nfixme:(dll/win32/advapi32/wine/cred.c:2219) BinaryBlobCredential not checked\ncred.c:361: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:361: Test failed: expected NULL credentials but got 002326F4\ncred.c:374: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:374: Test failed: expected NULL credentials but got 002326F0\ncred.c:820: Tests skipped: CRED_TYPE_DOMAIN_VISIBLE_PASSWORD credentials are not supported or are disabled. Skipping\n\ncred: 349 tests executed (0 marked as todo, 4 failures), 1 skipped.\nTest cred completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "(ntoskrnl/mm/mmfault.c:148) Address: deadbeef\n(ntoskrnl/mm/mmfault.c:148) Address: deadbeef\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef7\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef3\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef7\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef3\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef7\ncrypt.c:156: Test failed: got 2148073473\ncrypt.c:285: Test failed: 6\ncrypt.c:288: Test failed: 6\ncrypt.c:291: Test failed: 6\ncrypt.c:298: Test failed: 6\ncrypt.c:301: Test failed: 6\ncrypt.c:307: Test failed: 6\ncrypt.c:325: Test failed: deadbeef\ncrypt.c:360: Test failed: 6\ncrypt.c:370: Test failed: -559038737\ncrypt.c:378: Test failed: 6\ncrypt.c:432: Test failed: 6\ncrypt.c:466: Test failed: 6\ncrypt.c:1289: Test failed: got -559038737\n\ncrypt: 164 tests executed (0 marked as todo, 14 failures), 0 skipped.\nTest crypt completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_lmhash completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md4 completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.01 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106701,
+    "source": "Build MSVC_x64 on Test KVM_x64",
+    "revision": "7950ea3f07eace2dd52b1439a2b4c1b64c8efc48",
+    "platform": "ReactOS - i386",
+    "comment": "Build 8047",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\acpi_apitest.exe) failing with status c000000f\nBus_PDO_EvalMethod.c:857: Test failed: Line 627: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 628: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 641: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 643: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 645: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 647: Status = 0xc0000001, expected 0x00000000\nBus_PDO_EvalMethod.c:955: Test failed: Line 669: Argument->Type = 0, expected 2\nBus_PDO_EvalMethod.c:962: Test failed: Line 669: Argument->DataLength = 0, expected 20\nBus_PDO_EvalMethod.c:924: Test failed: Line 698: Status = 0xc00000ef, expected 0xc0000023\n\nBus_PDO_EvalMethod: 335 tests executed (0 marked as todo, 9 failures), 0 skipped.\nTest Bus_PDO_EvalMethod completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\acpi_apitest.exe) failing with status c000000f\nBus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\n\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\nTest Bus_PDO_QueryResourceRequirements completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "CreateService",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_apitest.exe) failing with status c000000f\n\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest CreateService completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "cred",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1469) unhandled type -1\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1476) unhandled flags 0xdeadbeef\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username L\"winetest\"\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username (null)\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username (null)\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1181) unhandled type -1\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1188) unhandled flags 0xdeadbeef\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (00000000001321F0, 0x0, 000000000012FC54, 000000000012FC08) stub\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (00000000001321F0, 0x0, 000000000012FC54, 000000000012FC08) stub\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (00000000001321F0, 0x0, 000000000012FC54, 000000000012FC08) stub\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:2219) BinaryBlobCredential not checked\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:2219) BinaryBlobCredential not checked\ncred.c:361: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:361: Test failed: expected NULL credentials but got 0000000000132264\ncred.c:374: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:374: Test failed: expected NULL credentials but got 000000000013225C\ncred.c:820: Tests skipped: CRED_TYPE_DOMAIN_VISIBLE_PASSWORD credentials are not supported or are disabled. Skipping\n\ncred: 349 tests executed (0 marked as todo, 4 failures), 1 skipped.\nTest cred completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\ncrypt.c:156: Test failed: got 2148073473\ncrypt.c:285: Test failed: 6\ncrypt.c:288: Test failed: 6\ncrypt.c:291: Test failed: 6\ncrypt.c:298: Test failed: 6\ncrypt.c:301: Test failed: 6\ncrypt.c:307: Test failed: 6\ncrypt.c:325: Test failed: deadbeef\ncrypt.c:360: Test failed: 6\ncrypt.c:370: Test failed: 3735928559\ncrypt.c:378: Test failed: 6\ncrypt.c:402: Test failed: FIXME: The following tests normally completes on ReactOS x64, but not after being fuzzed from other tests in our test suite.\ncrypt.c:1289: Test failed: got 3735928559\n\ncrypt: 144 tests executed (0 marked as todo, 13 failures), 0 skipped.\nTest crypt completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_lmhash completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md4 completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.01 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106700,
+    "source": "Build GCCLin_x86 on Test KVM",
+    "revision": "20494b84efc05c6d9d5ac4cc1618fe4f1269c22e",
+    "platform": "ReactOS - i386",
+    "comment": "Build 40208",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "Bus_PDO_EvalMethod.c:857: Test failed: Line 627: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 628: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 641: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 643: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 645: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 647: Status = 0xc0000001, expected 0x00000000\nBus_PDO_EvalMethod.c:955: Test failed: Line 669: Argument->Type = 0, expected 2\nBus_PDO_EvalMethod.c:962: Test failed: Line 669: Argument->DataLength = 0, expected 20\nBus_PDO_EvalMethod.c:924: Test failed: Line 698: Status = 0xc00000ef, expected 0xc0000023\n\nBus_PDO_EvalMethod: 335 tests executed (0 marked as todo, 9 failures), 0 skipped.\nTest Bus_PDO_EvalMethod completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "Bus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\n\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\nTest Bus_PDO_QueryResourceRequirements completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "CreateService",
+        "status": "ok",
+        "log": "\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest CreateService completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "cred",
+        "status": "ok",
+        "log": "fixme:(dll/win32/advapi32/wine/cred.c:1469) unhandled type -1\nfixme:(dll/win32/advapi32/wine/cred.c:1476) unhandled flags 0xdeadbeef\nerr:(dll/win32/advapi32/wine/cred.c:1853) bad username L\"winetest\"\nerr:(dll/win32/advapi32/wine/cred.c:1853) bad username (null)\nerr:(dll/win32/advapi32/wine/cred.c:1853) bad username (null)\nfixme:(dll/win32/advapi32/wine/cred.c:1181) unhandled type -1\nfixme:(dll/win32/advapi32/wine/cred.c:1188) unhandled flags 0xdeadbeef\nfixme:(dll/win32/advapi32/wine/cred.c:1757) (002326A0, 0x0, 0022FD14, 0022FCE4) stub\nfixme:(dll/win32/advapi32/wine/cred.c:1757) (002326A0, 0x0, 0022FD14, 0022FCE4) stub\nfixme:(dll/win32/advapi32/wine/cred.c:1757) (002326A0, 0x0, 0022FD14, 0022FCE4) stub\nfixme:(dll/win32/advapi32/wine/cred.c:2219) BinaryBlobCredential not checked\nfixme:(dll/win32/advapi32/wine/cred.c:2219) BinaryBlobCredential not checked\ncred.c:361: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:361: Test failed: expected NULL credentials but got 002326F4\ncred.c:374: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:374: Test failed: expected NULL credentials but got 002326F0\ncred.c:820: Tests skipped: CRED_TYPE_DOMAIN_VISIBLE_PASSWORD credentials are not supported or are disabled. Skipping\n\ncred: 349 tests executed (0 marked as todo, 4 failures), 1 skipped.\nTest cred completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "(ntoskrnl/mm/mmfault.c:148) Address: deadbeef\n(ntoskrnl/mm/mmfault.c:148) Address: deadbeef\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef7\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef3\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef7\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef3\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef7\ncrypt.c:156: Test failed: got 2148073473\ncrypt.c:285: Test failed: 6\ncrypt.c:288: Test failed: 6\ncrypt.c:291: Test failed: 6\ncrypt.c:298: Test failed: 6\ncrypt.c:301: Test failed: 6\ncrypt.c:307: Test failed: 6\ncrypt.c:325: Test failed: deadbeef\ncrypt.c:360: Test failed: 6\ncrypt.c:370: Test failed: -559038737\ncrypt.c:378: Test failed: 6\ncrypt.c:432: Test failed: 6\ncrypt.c:466: Test failed: 6\ncrypt.c:1289: Test failed: got -559038737\n\ncrypt: 164 tests executed (0 marked as todo, 14 failures), 0 skipped.\nTest crypt completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_lmhash completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md4 completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.01 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106699,
+    "source": "Build MSVC_x64 on Test KVM_x64",
+    "revision": "20494b84efc05c6d9d5ac4cc1618fe4f1269c22e",
+    "platform": "ReactOS - i386",
+    "comment": "Build 8046",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\acpi_apitest.exe) failing with status c000000f\nBus_PDO_EvalMethod.c:857: Test failed: Line 627: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 628: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 641: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 643: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 645: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 647: Status = 0xc0000001, expected 0x00000000\nBus_PDO_EvalMethod.c:955: Test failed: Line 669: Argument->Type = 0, expected 2\nBus_PDO_EvalMethod.c:962: Test failed: Line 669: Argument->DataLength = 0, expected 20\nBus_PDO_EvalMethod.c:924: Test failed: Line 698: Status = 0xc00000ef, expected 0xc0000023\n\nBus_PDO_EvalMethod: 335 tests executed (0 marked as todo, 9 failures), 0 skipped.\nTest Bus_PDO_EvalMethod completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\acpi_apitest.exe) failing with status c000000f\nBus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\n\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\nTest Bus_PDO_QueryResourceRequirements completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "CreateService",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_apitest.exe) failing with status c000000f\n\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest CreateService completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "cred",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1469) unhandled type -1\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1476) unhandled flags 0xdeadbeef\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username L\"winetest\"\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username (null)\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username (null)\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1181) unhandled type -1\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1188) unhandled flags 0xdeadbeef\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (00000000001321F0, 0x0, 000000000012FC54, 000000000012FC08) stub\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (00000000001321F0, 0x0, 000000000012FC54, 000000000012FC08) stub\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (00000000001321F0, 0x0, 000000000012FC54, 000000000012FC08) stub\ncred.c:361: Test failed: expected CredentialBlobSize of 0 but got 20\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:2219) BinaryBlobCredential not checked\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:2219) BinaryBlobCredential not checked\ncred.c:361: Test failed: expected NULL credentials but got 0000000000132264\ncred.c:374: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:374: Test failed: expected NULL credentials but got 000000000013225C\ncred.c:820: Tests skipped: CRED_TYPE_DOMAIN_VISIBLE_PASSWORD credentials are not supported or are disabled. Skipping\n\ncred: 349 tests executed (0 marked as todo, 4 failures), 1 skipped.\nTest cred completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\ncrypt.c:156: Test failed: got 2148073473\ncrypt.c:285: Test failed: 6\ncrypt.c:288: Test failed: 6\ncrypt.c:291: Test failed: 6\ncrypt.c:298: Test failed: 6\ncrypt.c:301: Test failed: 6\ncrypt.c:307: Test failed: 6\ncrypt.c:325: Test failed: deadbeef\ncrypt.c:360: Test failed: 6\ncrypt.c:370: Test failed: 3735928559\ncrypt.c:378: Test failed: 6\ncrypt.c:402: Test failed: FIXME: The following tests normally completes on ReactOS x64, but not after being fuzzed from other tests in our test suite.\ncrypt.c:1289: Test failed: got 3735928559\n\ncrypt: 144 tests executed (0 marked as todo, 13 failures), 0 skipped.\nTest crypt completed in 0.06 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_lmhash completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md4 completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.00 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106698,
+    "source": "Test Win2003_x64",
+    "revision": "7950ea3f07eace2dd52b1439a2b4c1b64c8efc48",
+    "platform": "Windows Server 2008 - Build 6003 SP2 - AMD64",
+    "comment": "Build 9807",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "Bus_PDO_EvalMethod.c:857: Test marked todo: Line 627: Status = 0xc0140008, expected 0x00000000\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 628: Status = 0xc0140008, expected 0x00000000\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 641: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 643: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 645: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 647: Status = 0xc0000001, expected 0x00000000\r\nBus_PDO_EvalMethod.c:955: Test marked todo: Line 669: Argument->Type = 0, expected 2\r\nBus_PDO_EvalMethod.c:962: Test marked todo: Line 669: Argument->DataLength = 0, expected 20\r\nBus_PDO_EvalMethod.c:924: Test marked todo: Line 698: Status = 0xc00000ef, expected 0xc0000023\r\n\r\nBus_PDO_EvalMethod: 335 tests executed (9 marked as todo, 0 failures), 0 skipped.\r\nTest Bus_PDO_EvalMethod completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "Bus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\r\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\r\n\r\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\r\nTest Bus_PDO_QueryResourceRequirements completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "CreateService",
+        "status": "ok",
+        "log": "\r\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest CreateService completed in 0.11 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "cred",
+        "status": "ok",
+        "log": "cred.c:806: generic:\r\ncred.c:812: domain password:\r\ncred.c:345: Tests skipped: CRED_TYPE_DOMAIN_PASSWORD credentials are not supported or are disabled. Skipping\r\ncred.c:818: domain visible password:\r\n\r\ncred: 350 tests executed (0 marked as todo, 0 failures), 1 skipped.\r\nTest cred completed in 0.05 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "\r\ncrypt: 163 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "\r\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_lmhash completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "\r\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_md4 completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "\r\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_md5 completed in 0.02 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106697,
+    "source": "Build MSVC_x64 on Test KVM_x64",
+    "revision": "aad94302b7d489630fd931219e4cf3f0185e3007",
+    "platform": "ReactOS - i386",
+    "comment": "Build 8045, Reason: PR 8816 (aad9430)",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\acpi_apitest.exe) failing with status c000000f\nBus_PDO_EvalMethod.c:857: Test failed: Line 627: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 628: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 641: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 643: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 645: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 647: Status = 0xc0000001, expected 0x00000000\nBus_PDO_EvalMethod.c:955: Test failed: Line 669: Argument->Type = 0, expected 2\nBus_PDO_EvalMethod.c:962: Test failed: Line 669: Argument->DataLength = 0, expected 20\nBus_PDO_EvalMethod.c:924: Test failed: Line 698: Status = 0xc00000ef, expected 0xc0000023\n\nBus_PDO_EvalMethod: 335 tests executed (0 marked as todo, 9 failures), 0 skipped.\nTest Bus_PDO_EvalMethod completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\acpi_apitest.exe) failing with status c000000f\nBus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\n\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\nTest Bus_PDO_QueryResourceRequirements completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "CreateService",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_apitest.exe) failing with status c000000f\n\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest CreateService completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "cred",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1469) unhandled type -1\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1476) unhandled flags 0xdeadbeef\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username L\"winetest\"\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username (null)\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username (null)\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1181) unhandled type -1\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1188) unhandled flags 0xdeadbeef\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (0000000000132110, 0x0, 000000000012FC54, 000000000012FC08) stub\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (0000000000132110, 0x0, 000000000012FC54, 000000000012FC08) stub\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (0000000000132110, 0x0, 000000000012FC54, 000000000012FC08) stub\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:2219) BinaryBlobCredential not checked\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:2219) BinaryBlobCredential not checked\ncred.c:361: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:361: Test failed: expected NULL credentials but got 0000000000132254\ncred.c:374: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:374: Test failed: expected NULL credentials but got 000000000013224C\ncred.c:820: Tests skipped: CRED_TYPE_DOMAIN_VISIBLE_PASSWORD credentials are not supported or are disabled. Skipping\n\ncred: 349 tests executed (0 marked as todo, 4 failures), 1 skipped.\nTest cred completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\ncrypt.c:156: Test failed: got 2148073473\ncrypt.c:285: Test failed: 6\ncrypt.c:288: Test failed: 6\ncrypt.c:291: Test failed: 6\ncrypt.c:298: Test failed: 6\ncrypt.c:301: Test failed: 6\ncrypt.c:307: Test failed: 6\ncrypt.c:325: Test failed: deadbeef\ncrypt.c:360: Test failed: 6\ncrypt.c:370: Test failed: 3735928559\ncrypt.c:378: Test failed: 6\ncrypt.c:402: Test failed: FIXME: The following tests normally completes on ReactOS x64, but not after being fuzzed from other tests in our test suite.\ncrypt.c:1289: Test failed: got 3735928559\n\ncrypt: 144 tests executed (0 marked as todo, 13 failures), 0 skipped.\nTest crypt completed in 0.09 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_lmhash completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md4 completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.02 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106696,
+    "source": "Build GCCLin_x86 on Test KVM",
+    "revision": "aad94302b7d489630fd931219e4cf3f0185e3007",
+    "platform": "ReactOS - i386",
+    "comment": "Build 40207, Reason: PR 8816 (aad9430)",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "Bus_PDO_EvalMethod.c:857: Test failed: Line 627: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 628: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 641: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 643: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 645: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 647: Status = 0xc0000001, expected 0x00000000\nBus_PDO_EvalMethod.c:955: Test failed: Line 669: Argument->Type = 0, expected 2\nBus_PDO_EvalMethod.c:962: Test failed: Line 669: Argument->DataLength = 0, expected 20\nBus_PDO_EvalMethod.c:924: Test failed: Line 698: Status = 0xc00000ef, expected 0xc0000023\n\nBus_PDO_EvalMethod: 335 tests executed (0 marked as todo, 9 failures), 0 skipped.\nTest Bus_PDO_EvalMethod completed in 0.05 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "Bus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\n\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\nTest Bus_PDO_QueryResourceRequirements completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "CreateService",
+        "status": "ok",
+        "log": "\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest CreateService completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "cred",
+        "status": "ok",
+        "log": "fixme:(dll/win32/advapi32/wine/cred.c:1469) unhandled type -1\nfixme:(dll/win32/advapi32/wine/cred.c:1476) unhandled flags 0xdeadbeef\nerr:(dll/win32/advapi32/wine/cred.c:1853) bad username L\"winetest\"\nerr:(dll/win32/advapi32/wine/cred.c:1853) bad username (null)\nerr:(dll/win32/advapi32/wine/cred.c:1853) bad username (null)\nfixme:(dll/win32/advapi32/wine/cred.c:1181) unhandled type -1\nfixme:(dll/win32/advapi32/wine/cred.c:1188) unhandled flags 0xdeadbeef\nfixme:(dll/win32/advapi32/wine/cred.c:1757) (00231FC0, 0x0, 0022FD14, 0022FCE4) stub\nfixme:(dll/win32/advapi32/wine/cred.c:1757) (00231FC0, 0x0, 0022FD14, 0022FCE4) stub\nfixme:(dll/win32/advapi32/wine/cred.c:1757) (00231FC0, 0x0, 0022FD14, 0022FCE4) stub\nfixme:(dll/win32/advapi32/wine/cred.c:2219) BinaryBlobCredential not checked\nfixme:(dll/win32/advapi32/wine/cred.c:2219) BinaryBlobCredential not checked\ncred.c:361: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:361: Test failed: expected NULL credentials but got 00232104\ncred.c:374: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:374: Test failed: expected NULL credentials but got 002320E8\ncred.c:820: Tests skipped: CRED_TYPE_DOMAIN_VISIBLE_PASSWORD credentials are not supported or are disabled. Skipping\n\ncred: 349 tests executed (0 marked as todo, 4 failures), 1 skipped.\nTest cred completed in 0.05 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "(ntoskrnl/mm/mmfault.c:148) Address: deadbeef\n(ntoskrnl/mm/mmfault.c:148) Address: deadbeef\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef7\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef3\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef7\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef3\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef7\ncrypt.c:156: Test failed: got 2148073473\ncrypt.c:285: Test failed: 6\ncrypt.c:288: Test failed: 6\ncrypt.c:291: Test failed: 6\ncrypt.c:298: Test failed: 6\ncrypt.c:301: Test failed: 6\ncrypt.c:307: Test failed: 6\ncrypt.c:325: Test failed: deadbeef\ncrypt.c:360: Test failed: 6\ncrypt.c:370: Test failed: -559038737\ncrypt.c:378: Test failed: 6\ncrypt.c:432: Test failed: 6\ncrypt.c:466: Test failed: 6\ncrypt.c:1289: Test failed: got -559038737\n\ncrypt: 164 tests executed (0 marked as todo, 14 failures), 0 skipped.\nTest crypt completed in 0.06 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_lmhash completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md4 completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.01 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106695,
+    "source": "Test Win2003_x64",
+    "revision": "20494b84efc05c6d9d5ac4cc1618fe4f1269c22e",
+    "platform": "Windows Server 2008 - Build 6003 SP2 - AMD64",
+    "comment": "Build 9806",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "Bus_PDO_EvalMethod.c:857: Test marked todo: Line 627: Status = 0xc0140008, expected 0x00000000\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 628: Status = 0xc0140008, expected 0x00000000\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 641: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 643: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 645: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 647: Status = 0xc0000001, expected 0x00000000\r\nBus_PDO_EvalMethod.c:955: Test marked todo: Line 669: Argument->Type = 0, expected 2\r\nBus_PDO_EvalMethod.c:962: Test marked todo: Line 669: Argument->DataLength = 0, expected 20\r\nBus_PDO_EvalMethod.c:924: Test marked todo: Line 698: Status = 0xc00000ef, expected 0xc0000023\r\n\r\nBus_PDO_EvalMethod: 335 tests executed (9 marked as todo, 0 failures), 0 skipped.\r\nTest Bus_PDO_EvalMethod completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "Bus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\r\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\r\n\r\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\r\nTest Bus_PDO_QueryResourceRequirements completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "CreateService",
+        "status": "ok",
+        "log": "\r\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest CreateService completed in 0.22 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "cred",
+        "status": "ok",
+        "log": "cred.c:806: generic:\r\ncred.c:812: domain password:\r\ncred.c:345: Tests skipped: CRED_TYPE_DOMAIN_PASSWORD credentials are not supported or are disabled. Skipping\r\ncred.c:818: domain visible password:\r\n\r\ncred: 350 tests executed (0 marked as todo, 0 failures), 1 skipped.\r\nTest cred completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "\r\ncrypt: 163 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "\r\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_lmhash completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "\r\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_md4 completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "\r\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_md5 completed in 0.00 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106694,
+    "source": "Test Win2003_x64",
+    "revision": "aad94302b7d489630fd931219e4cf3f0185e3007",
+    "platform": "Windows Server 2008 - Build 6003 SP2 - AMD64",
+    "comment": "Build 9805, Reason: PR 8816 (aad9430)",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "Bus_PDO_EvalMethod.c:857: Test marked todo: Line 627: Status = 0xc0140008, expected 0x00000000\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 628: Status = 0xc0140008, expected 0x00000000\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 641: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 643: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 645: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 647: Status = 0xc0000001, expected 0x00000000\r\nBus_PDO_EvalMethod.c:955: Test marked todo: Line 669: Argument->Type = 0, expected 2\r\nBus_PDO_EvalMethod.c:962: Test marked todo: Line 669: Argument->DataLength = 0, expected 20\r\nBus_PDO_EvalMethod.c:924: Test marked todo: Line 698: Status = 0xc00000ef, expected 0xc0000023\r\n\r\nBus_PDO_EvalMethod: 335 tests executed (9 marked as todo, 0 failures), 0 skipped.\r\nTest Bus_PDO_EvalMethod completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "Bus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\r\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\r\n\r\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\r\nTest Bus_PDO_QueryResourceRequirements completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "CreateService",
+        "status": "ok",
+        "log": "\r\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest CreateService completed in 0.14 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "cred",
+        "status": "ok",
+        "log": "cred.c:806: generic:\r\ncred.c:812: domain password:\r\ncred.c:345: Tests skipped: CRED_TYPE_DOMAIN_PASSWORD credentials are not supported or are disabled. Skipping\r\ncred.c:818: domain visible password:\r\n\r\ncred: 350 tests executed (0 marked as todo, 0 failures), 1 skipped.\r\nTest cred completed in 0.05 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "\r\ncrypt: 163 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "\r\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_lmhash completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "\r\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_md4 completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "\r\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_md5 completed in 0.00 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106693,
+    "source": "Build MSVC_x64 on Test KVM_x64",
+    "revision": "06fec86b5610ab2b4d4e1c8624e7c486c255a736",
+    "platform": "ReactOS - i386",
+    "comment": "Build 8044, Reason: TLS Investigation",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\acpi_apitest.exe) failing with status c000000f\nBus_PDO_EvalMethod.c:857: Test failed: Line 627: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 628: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 641: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 643: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 645: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 647: Status = 0xc0000001, expected 0x00000000\nBus_PDO_EvalMethod.c:955: Test failed: Line 669: Argument->Type = 0, expected 2\nBus_PDO_EvalMethod.c:962: Test failed: Line 669: Argument->DataLength = 0, expected 20\nBus_PDO_EvalMethod.c:924: Test failed: Line 698: Status = 0xc00000ef, expected 0xc0000023\n\nBus_PDO_EvalMethod: 335 tests executed (0 marked as todo, 9 failures), 0 skipped.\nTest Bus_PDO_EvalMethod completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\acpi_apitest.exe) failing with status c000000f\nBus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\n\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\nTest Bus_PDO_QueryResourceRequirements completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "CreateService",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_apitest.exe) failing with status c000000f\n\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest CreateService completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "cred",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1469) unhandled type -1\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1476) unhandled flags 0xdeadbeef\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username L\"winetest\"\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username (null)\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username (null)\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1181) unhandled type -1\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1188) unhandled flags 0xdeadbeef\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (0000000000132190, 0x0, 000000000012FC54, 000000000012FC08) stub\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (0000000000132190, 0x0, 000000000012FC54, 000000000012FC08) stub\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (0000000000132190, 0x0, 000000000012FC54, 000000000012FC08) stub\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:2219) BinaryBlobCredential not checked\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:2219) BinaryBlobCredential not checked\ncred.c:361: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:361: Test failed: expected NULL credentials but got 0000000000132204\ncred.c:374: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:374: Test failed: expected NULL credentials but got 00000000001321FC\ncred.c:820: Tests skipped: CRED_TYPE_DOMAIN_VISIBLE_PASSWORD credentials are not supported or are disabled. Skipping\n\ncred: 349 tests executed (0 marked as todo, 4 failures), 1 skipped.\nTest cred completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\ncrypt.c:156: Test failed: got 2148073473\ncrypt.c:285: Test failed: 6\ncrypt.c:288: Test failed: 6\ncrypt.c:291: Test failed: 6\ncrypt.c:298: Test failed: 6\ncrypt.c:301: Test failed: 6\ncrypt.c:307: Test failed: 6\ncrypt.c:325: Test failed: deadbeef\ncrypt.c:360: Test failed: 6\ncrypt.c:370: Test failed: 3735928559\ncrypt.c:378: Test failed: 6\ncrypt.c:402: Test failed: FIXME: The following tests normally completes on ReactOS x64, but not after being fuzzed from other tests in our test suite.\ncrypt.c:1289: Test failed: got 3735928559\n\ncrypt: 144 tests executed (0 marked as todo, 13 failures), 0 skipped.\nTest crypt completed in 0.06 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_lmhash completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md4 completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.00 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106692,
+    "source": "Test Win2003_x64",
+    "revision": "06fec86b5610ab2b4d4e1c8624e7c486c255a736",
+    "platform": "Windows Server 2008 - Build 6003 SP2 - AMD64",
+    "comment": "Build 9804, Reason: TLS Investigation",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "Bus_PDO_EvalMethod.c:857: Test marked todo: Line 627: Status = 0xc0140008, expected 0x00000000\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 628: Status = 0xc0140008, expected 0x00000000\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 641: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 643: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 645: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 647: Status = 0xc0000001, expected 0x00000000\r\nBus_PDO_EvalMethod.c:955: Test marked todo: Line 669: Argument->Type = 0, expected 2\r\nBus_PDO_EvalMethod.c:962: Test marked todo: Line 669: Argument->DataLength = 0, expected 20\r\nBus_PDO_EvalMethod.c:924: Test marked todo: Line 698: Status = 0xc00000ef, expected 0xc0000023\r\n\r\nBus_PDO_EvalMethod: 335 tests executed (9 marked as todo, 0 failures), 0 skipped.\r\nTest Bus_PDO_EvalMethod completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "Bus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\r\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\r\n\r\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\r\nTest Bus_PDO_QueryResourceRequirements completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "CreateService",
+        "status": "ok",
+        "log": "\r\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest CreateService completed in 0.13 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "cred",
+        "status": "ok",
+        "log": "cred.c:806: generic:\r\ncred.c:812: domain password:\r\ncred.c:345: Tests skipped: CRED_TYPE_DOMAIN_PASSWORD credentials are not supported or are disabled. Skipping\r\ncred.c:818: domain visible password:\r\n\r\ncred: 350 tests executed (0 marked as todo, 0 failures), 1 skipped.\r\nTest cred completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "\r\ncrypt: 163 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "\r\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_lmhash completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "\r\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_md4 completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "\r\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_md5 completed in 0.00 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106691,
+    "source": "Build MSVC_x64 on Test KVM_x64",
+    "revision": "b0f8266223b5129f9cd0d2e0af7fdb92349f6c3a",
+    "platform": "ReactOS - i386",
+    "comment": "Build 8043, Reason: TLS Investigation",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\acpi_apitest.exe) failing with status c000000f\nBus_PDO_EvalMethod.c:857: Test failed: Line 627: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 628: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 641: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 643: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 645: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 647: Status = 0xc0000001, expected 0x00000000\nBus_PDO_EvalMethod.c:955: Test failed: Line 669: Argument->Type = 0, expected 2\nBus_PDO_EvalMethod.c:962: Test failed: Line 669: Argument->DataLength = 0, expected 20\nBus_PDO_EvalMethod.c:924: Test failed: Line 698: Status = 0xc00000ef, expected 0xc0000023\n\nBus_PDO_EvalMethod: 335 tests executed (0 marked as todo, 9 failures), 0 skipped.\nTest Bus_PDO_EvalMethod completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\acpi_apitest.exe) failing with status c000000f\nBus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\n\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\nTest Bus_PDO_QueryResourceRequirements completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "CreateService",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_apitest.exe) failing with status c000000f\n\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest CreateService completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "cred",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1469) unhandled type -1\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1476) unhandled flags 0xdeadbeef\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username L\"winetest\"\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username (null)\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username (null)\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1181) unhandled type -1\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1188) unhandled flags 0xdeadbeef\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (00000000001321F0, 0x0, 000000000012FC54, 000000000012FC08) stub\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (00000000001321F0, 0x0, 000000000012FC54, 000000000012FC08) stub\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (00000000001321F0, 0x0, 000000000012FC54, 000000000012FC08) stub\ncred.c:361: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:361: Test failed: expected NULL credentials but got 0000000000132264\ncred.c:374: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:374: Test failed: expected NULL credentials but got 000000000013225C\ncred.c:820: Tests skipped: CRED_TYPE_DOMAIN_VISIBLE_PASSWORD credentials are not supported or are disabled. Skipping\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:2219) BinaryBlobCredential not checked\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:2219) BinaryBlobCredential not checked\n\ncred: 349 tests executed (0 marked as todo, 4 failures), 1 skipped.\nTest cred completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\ncrypt.c:156: Test failed: got 2148073473\ncrypt.c:285: Test failed: 6\ncrypt.c:288: Test failed: 6\ncrypt.c:291: Test failed: 6\ncrypt.c:298: Test failed: 6\ncrypt.c:301: Test failed: 6\ncrypt.c:307: Test failed: 6\ncrypt.c:325: Test failed: deadbeef\ncrypt.c:360: Test failed: 6\ncrypt.c:370: Test failed: 3735928559\ncrypt.c:378: Test failed: 6\ncrypt.c:402: Test failed: FIXME: The following tests normally completes on ReactOS x64, but not after being fuzzed from other tests in our test suite.\ncrypt.c:1289: Test failed: got 3735928559\n\ncrypt: 144 tests executed (0 marked as todo, 13 failures), 0 skipped.\nTest crypt completed in 0.05 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_lmhash completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md4 completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.00 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106690,
+    "source": "Build MSVC_x64 on Test KVM_x64",
+    "revision": "f8609beeb0f2fd49964536a3c542fcc8b594e8fc",
+    "platform": "ReactOS - i386",
+    "comment": "Build 8042, Reason: TLS Investigation",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\acpi_apitest.exe) failing with status c000000f\nBus_PDO_EvalMethod.c:857: Test failed: Line 627: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 628: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 641: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 643: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 645: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 647: Status = 0xc0000001, expected 0x00000000\nBus_PDO_EvalMethod.c:955: Test failed: Line 669: Argument->Type = 0, expected 2\nBus_PDO_EvalMethod.c:962: Test failed: Line 669: Argument->DataLength = 0, expected 20\nBus_PDO_EvalMethod.c:924: Test failed: Line 698: Status = 0xc00000ef, expected 0xc0000023\n\nBus_PDO_EvalMethod: 335 tests executed (0 marked as todo, 9 failures), 0 skipped.\nTest Bus_PDO_EvalMethod completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\acpi_apitest.exe) failing with status c000000f\nBus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\n\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\nTest Bus_PDO_QueryResourceRequirements completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "CreateService",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_apitest.exe) failing with status c000000f\n\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest CreateService completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "cred",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1469) unhandled type -1\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1476) unhandled flags 0xdeadbeef\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username L\"winetest\"\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username (null)\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username (null)\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1181) unhandled type -1\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1188) unhandled flags 0xdeadbeef\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (0000000000132190, 0x0, 000000000012FC54, 000000000012FC08) stub\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (0000000000132190, 0x0, 000000000012FC54, 000000000012FC08) stub\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (0000000000132190, 0x0, 000000000012FC54, 000000000012FC08) stub\ncred.c:361: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:361: Test failed: expected NULL credentials but got 0000000000132204\ncred.c:374: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:374: Test failed: expected NULL credentials but got 00000000001321FC\ncred.c:820: Tests skipped: CRED_TYPE_DOMAIN_VISIBLE_PASSWORD credentials are not supported or are disabled. Skipping\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:2219) BinaryBlobCredential not checked\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:2219) BinaryBlobCredential not checked\n\ncred: 349 tests executed (0 marked as todo, 4 failures), 1 skipped.\nTest cred completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\ncrypt.c:156: Test failed: got 2148073473\ncrypt.c:285: Test failed: 6\ncrypt.c:288: Test failed: 6\ncrypt.c:291: Test failed: 6\ncrypt.c:298: Test failed: 6\ncrypt.c:301: Test failed: 6\ncrypt.c:307: Test failed: 6\ncrypt.c:325: Test failed: deadbeef\ncrypt.c:360: Test failed: 6\ncrypt.c:370: Test failed: 3735928559\ncrypt.c:378: Test failed: 6\ncrypt.c:402: Test failed: FIXME: The following tests normally completes on ReactOS x64, but not after being fuzzed from other tests in our test suite.\ncrypt.c:1289: Test failed: got 3735928559\n\ncrypt: 144 tests executed (0 marked as todo, 13 failures), 0 skipped.\nTest crypt completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_lmhash completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md4 completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.00 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106689,
+    "source": "Test Win2003_x64",
+    "revision": "b0f8266223b5129f9cd0d2e0af7fdb92349f6c3a",
+    "platform": "Windows Server 2008 - Build 6003 SP2 - AMD64",
+    "comment": "Build 9803, Reason: TLS Investigation",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "Bus_PDO_EvalMethod.c:857: Test marked todo: Line 627: Status = 0xc0140008, expected 0x00000000\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 628: Status = 0xc0140008, expected 0x00000000\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 641: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 643: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 645: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 647: Status = 0xc0000001, expected 0x00000000\r\nBus_PDO_EvalMethod.c:955: Test marked todo: Line 669: Argument->Type = 0, expected 2\r\nBus_PDO_EvalMethod.c:962: Test marked todo: Line 669: Argument->DataLength = 0, expected 20\r\nBus_PDO_EvalMethod.c:924: Test marked todo: Line 698: Status = 0xc00000ef, expected 0xc0000023\r\n\r\nBus_PDO_EvalMethod: 335 tests executed (9 marked as todo, 0 failures), 0 skipped.\r\nTest Bus_PDO_EvalMethod completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "Bus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\r\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\r\n\r\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\r\nTest Bus_PDO_QueryResourceRequirements completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "CreateService",
+        "status": "ok",
+        "log": "\r\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest CreateService completed in 0.17 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "cred",
+        "status": "ok",
+        "log": "cred.c:806: generic:\r\ncred.c:812: domain password:\r\ncred.c:345: Tests skipped: CRED_TYPE_DOMAIN_PASSWORD credentials are not supported or are disabled. Skipping\r\ncred.c:818: domain visible password:\r\n\r\ncred: 350 tests executed (0 marked as todo, 0 failures), 1 skipped.\r\nTest cred completed in 0.05 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "\r\ncrypt: 163 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "\r\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_lmhash completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "\r\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_md4 completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "\r\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_md5 completed in 0.00 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106688,
+    "source": "Test Win2003_x64",
+    "revision": "f8609beeb0f2fd49964536a3c542fcc8b594e8fc",
+    "platform": "Windows Server 2008 - Build 6003 SP2 - AMD64",
+    "comment": "Build 9802, Reason: TLS Investigation",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "Bus_PDO_EvalMethod.c:857: Test marked todo: Line 627: Status = 0xc0140008, expected 0x00000000\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 628: Status = 0xc0140008, expected 0x00000000\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 641: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 643: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 645: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 647: Status = 0xc0000001, expected 0x00000000\r\nBus_PDO_EvalMethod.c:955: Test marked todo: Line 669: Argument->Type = 0, expected 2\r\nBus_PDO_EvalMethod.c:962: Test marked todo: Line 669: Argument->DataLength = 0, expected 20\r\nBus_PDO_EvalMethod.c:924: Test marked todo: Line 698: Status = 0xc00000ef, expected 0xc0000023\r\n\r\nBus_PDO_EvalMethod: 335 tests executed (9 marked as todo, 0 failures), 0 skipped.\r\nTest Bus_PDO_EvalMethod completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "Bus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\r\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\r\n\r\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\r\nTest Bus_PDO_QueryResourceRequirements completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "CreateService",
+        "status": "ok",
+        "log": "\r\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest CreateService completed in 0.11 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "cred",
+        "status": "ok",
+        "log": "cred.c:806: generic:\r\ncred.c:812: domain password:\r\ncred.c:345: Tests skipped: CRED_TYPE_DOMAIN_PASSWORD credentials are not supported or are disabled. Skipping\r\ncred.c:818: domain visible password:\r\n\r\ncred: 350 tests executed (0 marked as todo, 0 failures), 1 skipped.\r\nTest cred completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "\r\ncrypt: 163 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "\r\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_lmhash completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "\r\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_md4 completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "\r\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_md5 completed in 0.02 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106687,
+    "source": "Build MSVC_x64 on Test KVM_x64",
+    "revision": "010c66487ea0e4c8f56c4080578771a66e8f03bc",
+    "platform": "ReactOS - i386",
+    "comment": "Build 8041, Reason: TLS Investigation",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\acpi_apitest.exe) failing with status c000000f\nBus_PDO_EvalMethod.c:857: Test failed: Line 627: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 628: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 641: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 643: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 645: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 647: Status = 0xc0000001, expected 0x00000000\nBus_PDO_EvalMethod.c:955: Test failed: Line 669: Argument->Type = 0, expected 2\nBus_PDO_EvalMethod.c:962: Test failed: Line 669: Argument->DataLength = 0, expected 20\nBus_PDO_EvalMethod.c:924: Test failed: Line 698: Status = 0xc00000ef, expected 0xc0000023\n\nBus_PDO_EvalMethod: 335 tests executed (0 marked as todo, 9 failures), 0 skipped.\nTest Bus_PDO_EvalMethod completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\acpi_apitest.exe) failing with status c000000f\nBus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\n\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\nTest Bus_PDO_QueryResourceRequirements completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "CreateService",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_apitest.exe) failing with status c000000f\n\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest CreateService completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "cred",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1469) unhandled type -1\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1476) unhandled flags 0xdeadbeef\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username L\"winetest\"\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username (null)\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username (null)\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1181) unhandled type -1\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1188) unhandled flags 0xdeadbeef\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (00000000001321F0, 0x0, 000000000012FC54, 000000000012FC08) stub\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (00000000001321F0, 0x0, 000000000012FC54, 000000000012FC08) stub\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (00000000001321F0, 0x0, 000000000012FC54, 000000000012FC08) stub\ncred.c:361: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:361: Test failed: expected NULL credentials but got 0000000000132264\ncred.c:374: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:374: Test failed: expected NULL credentials but got 000000000013225C\ncred.c:820: Tests skipped: CRED_TYPE_DOMAIN_VISIBLE_PASSWORD credentials are not supported or are disabled. Skipping\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:2219) BinaryBlobCredential not checked\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:2219) BinaryBlobCredential not checked\n\ncred: 349 tests executed (0 marked as todo, 4 failures), 1 skipped.\nTest cred completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\ncrypt.c:156: Test failed: got 2148073473\ncrypt.c:285: Test failed: 6\ncrypt.c:288: Test failed: 6\ncrypt.c:291: Test failed: 6\ncrypt.c:298: Test failed: 6\ncrypt.c:301: Test failed: 6\ncrypt.c:307: Test failed: 6\ncrypt.c:325: Test failed: deadbeef\ncrypt.c:360: Test failed: 6\ncrypt.c:370: Test failed: 3735928559\ncrypt.c:378: Test failed: 6\ncrypt.c:402: Test failed: FIXME: The following tests normally completes on ReactOS x64, but not after being fuzzed from other tests in our test suite.\ncrypt.c:1289: Test failed: got 3735928559\n\ncrypt: 144 tests executed (0 marked as todo, 13 failures), 0 skipped.\nTest crypt completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_lmhash completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md4 completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.02 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106686,
+    "source": "Test Win2003_x64",
+    "revision": "2a53a7480f11efb6023129aad4ec172e203800c5",
+    "platform": "Windows Server 2008 - Build 6003 SP2 - AMD64",
+    "comment": "Build 9800, Reason: PR 8814 shell AddCommasW",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "Bus_PDO_EvalMethod.c:857: Test marked todo: Line 627: Status = 0xc0140008, expected 0x00000000\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 628: Status = 0xc0140008, expected 0x00000000\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 641: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 643: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 645: Status = 0xc0000004, expected 0xc000009a\r\nBus_PDO_EvalMethod.c:857: Test marked todo: Line 647: Status = 0xc0000001, expected 0x00000000\r\nBus_PDO_EvalMethod.c:955: Test marked todo: Line 669: Argument->Type = 0, expected 2\r\nBus_PDO_EvalMethod.c:962: Test marked todo: Line 669: Argument->DataLength = 0, expected 20\r\nBus_PDO_EvalMethod.c:924: Test marked todo: Line 698: Status = 0xc00000ef, expected 0xc0000023\r\n\r\nBus_PDO_EvalMethod: 335 tests executed (9 marked as todo, 0 failures), 0 skipped.\r\nTest Bus_PDO_EvalMethod completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "Bus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\r\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\r\n\r\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\r\nTest Bus_PDO_QueryResourceRequirements completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "CreateService",
+        "status": "ok",
+        "log": "\r\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest CreateService completed in 0.17 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "cred",
+        "status": "ok",
+        "log": "cred.c:806: generic:\r\ncred.c:812: domain password:\r\ncred.c:345: Tests skipped: CRED_TYPE_DOMAIN_PASSWORD credentials are not supported or are disabled. Skipping\r\ncred.c:818: domain visible password:\r\n\r\ncred: 350 tests executed (0 marked as todo, 0 failures), 1 skipped.\r\nTest cred completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "\r\ncrypt: 163 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "\r\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_lmhash completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "\r\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_md4 completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "\r\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\r\nTest crypt_md5 completed in 0.00 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106684,
+    "source": "Build GCCLin_x86 on Test KVM",
+    "revision": "7139e57ff892e59feb5f92794ccf15fdc7a24a72",
+    "platform": "ReactOS - i386",
+    "comment": "Build 40205",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "Bus_PDO_EvalMethod.c:857: Test failed: Line 627: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 628: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 641: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 643: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 645: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 647: Status = 0xc0000001, expected 0x00000000\nBus_PDO_EvalMethod.c:955: Test failed: Line 669: Argument->Type = 0, expected 2\nBus_PDO_EvalMethod.c:962: Test failed: Line 669: Argument->DataLength = 0, expected 20\nBus_PDO_EvalMethod.c:924: Test failed: Line 698: Status = 0xc00000ef, expected 0xc0000023\n\nBus_PDO_EvalMethod: 335 tests executed (0 marked as todo, 9 failures), 0 skipped.\nTest Bus_PDO_EvalMethod completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "Bus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\n\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\nTest Bus_PDO_QueryResourceRequirements completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "CreateService",
+        "status": "ok",
+        "log": "\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest CreateService completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "cred",
+        "status": "ok",
+        "log": "fixme:(dll/win32/advapi32/wine/cred.c:1469) unhandled type -1\nfixme:(dll/win32/advapi32/wine/cred.c:1476) unhandled flags 0xdeadbeef\nerr:(dll/win32/advapi32/wine/cred.c:1853) bad username L\"winetest\"\nerr:(dll/win32/advapi32/wine/cred.c:1853) bad username (null)\nerr:(dll/win32/advapi32/wine/cred.c:1853) bad username (null)\nfixme:(dll/win32/advapi32/wine/cred.c:1181) unhandled type -1\nfixme:(dll/win32/advapi32/wine/cred.c:1188) unhandled flags 0xdeadbeef\nfixme:(dll/win32/advapi32/wine/cred.c:1757) (002326A0, 0x0, 0022FD14, 0022FCE4) stub\nfixme:(dll/win32/advapi32/wine/cred.c:1757) (002326A0, 0x0, 0022FD14, 0022FCE4) stub\nfixme:(dll/win32/advapi32/wine/cred.c:1757) (002326A0, 0x0, 0022FD14, 0022FCE4) stub\ncred.c:361: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:361: Test failed: expected NULL credentials but got 002326F4\ncred.c:374: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:374: Test failed: expected NULL credentials but got 002326F0\ncred.c:820: Tests skipped: CRED_TYPE_DOMAIN_VISIBLE_PASSWORD credentials are not supported or are disabled. Skipping\nfixme:(dll/win32/advapi32/wine/cred.c:2219) BinaryBlobCredential not checked\nfixme:(dll/win32/advapi32/wine/cred.c:2219) BinaryBlobCredential not checked\n\ncred: 349 tests executed (0 marked as todo, 4 failures), 1 skipped.\nTest cred completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "(ntoskrnl/mm/mmfault.c:148) Address: deadbeef\n(ntoskrnl/mm/mmfault.c:148) Address: deadbeef\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef7\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef3\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef7\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef3\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef7\ncrypt.c:156: Test failed: got 2148073473\ncrypt.c:285: Test failed: 6\ncrypt.c:288: Test failed: 6\ncrypt.c:291: Test failed: 6\ncrypt.c:298: Test failed: 6\ncrypt.c:301: Test failed: 6\ncrypt.c:307: Test failed: 6\ncrypt.c:325: Test failed: deadbeef\ncrypt.c:360: Test failed: 6\ncrypt.c:370: Test failed: -559038737\ncrypt.c:378: Test failed: 6\ncrypt.c:432: Test failed: 6\ncrypt.c:466: Test failed: 6\ncrypt.c:1289: Test failed: got -559038737\n\ncrypt: 164 tests executed (0 marked as todo, 14 failures), 0 skipped.\nTest crypt completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_lmhash completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md4 completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.01 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106683,
+    "source": "Build GCCLin_x86 on Test KVM",
+    "revision": "2a53a7480f11efb6023129aad4ec172e203800c5",
+    "platform": "ReactOS - i386",
+    "comment": "Build 40204, Reason: PR 8814 shell AddCommasW",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "Bus_PDO_EvalMethod.c:857: Test failed: Line 627: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 628: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 641: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 643: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 645: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 647: Status = 0xc0000001, expected 0x00000000\nBus_PDO_EvalMethod.c:955: Test failed: Line 669: Argument->Type = 0, expected 2\nBus_PDO_EvalMethod.c:962: Test failed: Line 669: Argument->DataLength = 0, expected 20\nBus_PDO_EvalMethod.c:924: Test failed: Line 698: Status = 0xc00000ef, expected 0xc0000023\n\nBus_PDO_EvalMethod: 335 tests executed (0 marked as todo, 9 failures), 0 skipped.\nTest Bus_PDO_EvalMethod completed in 0.05 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "Bus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\n\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\nTest Bus_PDO_QueryResourceRequirements completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "CreateService",
+        "status": "ok",
+        "log": "(ntoskrnl/ps/query.c:2303) NtSetInformationThread(ThreadInformationClass: ThreadNameInformation): Class validation failed! (Status: 0xc0000003)\n\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest CreateService completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "cred",
+        "status": "ok",
+        "log": "fixme:(dll/win32/advapi32/wine/cred.c:1469) unhandled type -1\nfixme:(dll/win32/advapi32/wine/cred.c:1476) unhandled flags 0xdeadbeef\nerr:(dll/win32/advapi32/wine/cred.c:1853) bad username L\"winetest\"\nerr:(dll/win32/advapi32/wine/cred.c:1853) bad username (null)\nerr:(dll/win32/advapi32/wine/cred.c:1853) bad username (null)\nfixme:(dll/win32/advapi32/wine/cred.c:1181) unhandled type -1\nfixme:(dll/win32/advapi32/wine/cred.c:1188) unhandled flags 0xdeadbeef\nfixme:(dll/win32/advapi32/wine/cred.c:1757) (00231FC0, 0x0, 0022FD14, 0022FCE4) stub\nfixme:(dll/win32/advapi32/wine/cred.c:1757) (00231FC0, 0x0, 0022FD14, 0022FCE4) stub\nfixme:(dll/win32/advapi32/wine/cred.c:1757) (00231FC0, 0x0, 0022FD14, 0022FCE4) stub\nfixme:(dll/win32/advapi32/wine/cred.c:2219) BinaryBlobCredential not checked\nfixme:(dll/win32/advapi32/wine/cred.c:2219) BinaryBlobCredential not checked\ncred.c:361: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:361: Test failed: expected NULL credentials but got 00232104\ncred.c:374: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:374: Test failed: expected NULL credentials but got 002320E8\ncred.c:820: Tests skipped: CRED_TYPE_DOMAIN_VISIBLE_PASSWORD credentials are not supported or are disabled. Skipping\n\ncred: 349 tests executed (0 marked as todo, 4 failures), 1 skipped.\nTest cred completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "(ntoskrnl/ps/query.c:2303) NtSetInformationThread(ThreadInformationClass: ThreadNameInformation): Class validation failed! (Status: 0xc0000003)\ncrypt.c:156: Test failed: got 2148073473\n(ntoskrnl/mm/mmfault.c:148) Address: deadbeef\n(ntoskrnl/mm/mmfault.c:148) Address: deadbeef\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef7\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef3\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef7\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef3\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef7\ncrypt.c:285: Test failed: 6\ncrypt.c:288: Test failed: 6\ncrypt.c:291: Test failed: 6\ncrypt.c:298: Test failed: 6\ncrypt.c:301: Test failed: 6\ncrypt.c:307: Test failed: 6\ncrypt.c:325: Test failed: deadbeef\ncrypt.c:360: Test failed: 6\ncrypt.c:370: Test failed: -559038737\ncrypt.c:378: Test failed: 6\ncrypt.c:432: Test failed: 6\ncrypt.c:466: Test failed: 6\ncrypt.c:1289: Test failed: got -559038737\n\ncrypt: 164 tests executed (0 marked as todo, 14 failures), 0 skipped.\nTest crypt completed in 0.05 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_lmhash completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md4 completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.00 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106682,
+    "source": "Build GCCLin_x86 on Test KVM",
+    "revision": "c47891c62aaae69957c75e08044e976b34bf0386",
+    "platform": "ReactOS - i386",
+    "comment": "Build 40203, Reason: TLS",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "Bus_PDO_EvalMethod.c:857: Test failed: Line 627: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 628: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 641: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 643: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 645: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 647: Status = 0xc0000001, expected 0x00000000\nBus_PDO_EvalMethod.c:955: Test failed: Line 669: Argument->Type = 0, expected 2\nBus_PDO_EvalMethod.c:962: Test failed: Line 669: Argument->DataLength = 0, expected 20\nBus_PDO_EvalMethod.c:924: Test failed: Line 698: Status = 0xc00000ef, expected 0xc0000023\n\nBus_PDO_EvalMethod: 335 tests executed (0 marked as todo, 9 failures), 0 skipped.\nTest Bus_PDO_EvalMethod completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "Bus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\n\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\nTest Bus_PDO_QueryResourceRequirements completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "CreateService",
+        "status": "ok",
+        "log": "\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest CreateService completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "cred",
+        "status": "ok",
+        "log": "fixme:(dll/win32/advapi32/wine/cred.c:1469) unhandled type -1\nfixme:(dll/win32/advapi32/wine/cred.c:1476) unhandled flags 0xdeadbeef\nerr:(dll/win32/advapi32/wine/cred.c:1853) bad username L\"winetest\"\nerr:(dll/win32/advapi32/wine/cred.c:1853) bad username (null)\nerr:(dll/win32/advapi32/wine/cred.c:1853) bad username (null)\nfixme:(dll/win32/advapi32/wine/cred.c:1181) unhandled type -1\nfixme:(dll/win32/advapi32/wine/cred.c:1188) unhandled flags 0xdeadbeef\nfixme:(dll/win32/advapi32/wine/cred.c:1757) (002326A0, 0x0, 0022FD14, 0022FCE4) stub\nfixme:(dll/win32/advapi32/wine/cred.c:1757) (002326A0, 0x0, 0022FD14, 0022FCE4) stub\nfixme:(dll/win32/advapi32/wine/cred.c:1757) (002326A0, 0x0, 0022FD14, 0022FCE4) stub\nfixme:(dll/win32/advapi32/wine/cred.c:2219) BinaryBlobCredential not checked\nfixme:(dll/win32/advapi32/wine/cred.c:2219) BinaryBlobCredential not checked\ncred.c:361: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:361: Test failed: expected NULL credentials but got 002326F4\ncred.c:374: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:374: Test failed: expected NULL credentials but got 002326F0\ncred.c:820: Tests skipped: CRED_TYPE_DOMAIN_VISIBLE_PASSWORD credentials are not supported or are disabled. Skipping\n\ncred: 349 tests executed (0 marked as todo, 4 failures), 1 skipped.\nTest cred completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "(ntoskrnl/mm/mmfault.c:148) Address: deadbeef\n(ntoskrnl/mm/mmfault.c:148) Address: deadbeef\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef7\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef3\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef7\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef3\n(ntoskrnl/mm/mmfault.c:148) Address: deadbef7\ncrypt.c:156: Test failed: got 2148073473\ncrypt.c:285: Test failed: 6\ncrypt.c:288: Test failed: 6\ncrypt.c:291: Test failed: 6\ncrypt.c:298: Test failed: 6\ncrypt.c:301: Test failed: 6\ncrypt.c:307: Test failed: 6\ncrypt.c:325: Test failed: deadbeef\ncrypt.c:360: Test failed: 6\ncrypt.c:370: Test failed: -559038737\ncrypt.c:378: Test failed: 6\ncrypt.c:432: Test failed: 6\ncrypt.c:466: Test failed: 6\ncrypt.c:1289: Test failed: got -559038737\n\ncrypt: 164 tests executed (0 marked as todo, 14 failures), 0 skipped.\nTest crypt completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_lmhash completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md4 completed in 0.00 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.01 seconds.\n"
+      }
+    ]
+  },
+  {
+    "id": 106681,
+    "source": "Build MSVC_x64 on Test KVM_x64",
+    "revision": "8ea4f7bcfba743368feca0a1a9bd68130dcb9f32",
+    "platform": "ReactOS - i386",
+    "comment": "Build 8039, Reason: TLS weirdness on testbots",
+    "suites": [
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_EvalMethod",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\acpi_apitest.exe) failing with status c000000f\nBus_PDO_EvalMethod.c:857: Test failed: Line 627: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 628: Status = 0xc0140008, expected 0x00000000\nBus_PDO_EvalMethod.c:857: Test failed: Line 641: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 643: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 645: Status = 0xc0000004, expected 0xc000009a\nBus_PDO_EvalMethod.c:857: Test failed: Line 647: Status = 0xc0000001, expected 0x00000000\nBus_PDO_EvalMethod.c:955: Test failed: Line 669: Argument->Type = 0, expected 2\nBus_PDO_EvalMethod.c:962: Test failed: Line 669: Argument->DataLength = 0, expected 20\nBus_PDO_EvalMethod.c:924: Test failed: Line 698: Status = 0xc00000ef, expected 0xc0000023\n\nBus_PDO_EvalMethod: 335 tests executed (0 marked as todo, 9 failures), 0 skipped.\nTest Bus_PDO_EvalMethod completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "acpi",
+        "test": "Bus_PDO_QueryResourceRequirements",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\acpi_apitest.exe) failing with status c000000f\nBus_PDO_QueryResourceRequirements.c:432: Test marked todo: AlternativeLists = 1\nBus_PDO_QueryResourceRequirements.c:457: Test marked todo: Wrong value for 'ReqList->ListSize', expected: (ULONG_PTR)&ReqList2->Descriptors[6] - (ULONG_PTR)ReqList (432), got: 232\n\nBus_PDO_QueryResourceRequirements: 169 tests executed (2 marked as todo, 0 failures), 0 skipped.\nTest Bus_PDO_QueryResourceRequirements completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "CreateService",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_apitest.exe) failing with status c000000f\n\nCreateService: 29 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest CreateService completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "cred",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1469) unhandled type -1\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1476) unhandled flags 0xdeadbeef\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username L\"winetest\"\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username (null)\nerr:(dll\\win32\\advapi32\\wine\\cred.c:1853) bad username (null)\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1181) unhandled type -1\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1188) unhandled flags 0xdeadbeef\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (00000000001321F0, 0x0, 000000000012FC54, 000000000012FC08) stub\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (00000000001321F0, 0x0, 000000000012FC54, 000000000012FC08) stub\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:1757) (00000000001321F0, 0x0, 000000000012FC54, 000000000012FC08) stub\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:2219) BinaryBlobCredential not checked\nfixme:(dll\\win32\\advapi32\\wine\\cred.c:2219) BinaryBlobCredential not checked\ncred.c:361: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:361: Test failed: expected NULL credentials but got 0000000000132264\ncred.c:374: Test failed: expected CredentialBlobSize of 0 but got 20\ncred.c:374: Test failed: expected NULL credentials but got 000000000013225C\ncred.c:820: Tests skipped: CRED_TYPE_DOMAIN_VISIBLE_PASSWORD credentials are not supported or are disabled. Skipping\n\ncred: 349 tests executed (0 marked as todo, 4 failures), 1 skipped.\nTest cred completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\ncrypt.c:156: Test failed: got 2148073473\ncrypt.c:285: Test failed: 6\ncrypt.c:288: Test failed: 6\ncrypt.c:291: Test failed: 6\ncrypt.c:298: Test failed: 6\ncrypt.c:301: Test failed: 6\ncrypt.c:307: Test failed: 6\ncrypt.c:325: Test failed: deadbeef\ncrypt.c:360: Test failed: 6\ncrypt.c:370: Test failed: 3735928559\ncrypt.c:378: Test failed: 6\ncrypt.c:402: Test failed: FIXME: The following tests normally completes on ReactOS x64, but not after being fuzzed from other tests in our test suite.\ncrypt.c:1289: Test failed: got 3735928559\n\ncrypt: 144 tests executed (0 marked as todo, 13 failures), 0 skipped.\nTest crypt completed in 0.03 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_lmhash",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_lmhash: 95 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_lmhash completed in 0.01 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md4",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_md4: 11 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md4 completed in 0.02 seconds.\n"
+      },
+      {
+        "module": "advapi32",
+        "test": "crypt_md5",
+        "status": "ok",
+        "log": "(dll\\win32\\kernel32\\client\\loader.c:386) LoadLibraryExW(\\??\\C:\\Windows\\bin\\advapi32_winetest.exe) failing with status c000000f\n\ncrypt_md5: 5 tests executed (0 marked as todo, 0 failures), 0 skipped.\nTest crypt_md5 completed in 0.02 seconds.\n"
       }
     ]
   }

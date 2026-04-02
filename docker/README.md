@@ -44,8 +44,8 @@ The LDAP stub is pre-populated with these test accounts:
 Connect directly to the database for debugging:
 
 ```bash
-docker compose exec db mysql -u roslogin roslogin
-docker compose exec db mysql -u testman testman
+docker compose exec db mysql -u roslogin -p51505150 roslogin
+docker compose exec db mysql -u testman -p51505150 testman
 ```
 
 ## Configuration

@@ -2,7 +2,7 @@
 	// DB Settings
 	define("ROSLOGIN_DB_HOST", "db");
 	define("ROSLOGIN_DB_USER", "roslogin");
-	define("ROSLOGIN_DB_PASS", "");
+	define("ROSLOGIN_DB_PASS", "51505150");
 	define("ROSLOGIN_DB_NAME", "roslogin");
 
 	// LDAP Settings

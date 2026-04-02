@@ -8,11 +8,11 @@ CREATE DATABASE IF NOT EXISTS `testman`  CHARACTER SET latin1 COLLATE latin1_gen
 CREATE DATABASE IF NOT EXISTS `gitinfo`  CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 -- -------------------------------------------------------
--- Users
+-- Users (educational VM: one shared password in repo)
 -- -------------------------------------------------------
-CREATE USER IF NOT EXISTS 'roslogin'@'%'       IDENTIFIED WITH mysql_native_password BY '';
-CREATE USER IF NOT EXISTS 'testman'@'%'        IDENTIFIED WITH mysql_native_password BY '';
-CREATE USER IF NOT EXISTS 'gitinfo_reader'@'%' IDENTIFIED WITH mysql_native_password BY '';
+CREATE USER IF NOT EXISTS 'roslogin'@'%'       IDENTIFIED WITH mysql_native_password BY '51505150';
+CREATE USER IF NOT EXISTS 'testman'@'%'        IDENTIFIED WITH mysql_native_password BY '51505150';
+CREATE USER IF NOT EXISTS 'gitinfo_reader'@'%' IDENTIFIED WITH mysql_native_password BY '51505150';
 
 GRANT SELECT, INSERT, UPDATE, DELETE ON `roslogin`.* TO 'roslogin'@'%';
 GRANT SELECT, INSERT, UPDATE, DELETE ON `testman`.*  TO 'testman'@'%';
@@ -63,8 +63,8 @@ CREATE TABLE `sources` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
--- Default source for the submit script (sourceid=1, password="testpassword")
-INSERT INTO `sources` (name, password) VALUES ('Test Build GCCLin_x86 on Test KVM', MD5('testpassword'));
+-- Default source for the submit script (sourceid=1, plaintext matches submit_builds.py default)
+INSERT INTO `sources` (name, password) VALUES ('Test Build GCCLin_x86 on Test KVM', MD5('51505150'));
 
 CREATE TABLE `winetest_logs` (
   `id` int(10) unsigned NOT NULL auto_increment,

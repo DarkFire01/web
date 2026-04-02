@@ -11,25 +11,28 @@ The actual log text fetched from the live server is submitted as-is.
 Usage:
     python submit_builds.py [--input FILE] [--url URL] [--sourceid N] [--password PW]
 
-Inject into a remote VPS (from your PC; use your public IP or hostname and the
-API password you set with UPDATE sources SET password = MD5('...') ):
+Lab VPS (this project): copy with `scp ... darkfire@216.128.144.135:~/` then
+either submit from your PC or on the server. API password is plaintext whose
+MD5 is in `sources.password`.
+
+From your PC:
 
     python submit_builds.py --input builds_data.json \\
-      --url http://YOUR_SERVER_IP/testman/webservice/index.php \\
-      --sourceid 1 --password 'YourApiPassword'
+      --url http://216.128.144.135/testman/webservice/index.php \\
+      --sourceid 1 --password '51505150'
 
-Or on the server after scp builds_data.json:
+On the server (after ssh darkfire@216.128.144.135):
 
     python3 submit_builds.py --input builds_data.json \\
       --url http://127.0.0.1/testman/webservice/index.php \\
-      --sourceid 1 --password 'YourApiPassword'
+      --sourceid 1 --password '51505150'
 
 Requirements:
     pip install requests
 
-The default credentials (sourceid=1, password=testpassword) match the test
-source added to the Docker init.sql. Re-run `docker compose down -v && docker
-compose up` to reset the database if needed.
+The default credentials (sourceid=1, password=51505150) match the test source
+in Docker init.sql. Re-run `docker compose down -v && docker compose up` to
+reset the database if needed.
 """
 
 import argparse
@@ -39,7 +42,7 @@ import requests
 
 WEBSERVICE_URL = "http://localhost/testman/webservice/index.php"
 DEFAULT_SOURCE_ID = 1
-DEFAULT_PASSWORD = "testpassword"
+DEFAULT_PASSWORD = "51505150"
 
 
 def ws_post(url, **fields):

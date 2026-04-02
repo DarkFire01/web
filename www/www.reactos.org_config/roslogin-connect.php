@@ -3,7 +3,7 @@
 	// The user entered here must have SELECT, INSERT, UPDATE and DELETE privileges to ROSLOGIN_DB_NAME
 	define("ROSLOGIN_DB_HOST", "127.0.0.1");
 	define("ROSLOGIN_DB_USER", "roslogin");
-	define("ROSLOGIN_DB_PASS", "");
+	define("ROSLOGIN_DB_PASS", "51505150");
 	define("ROSLOGIN_DB_NAME", "roslogin");
 
 	// LDAP Settings
