@@ -126,10 +126,17 @@ function ApplySearchFiltersToData(d)
 
 	function addFacet(boxName, param)
 	{
-		var all = document.querySelectorAll('input[name="' + boxName + '"]');
-		var on = document.querySelectorAll('input[name="' + boxName + '"]:checked');
-		if (!all.length)
+		// Must use getElementsByName: names like fac_arch[] break querySelectorAll because `]`
+		// ends the CSS [attr="..."] selector, so no inputs match and filters are never sent.
+		var all = document.getElementsByName(boxName);
+		if (!all || !all.length)
 			return;
+		var on = [];
+		for (var i = 0; i < all.length; i++)
+		{
+			if (all[i].checked)
+				on.push(all[i]);
+		}
 		if (!on.length)
 		{
 			// Do not send an empty query value: PHP treats compilers= etc. as "" and applies 0=1 (no rows).
