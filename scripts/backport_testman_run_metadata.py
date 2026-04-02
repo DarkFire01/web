@@ -38,9 +38,11 @@ except ImportError:
     print("Install PyMySQL: pip install pymysql", file=sys.stderr)
     sys.exit(1)
 
-# Optional: force facet values by source_id when name heuristics are wrong.
+# Optional: force facet values by Testman sources.id (= winetest_runs.source_id, same ints as
+# fetch_builds.py --source-ids). Verify on server: SELECT id, name FROM sources;
+# builds*.json "source" is the display name; re-fetch after deploy includes "source_id" from ajax-search.
 MANUAL_SOURCE_OVERRIDES: dict[int, dict[str, str]] = {
-    # 1: {"compiler": "GCC", "vm": "KVM", "host_os": "Linux"},
+    # Example after confirming id: 1: {"compiler": "GCC", "vm": "KVM", "host_os": "Linux"},
 }
 
 DEFINE_RE = re.compile(
@@ -85,6 +87,12 @@ def infer_facets_from_source_name(name: str) -> dict[str, str | None]:
         out["host_os"] = "Windows"
     elif "GCCWIN" in un or "WIN7" in un:
         out["host_os"] = "Windows"
+
+    # Plain client name with no KVM/VBox/etc. in the string (common lab submitter).
+    if name.casefold() == "lab buildbot".casefold():
+        out["compiler"] = out["compiler"] or "GCC"
+        out["vm"] = out["vm"] or "KVM"
+        out["host_os"] = out["host_os"] or "Linux"
 
     return out
 

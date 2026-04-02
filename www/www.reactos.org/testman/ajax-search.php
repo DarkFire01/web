@@ -273,7 +273,7 @@
 
 			if (array_key_exists("resultlist", $_GET))
 			{
-				$sql = "SELECT r.id, UNIX_TIMESTAMP(r.timestamp) AS timestamp, src.name, r.revision, r.platform, r.comment, r.count, r.failures, r.todo " .
+				$sql = "SELECT r.id, UNIX_TIMESTAMP(r.timestamp) AS timestamp, src.id AS source_id, src.name, r.revision, r.platform, r.comment, r.count, r.failures, r.todo " .
 					$base_from . " ORDER BY r.id " . $order . " LIMIT $limit_offset, $limit_count";
 
 				$stmt = $dbh->prepare($sql);
@@ -285,6 +285,7 @@
 					$output .= "<id>" . $row["id"] . "</id>";
 					$output .= "<date>" . GetDateString($row["timestamp"]) . "</date>";
 					$output .= "<source>" . htmlspecialchars($row["name"]) . "</source>";
+					$output .= "<source_id>" . (int)$row["source_id"] . "</source_id>";
 					$output .= "<revision>" . $gi->getShortHash($row["revision"]) . "</revision>";
 					$output .= "<platform>" . GetPlatformString($row["platform"]) . "</platform>";
 					$output .= "<comment>" . htmlspecialchars($row["comment"]) . "</comment>";

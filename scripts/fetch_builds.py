@@ -208,6 +208,8 @@ def main():
             # Search XML uses GetPlatformString() (long, human-readable).
             platform_display = result_el.findtext("platform", "")
             source_display = result_el.findtext("source", "")
+            source_id_raw = (result_el.findtext("source_id", "") or "").strip()
+            source_id = int(source_id_raw) if source_id_raw.isdigit() else None
             comment  = result_el.findtext("comment", "")
 
             if display_needle and display_needle not in platform_display:
@@ -264,9 +266,10 @@ def main():
                 ]
 
                 runs.append({
-                    "id":       run_id,
-                    "source":   run_el.get("source", result_el.findtext("source", "")),
-                    "revision": run_el.get("revision", ""),
+                    "id":         run_id,
+                    "source_id":  source_id,
+                    "source":     run_el.get("source", result_el.findtext("source", "")),
+                    "revision":   run_el.get("revision", ""),
                     "platform": platform_raw,
                     "comment":  comment,
                     "suites":   suites,
